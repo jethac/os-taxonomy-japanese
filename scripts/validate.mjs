@@ -14,6 +14,7 @@ const requiredTopicFields = [
   'subject',
   'domain',
   'name',
+  'japaneseName',
   'description',
   'evidence',
   'assessmentPrompt',
@@ -22,6 +23,8 @@ const requiredTopicFields = [
 
 const allowedTypes = new Set(['CONCEPTUAL', 'PROCEDURAL', 'REPRESENTATIONAL', 'LANGUAGE', 'META']);
 const allowedProfiles = new Set(graphs.map((g) => g.profile));
+const japaneseScriptPattern = /[\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Han}]/u;
+const technicalLevelPattern = /^(?:[ABC][12]|N[1-5]|J[1-5]\+?|BJT J[1-5]\+?|CEFR\/JF [ABC][12]|JLPT N[1-5])$/;
 const errors = [];
 
 function readJson(file) {
@@ -36,6 +39,25 @@ function readJson(file) {
 
 function assert(condition, message) {
   if (!condition) errors.push(message);
+}
+
+function addLocalizationString(target, value) {
+  if (typeof value !== 'string') return;
+  const source = value.trim();
+  if (source && /[A-Za-z]/.test(source)) target.add(source);
+}
+
+function addLocalizationStringValues(target, value) {
+  if (typeof value === 'string') {
+    addLocalizationString(target, value);
+    return;
+  }
+  if (Array.isArray(value)) {
+    value.forEach((item) => addLocalizationStringValues(target, item));
+    return;
+  }
+  if (!value || typeof value !== 'object') return;
+  Object.values(value).forEach((item) => addLocalizationStringValues(target, item));
 }
 
 function collectStandardKeys(curriculum, sourceIds) {
@@ -64,6 +86,7 @@ function validateTopic(topic, expectedProfile, standardKeys, characterSetIds, le
   assert(allowedTypes.has(topic.type), `${topic.id}: unknown type ${topic.type}`);
   assert(topic.subject === 'Japanese', `${topic.id}: subject must be Japanese`);
   assert(typeof topic.name === 'string' && topic.name.length > 0, `${topic.id}: missing name`);
+  assert(typeof topic.japaneseName === 'string' && topic.japaneseName.length > 0, `${topic.id}: missing japaneseName`);
   assert(typeof topic.description === 'string' && topic.description.length > 0, `${topic.id}: missing description`);
   assert(Array.isArray(topic.evidence), `${topic.id}: evidence must be an array`);
   assert(topic.evidence.length >= 2 && topic.evidence.length <= 5, `${topic.id}: evidence must have 2-5 items`);
@@ -177,6 +200,7 @@ if (sharedSources) {
 if (sharedCharacters) {
   assert(sharedCharacters.characterSetCount === sharedCharacters.characterSets.length, 'shared characters count mismatch');
   for (const characterSet of sharedCharacters.characterSets) {
+    assert(typeof characterSet.japaneseName === 'string' && characterSet.japaneseName.length > 0, `${characterSet.id}: missing japaneseName`);
     for (const tag of characterSet.sourceTags ?? []) {
       assert(sourceIds.has(tag), `${characterSet.id}: unknown sourceTag ${tag}`);
     }
@@ -185,6 +209,7 @@ if (sharedCharacters) {
 if (sharedLexemes) {
   assert(sharedLexemes.lexemeSetCount === sharedLexemes.lexemeSets.length, 'shared lexemes count mismatch');
   for (const lexemeSet of sharedLexemes.lexemeSets) {
+    assert(typeof lexemeSet.japaneseName === 'string' && lexemeSet.japaneseName.length > 0, `${lexemeSet.id}: missing japaneseName`);
     for (const tag of lexemeSet.sourceTags ?? []) {
       assert(sourceIds.has(tag), `${lexemeSet.id}: unknown sourceTag ${tag}`);
     }
@@ -212,6 +237,79 @@ for (const graph of graphs) {
   }
   validateDag(graph.profile, topics.topics, dependencies.dependencies);
   validateClusters(graph.profile, clusters, new Set(topics.topics.map((topic) => topic.domain)));
+}
+
+const localization = readJson('data/locales/ja.json');
+if (localization) {
+  assert(localization.locale === 'ja', 'Japanese localization pack locale must be ja');
+  assert(localization.entryCount === localization.entries?.length, 'Japanese localization entryCount does not match entries length');
+  assert(
+    localization.status === 'machine-assisted-draft' || localization.status === 'human-reviewed',
+    `Japanese localization has invalid status ${localization.status}`
+  );
+
+  const localizedBySource = new Map();
+  for (const entry of localization.entries ?? []) {
+    assert(typeof entry.source === 'string' && entry.source.length > 0, 'Japanese localization entry missing source');
+    assert(typeof entry.ja === 'string' && entry.ja.length > 0, `Japanese localization missing translation for ${entry.source}`);
+    assert(
+      japaneseScriptPattern.test(entry.ja) || (technicalLevelPattern.test(entry.source) && entry.ja === entry.source),
+      `Japanese localization still contains untranslated prose: ${entry.source}`
+    );
+    assert(Array.isArray(entry.contexts) && entry.contexts.length > 0, `Japanese localization missing contexts for ${entry.source}`);
+    assert(!localizedBySource.has(entry.source), `Japanese localization duplicate source: ${entry.source}`);
+    localizedBySource.set(entry.source, entry.ja);
+  }
+
+  const requiredLocalization = new Set();
+  for (const graph of graphs) {
+    const topics = readJson(`${graph.dir}/topics.json`);
+    const dependencies = readJson(`${graph.dir}/dependencies.json`);
+    const standards = readJson(`${graph.dir}/curriculum-standards.json`);
+    const clusters = readJson(`${graph.dir}/clusters.json`);
+
+    for (const topic of topics?.topics ?? []) {
+      addLocalizationString(requiredLocalization, topic.description);
+      topic.evidence?.forEach((item) => addLocalizationString(requiredLocalization, item));
+      addLocalizationString(requiredLocalization, topic.assessmentPrompt);
+      topic.textbookAlignments?.forEach((alignment) => {
+        addLocalizationString(requiredLocalization, alignment.unit);
+        addLocalizationString(requiredLocalization, alignment.note);
+      });
+    }
+    dependencies?.dependencies?.forEach((edge) => addLocalizationString(requiredLocalization, edge.reason));
+    clusters?.clusters?.forEach((cluster) => addLocalizationString(requiredLocalization, cluster.summary));
+    for (const curriculum of standards?.curricula ?? []) {
+      addLocalizationString(requiredLocalization, curriculum.name);
+      addLocalizationString(requiredLocalization, curriculum.version);
+      addLocalizationString(requiredLocalization, curriculum.license);
+      curriculum.topics?.forEach((standard) => addLocalizationStringValues(requiredLocalization, standard.data));
+    }
+  }
+
+  for (const characterSet of sharedCharacters?.characterSets ?? []) {
+    if (!characterSet.japaneseName) addLocalizationString(requiredLocalization, characterSet.name);
+    addLocalizationString(requiredLocalization, characterSet.notes);
+  }
+  for (const lexemeSet of sharedLexemes?.lexemeSets ?? []) {
+    if (!lexemeSet.japaneseName) addLocalizationString(requiredLocalization, lexemeSet.name);
+    addLocalizationString(requiredLocalization, lexemeSet.notes);
+    lexemeSet.items?.forEach((item) => addLocalizationString(requiredLocalization, item.gloss));
+  }
+  for (const source of sharedSources?.sources ?? []) {
+    addLocalizationString(requiredLocalization, source.name);
+    addLocalizationString(requiredLocalization, source.use);
+    addLocalizationString(requiredLocalization, source.redistribution);
+    addLocalizationString(requiredLocalization, source.licenseStatus);
+    addLocalizationString(requiredLocalization, source.notes);
+  }
+
+  for (const source of requiredLocalization) {
+    assert(localizedBySource.has(source), `Japanese localization missing learner-facing source: ${source}`);
+  }
+  for (const source of localizedBySource.keys()) {
+    assert(requiredLocalization.has(source), `Japanese localization contains stale source: ${source}`);
+  }
 }
 
 if (errors.length > 0) {

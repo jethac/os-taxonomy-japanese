@@ -41,6 +41,7 @@ Then open <http://127.0.0.1:4175/>.
 data/
   native-child/     L1 topics, dependencies, standards, and clusters
   l2-adult/         Adult-L2 topics, dependencies, standards, and clusters
+  locales/          Learner-facing Japanese prose localization
   shared/           Character, lexeme, and source metadata
   manifest.json     Dataset counts and profile inventory
 schema/             JSON Schemas for every public data shape
@@ -61,6 +62,8 @@ Topics are fine-grained learnable concepts with:
 - standards and source tags;
 - optional JLPT, BJT, JF, ACTFL, script, textbook-alignment, character, and lexeme metadata.
 
+`data/locales/ja.json` supplies Japanese learner-facing prose for topic descriptions, mastery evidence, assessment prompts, dependency reasons, alignment notes, provenance, and companion metadata. Its status field distinguishes machine-assisted draft text from human-reviewed localization. Validation requires complete coverage, so new English learner-facing prose cannot silently fall back inside Japanese mode.
+
 Dependencies connect a topic to its prerequisite and include a strength plus an authored reason. Each profile validates independently as a directed acyclic graph.
 
 Kanji and vocabulary inventories remain companion data instead of becoming one graph node per character or word. Graph nodes represent transferable skills such as reading strategies, orthographic patterns, language functions, and communicative procedures.
@@ -74,7 +77,7 @@ npm run validate
 npm run manifest
 ```
 
-Validation checks schema shape, unique IDs, cross-file references, learner-profile metadata, source tags, standards, companion links, and prerequisite cycles.
+Validation checks schema shape, unique IDs, cross-file references, learner-profile metadata, source tags, standards, companion links, prerequisite cycles, and complete Japanese learner-facing prose coverage.
 
 ## Provenance
 

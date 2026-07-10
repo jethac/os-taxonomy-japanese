@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/japanese-language-taxonomy/schema/localization.schema.json",
+  "title": "Japanese Language Taxonomy localization pack",
+  "type": "object",
+  "required": ["version", "locale", "status", "note", "entryCount", "entries"],
+  "properties": {
+    "version": { "type": "string" },
+    "locale": { "const": "ja" },
+    "status": { "enum": ["machine-assisted-draft", "human-reviewed"] },
+    "note": { "type": "string" },
+    "entryCount": { "type": "integer", "minimum": 0 },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["source", "ja", "contexts"],
+        "properties": {
+          "source": { "type": "string", "minLength": 1 },
+          "ja": { "type": "string", "minLength": 1 },
+          "contexts": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 1 },
+            "minItems": 1
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

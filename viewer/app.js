@@ -95,6 +95,27 @@ const typeLabelsJa = {
   REPRESENTATIONAL: '表象'
 };
 
+const scriptLabelsJa = {
+  hiragana: 'ひらがな',
+  kana: 'かな',
+  kanji: '漢字',
+  katakana: 'カタカナ',
+  romaji: 'ローマ字'
+};
+
+const dependencyStrengthLabelsJa = {
+  hard: '必須',
+  soft: '推奨'
+};
+
+const redistributionLabelsJa = {
+  'citation-level': '引用情報のみ',
+  'codes-only': 'コードのみ',
+  'level-tags-only': 'レベルタグのみ',
+  'metadata-only': 'メタデータのみ',
+  'original-project-text': 'プロジェクト独自テキスト'
+};
+
 const viewerCopy = {
   en: {
     title: 'Japanese Learning Atlas',
@@ -342,6 +363,8 @@ const state = {
   datasets: {},
   shared: null,
   commentary: null,
+  localization: null,
+  jaTextBySource: new Map(),
   profileId: 'native-child',
   locale: 'en',
   theme: 'dark',
@@ -465,6 +488,23 @@ function t(key) {
   return viewerCopy[state.locale]?.[key] ?? viewerCopy.en[key] ?? key;
 }
 
+function localizedProse(value) {
+  if (state.locale !== 'ja' || typeof value !== 'string' || !value.trim()) return value ?? '';
+  return (state.jaTextBySource.get(value.trim()) ?? value).replaceAll('{{name}}', '学習者');
+}
+
+function localizedScript(script) {
+  return state.locale === 'ja' ? scriptLabelsJa[script] ?? script : script;
+}
+
+function localizedDependencyStrength(strength) {
+  return state.locale === 'ja' ? dependencyStrengthLabelsJa[strength] ?? strength : strength;
+}
+
+function localizedRedistribution(value) {
+  return state.locale === 'ja' ? redistributionLabelsJa[value] ?? localizedProse(value) : value;
+}
+
 function restoreViewerPreferences() {
   const params = new URLSearchParams(window.location.hash.slice(1));
   let storedLocale = null;
@@ -496,11 +536,24 @@ function persistViewerPreferences() {
   }
 }
 
-function setViewerLocale(locale) {
+async function setViewerLocale(locale) {
   if (!['en', 'ja'].includes(locale) || locale === state.locale) return;
+  if (locale === 'ja') await ensureJapaneseLocalization();
   state.locale = locale;
   state.displayMode = locale === 'ja' ? 'japanese' : 'english';
   applyViewerPreferences();
+}
+
+function installJapaneseLocalization(localization) {
+  state.localization = localization;
+  state.jaTextBySource = new Map(localization.entries.map((entry) => [entry.source, entry.ja]));
+}
+
+async function ensureJapaneseLocalization() {
+  if (state.localization) return state.localization;
+  const localization = await fetchJson('/data/locales/ja.json');
+  installJapaneseLocalization(localization);
+  return localization;
 }
 
 function setViewerTheme(theme) {
@@ -556,16 +609,18 @@ async function init() {
   applyViewerPreferences({ renderContent: false });
   els.detailRegion.inert = true;
   els.filterPanel.inert = true;
-  const [nativeData, l2Data, commentary, shared] = await Promise.all([
+  const [nativeData, l2Data, commentary, shared, localization] = await Promise.all([
     loadGraph('native-child'),
     loadGraph('l2-adult'),
     fetchJson('/data/profile-commentary.json'),
-    loadSharedData()
+    loadSharedData(),
+    state.locale === 'ja' ? fetchJson('/data/locales/ja.json') : Promise.resolve(null)
   ]);
   state.datasets['native-child'] = nativeData;
   state.datasets['l2-adult'] = l2Data;
   state.commentary = commentary;
   state.shared = shared;
+  if (localization) installJapaneseLocalization(localization);
   restoreFromHash();
 
   els.profileSelect.addEventListener('change', () => switchProfile(els.profileSelect.value));
@@ -573,7 +628,7 @@ async function init() {
     button.addEventListener('click', () => switchProfile(button.dataset.profileAction));
   });
   document.querySelectorAll('[data-language-action]').forEach((button) => {
-    button.addEventListener('click', () => setViewerLocale(button.dataset.languageAction));
+    button.addEventListener('click', () => void setViewerLocale(button.dataset.languageAction));
   });
   els.themeToggle.addEventListener('click', () => setViewerTheme(state.theme === 'dark' ? 'light' : 'dark'));
   els.searchInput.addEventListener('input', () => {
@@ -1054,7 +1109,7 @@ function showGraphTooltip(node, event) {
     .filter(Boolean)
     .join(' · ');
   els.graphTooltip.querySelector('strong').textContent = displayName(node.topic);
-  els.graphTooltip.querySelector('p').textContent = node.topic.assessmentPrompt || node.topic.description;
+  els.graphTooltip.querySelector('p').textContent = localizedProse(node.topic.assessmentPrompt || node.topic.description);
   els.graphTooltip.classList.add('isVisible');
   els.graphTooltip.setAttribute('aria-hidden', 'false');
   placeGraphTooltip(event);
@@ -1119,7 +1174,9 @@ function syncControls() {
     .join('');
   els.axisSelect.innerHTML = axisOptions.map((item) => option(item.value, item.label)).join('');
   els.standardSelect.innerHTML = standardOptions.map((item) => option(item.value, item.label)).join('');
-  els.scriptSelect.innerHTML = scripts.map((script) => option(script, script === 'all' ? t('allScripts') : script)).join('');
+  els.scriptSelect.innerHTML = scripts
+    .map((script) => option(script, script === 'all' ? t('allScripts') : localizedScript(script)))
+    .join('');
   els.jlptSelect.innerHTML = jlpt.map((level) => option(level, level === 'all' ? t('allJlpt') : level)).join('');
   els.bjtSelect.innerHTML = bjt.map((level) => option(level, level === 'all' ? t('allBjt') : level)).join('');
   els.edgeModeSelect.innerHTML = [option('unlocks', t('unlocks')), option('depends', t('dependsOn'))].join('');
@@ -1214,7 +1271,7 @@ function renderClusterSummary() {
         <span class="tag">${escapeHtml(formatClusterRange(cluster))}</span>
         <span class="tag">${escapeHtml(topicCount)} ${t('topics').toLowerCase()}</span>
       </div>
-      <p>${escapeHtml(cluster.summary)}</p>
+      <p>${escapeHtml(localizedProse(cluster.summary))}</p>
     </section>
   `;
 }
@@ -1239,20 +1296,21 @@ function renderStandardSummary() {
   }
 
   const count = dataset.topics.filter((topic) => (topic.standards ?? []).includes(state.standard)).length;
+  const curriculumName = localizedProse(standard.curriculum.name);
   const sourceLink = standard.curriculum.sourceUrl
-    ? `<a href="${escapeHtml(standard.curriculum.sourceUrl)}" target="_blank" rel="noreferrer">${escapeHtml(standard.curriculum.name)}</a>`
-    : escapeHtml(standard.curriculum.name);
+    ? `<a href="${escapeHtml(standard.curriculum.sourceUrl)}" target="_blank" rel="noreferrer">${escapeHtml(curriculumName)}</a>`
+    : escapeHtml(curriculumName);
   els.standardSummary.innerHTML = `
     <section class="standardCard">
-      <div class="standardTitle">${escapeHtml(standard.data?.label ?? standard.key)}</div>
+      <div class="standardTitle">${escapeHtml(localizedProse(standard.data?.label ?? standard.key))}</div>
       <div class="tagRow">
         <span class="tag">${escapeHtml(standard.key)}</span>
         <span class="tag">${escapeHtml(count)} ${t('topics').toLowerCase()}</span>
         <span class="tag">${escapeHtml(standard.curriculum.textIncluded ? t('textIncluded') : t('noSourceText'))}</span>
       </div>
-      <p>${sourceLink} · ${escapeHtml(standard.curriculum.version)}</p>
-      <p>${escapeHtml(standard.data?.note ?? t('citationMetadata'))}</p>
-      <p class="standardLicense">${escapeHtml(standard.curriculum.license)}</p>
+      <p>${sourceLink} · ${escapeHtml(localizedProse(standard.curriculum.version))}</p>
+      <p>${escapeHtml(localizedProse(standard.data?.note ?? t('citationMetadata')))}</p>
+      <p class="standardLicense">${escapeHtml(localizedProse(standard.curriculum.license))}</p>
     </section>
   `;
 }
@@ -2274,7 +2332,7 @@ function standardFilterOptions(dataset) {
     { value: 'all', label: t('allStandards') },
     ...keys.map((key) => {
       const standard = dataset.standardByKey.get(key);
-      const label = standard?.data?.label ?? key;
+      const label = localizedProse(standard?.data?.label ?? key);
       const count = dataset.topics.filter((topic) => (topic.standards ?? []).includes(key)).length;
       return {
         value: key,
@@ -2582,20 +2640,22 @@ function renderSelectedTopic() {
     ...formatArrayTags('JF', selected.jfLevels),
     ...formatArrayTags('JLPT', selected.jlptLevels),
     ...formatArrayTags('BJT', selected.bjtLevels),
-    ...formatArrayTags('Script', selected.scriptRequirements)
+    ...formatArrayTags(t('script'), selected.scriptRequirements?.map(localizedScript))
   ]
     .filter(Boolean)
     .map((value) => `<span class="tag">${escapeHtml(value)}</span>`)
     .join('');
-  els.topicDescription.textContent = selected.description;
-  els.topicEvidence.innerHTML = selected.evidence.map((item) => `<li>${escapeHtml(item)}</li>`).join('');
-  els.topicAssessment.textContent = selected.assessmentPrompt;
+  els.topicDescription.textContent = localizedProse(selected.description);
+  els.topicEvidence.innerHTML = selected.evidence
+    .map((item) => `<li>${escapeHtml(localizedProse(item))}</li>`)
+    .join('');
+  els.topicAssessment.textContent = localizedProse(selected.assessmentPrompt);
   els.topicPrereqs.innerHTML = edgeList(dataset, prereqEdges, 'prerequisiteId');
   els.topicUnlocks.innerHTML = edgeList(dataset, unlockEdges, 'topicId');
   els.topicStandards.innerHTML = selected.standards
     .map((key) => {
       const standard = dataset.standardByKey.get(key);
-      const label = standard?.data?.label ?? key;
+      const label = localizedProse(standard?.data?.label ?? key);
       return `<li><span class="tag">${escapeHtml(key)}</span> ${escapeHtml(label)}</li>`;
     })
     .join('');
@@ -2618,7 +2678,7 @@ function edgeList(dataset, edges, idKey) {
   return edges
     .map((edge) => {
       const topic = dataset.byId.get(edge[idKey]);
-      return `<li><button class="linkButton" data-id="${edge[idKey]}">${escapeHtml(topic ? displayName(topic) : edge[idKey])}</button> <span class="tag">${edge.strength}</span><br>${escapeHtml(edge.reason)}</li>`;
+      return `<li><button class="linkButton" data-id="${edge[idKey]}">${escapeHtml(topic ? displayName(topic) : edge[idKey])}</button> <span class="tag">${escapeHtml(localizedDependencyStrength(edge.strength))}</span><br>${escapeHtml(localizedProse(edge.reason))}</li>`;
     })
     .join('');
 }
@@ -2639,19 +2699,20 @@ function renderReferenceAlignments(topic) {
 
 function referenceAlignmentCard(alignment) {
   const source = state.shared.sourceBySlug.get(alignment.source);
+  const sourceName = localizedProse(source?.name ?? alignment.source);
   const title = source?.sourceUrl
-    ? `<a href="${escapeHtml(source.sourceUrl)}" target="_blank" rel="noreferrer">${escapeHtml(source.name)}</a>`
-    : escapeHtml(source?.name ?? alignment.source);
+    ? `<a href="${escapeHtml(source.sourceUrl)}" target="_blank" rel="noreferrer">${escapeHtml(sourceName)}</a>`
+    : escapeHtml(sourceName);
   return `
     <section class="referenceCard">
       <div class="referenceTitle">${title}</div>
       <div class="tagRow">
         <span class="tag">${escapeHtml(alignment.source)}</span>
-        <span class="tag">${escapeHtml(alignment.unit)}</span>
+        <span class="tag">${escapeHtml(localizedProse(alignment.unit))}</span>
         <span class="tag">${escapeHtml(source?.textIncluded ? t('textIncluded') : t('noSourceText'))}</span>
       </div>
-      <p>${escapeHtml(alignment.note ?? t('metadataOnlyAlignment'))}</p>
-      ${source?.licenseStatus ? `<p class="referenceLicense">${escapeHtml(source.licenseStatus)}</p>` : ''}
+      <p>${escapeHtml(localizedProse(alignment.note ?? t('metadataOnlyAlignment')))}</p>
+      ${source?.licenseStatus ? `<p class="referenceLicense">${escapeHtml(localizedProse(source.licenseStatus))}</p>` : ''}
     </section>
   `;
 }
@@ -2711,19 +2772,20 @@ function sourceCard(record) {
   }
 
   const textIncluded = source.textIncluded ? t('textIncluded') : t('noSourceText');
+  const sourceName = localizedProse(source.name);
   const title = source.sourceUrl
-    ? `<a href="${escapeHtml(source.sourceUrl)}" target="_blank" rel="noreferrer">${escapeHtml(source.name)}</a>`
-    : escapeHtml(source.name);
+    ? `<a href="${escapeHtml(source.sourceUrl)}" target="_blank" rel="noreferrer">${escapeHtml(sourceName)}</a>`
+    : escapeHtml(sourceName);
   return `
     <section class="sourceCard">
       <div class="sourceTitle">${title}</div>
       <div class="tagRow">
         <span class="tag">${escapeHtml(source.slug)}</span>
-        <span class="tag">${escapeHtml(source.redistribution)}</span>
+        <span class="tag">${escapeHtml(localizedRedistribution(source.redistribution))}</span>
         <span class="tag">${escapeHtml(textIncluded)}</span>
       </div>
-      <p>${escapeHtml(source.use)}</p>
-      <p class="sourceLicense">${escapeHtml(source.licenseStatus)}</p>
+      <p>${escapeHtml(localizedProse(source.use))}</p>
+      <p class="sourceLicense">${escapeHtml(localizedProse(source.licenseStatus))}</p>
       <p class="statusText">${escapeHtml(record.contexts.join(', '))}</p>
     </section>
   `;
@@ -2762,7 +2824,7 @@ function characterCard(set) {
     <section class="companionCard">
       <div class="companionTitle">${escapeHtml(displaySetName(set))}</div>
       <div class="characterRun">${escapeHtml(sample)}${escapeHtml(more)}</div>
-      <p>${escapeHtml(set.notes ?? '')}</p>
+      <p>${escapeHtml(localizedProse(set.notes ?? ''))}</p>
       <div class="tagRow">${(set.sourceTags ?? []).map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join('')}</div>
     </section>
   `;
@@ -2771,14 +2833,14 @@ function characterCard(set) {
 function lexemeCard(set) {
   const items = set.items
     .slice(0, 8)
-    .map((item) => `<li><strong>${escapeHtml(item.lemma)}</strong> ${escapeHtml(item.reading)}${item.gloss ? ` · ${escapeHtml(item.gloss)}` : ''}</li>`)
+    .map((item) => `<li><strong>${escapeHtml(item.lemma)}</strong> ${escapeHtml(item.reading)}${item.gloss ? ` · ${escapeHtml(localizedProse(item.gloss))}` : ''}</li>`)
     .join('');
   const more = set.items.length > 8 ? `<li>+${set.items.length - 8}</li>` : '';
   return `
     <section class="companionCard">
       <div class="companionTitle">${escapeHtml(displaySetName(set))}</div>
       <ul class="compactList">${items}${more}</ul>
-      <p>${escapeHtml(set.notes ?? '')}</p>
+      <p>${escapeHtml(localizedProse(set.notes ?? ''))}</p>
       <div class="tagRow">${(set.sourceTags ?? []).map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join('')}</div>
     </section>
   `;

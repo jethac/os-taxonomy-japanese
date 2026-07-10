@@ -11,12 +11,12 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["id", "kind", "name", "characters", "sourceTags"],
+        "required": ["id", "kind", "name", "japaneseName", "characters", "sourceTags"],
         "properties": {
           "id": { "type": "string", "pattern": "^chars_" },
           "kind": { "enum": ["kana", "kanji", "punctuation", "mixed"] },
           "name": { "type": "string" },
-          "japaneseName": { "type": ["string", "null"] },
+          "japaneseName": { "type": "string", "minLength": 1 },
           "characters": { "type": "array", "items": { "type": "string" } },
           "grade": { "type": ["integer", "null"] },
           "notes": { "type": "string" },

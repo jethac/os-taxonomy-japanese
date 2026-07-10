@@ -30,7 +30,8 @@ const files = [
   'data/shared/characters.json',
   'data/shared/lexemes.json',
   'data/shared/sources.json',
-  'data/profile-commentary.json'
+  'data/profile-commentary.json',
+  'data/locales/ja.json'
 ];
 
 const nativeTopics = readJson('data/native-child/topics.json');
@@ -45,6 +46,7 @@ const characters = readJson('data/shared/characters.json');
 const lexemes = readJson('data/shared/lexemes.json');
 const sources = readJson('data/shared/sources.json');
 const commentary = readJson('data/profile-commentary.json');
+const japaneseLocalization = readJson('data/locales/ja.json');
 
 const manifest = {
   dataset: 'Japanese Language Taxonomy',
@@ -71,7 +73,8 @@ const manifest = {
     characterSets: characters.characterSetCount,
     lexemeSets: lexemes.lexemeSetCount,
     sources: sources.sourceCount,
-    profileCommentaries: Object.keys(commentary.profiles).length
+    profileCommentaries: Object.keys(commentary.profiles).length,
+    japaneseLocalizationEntries: japaneseLocalization.entryCount
   },
   files: Object.fromEntries(files.map((file) => [file, fileInfo(file)])),
   excluded: [
