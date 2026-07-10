@@ -1,0 +1,535 @@
+{
+  "profile": "ja-L2-adult",
+  "note": "Seed L2 alignment records are citation-level and metadata-only. Full textbook or test content is not included.",
+  "codesOnlySources": [
+    "yookoso-book1",
+    "jf-standard",
+    "jlpt",
+    "tae-kim",
+    "jgram",
+    "bjt",
+    "yookoso-book2",
+    "jsl-processability-research"
+  ],
+  "curriculumCount": 8,
+  "curricula": [
+    {
+      "slug": "yookoso-book1",
+      "country": "US",
+      "name": "Yookoso! An Invitation to Contemporary Japanese",
+      "version": "2006 edition",
+      "sourceUrl": "https://archive.org/details/yookosoinvitatio0000tohs",
+      "textIncluded": false,
+      "license": "Copyrighted textbook; seed uses metadata-only chapter tags.",
+      "topicCount": 9,
+      "topics": [
+        {
+          "key": "yookoso-book1:early-kana",
+          "code": "early-kana",
+          "data": {
+            "label": "Early kana and pronunciation coverage",
+            "note": "Metadata-only alignment."
+          }
+        },
+        {
+          "key": "yookoso-book1:early-introductions",
+          "code": "early-introductions",
+          "data": {
+            "label": "Early self-introduction and classroom interaction coverage",
+            "note": "Metadata-only alignment."
+          }
+        },
+        {
+          "key": "yookoso-book1:early-particles",
+          "code": "early-particles",
+          "data": {
+            "label": "Early particle and noun-predicate coverage",
+            "note": "Metadata-only alignment."
+          }
+        },
+        {
+          "key": "yookoso-book1:early-verbs",
+          "code": "early-verbs",
+          "data": {
+            "label": "Early verb and request coverage",
+            "note": "Metadata-only alignment."
+          }
+        },
+        {
+          "key": "yookoso-book1:time-and-daily-routines",
+          "code": "time-and-daily-routines",
+          "data": {
+            "label": "Time expressions and daily-routine coverage",
+            "note": "Metadata-only alignment for beginner time, routine, schedule, and activity language."
+          }
+        },
+        {
+          "key": "yookoso-book1:people-places-activities",
+          "code": "people-places-activities",
+          "data": {
+            "label": "People, places, activities, and location coverage",
+            "note": "Metadata-only alignment for beginner description of people, places, activities, and locations."
+          }
+        },
+        {
+          "key": "yookoso-book1:descriptions-and-preferences",
+          "code": "descriptions-and-preferences",
+          "data": {
+            "label": "Descriptions, preferences, and comparison coverage",
+            "note": "Metadata-only alignment for adjective predicates, likes, wants, and comparisons."
+          }
+        },
+        {
+          "key": "yookoso-book1:requests-permission-sequence",
+          "code": "requests-permission-sequence",
+          "data": {
+            "label": "Requests, permission, prohibition, and sequence coverage",
+            "note": "Metadata-only alignment for te-form functions and daily action sequences."
+          }
+        },
+        {
+          "key": "yookoso-book1:plain-forms-and-quoting",
+          "code": "plain-forms-and-quoting",
+          "data": {
+            "label": "Plain forms, reasons, quotation, and intention coverage",
+            "note": "Metadata-only alignment for plain-form grammar and early sentence embedding."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "jf-standard",
+      "country": "JP",
+      "name": "JF Standard for Japanese-Language Education",
+      "version": "current",
+      "sourceUrl": "https://www.jfstandard.jpf.go.jp/",
+      "textIncluded": false,
+      "license": "Verify reuse terms before full Can-do import; seed uses level tags only.",
+      "topicCount": 7,
+      "topics": [
+        {
+          "key": "jf-standard:A1",
+          "code": "A1",
+          "data": {
+            "label": "CEFR/JF A1",
+            "note": "Level alignment only."
+          }
+        },
+        {
+          "key": "jf-standard:A2",
+          "code": "A2",
+          "data": {
+            "label": "CEFR/JF A2",
+            "note": "Level alignment only."
+          }
+        },
+        {
+          "key": "jf-standard:B1",
+          "code": "B1",
+          "data": {
+            "label": "CEFR/JF B1",
+            "note": "Level alignment only for intermediate independent-user tasks."
+          }
+        },
+        {
+          "key": "jf-standard:interaction-repair",
+          "code": "interaction-repair",
+          "data": {
+            "label": "Interaction and repair strategies",
+            "note": "Citation-level communicative alignment."
+          }
+        },
+        {
+          "key": "jf-standard:autonomous-learning",
+          "code": "autonomous-learning",
+          "data": {
+            "label": "Autonomous learning and self-assessment",
+            "note": "Citation-level alignment for learner reflection, strategy choice, and self-monitoring."
+          }
+        },
+        {
+          "key": "jf-standard:B2",
+          "code": "B2",
+          "data": {
+            "label": "CEFR/JF B2",
+            "note": "Level alignment only for advanced independent-user tasks."
+          }
+        },
+        {
+          "key": "jf-standard:C1",
+          "code": "C1",
+          "data": {
+            "label": "CEFR/JF C1",
+            "note": "Level alignment only for effective operational proficiency tasks."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "jlpt",
+      "country": "JP",
+      "name": "Japanese-Language Proficiency Test",
+      "version": "current",
+      "sourceUrl": "https://www.jlpt.jp/e/about/cefr_reference.html",
+      "textIncluded": false,
+      "license": "Level metadata only; no exam content.",
+      "topicCount": 5,
+      "topics": [
+        {
+          "key": "jlpt:N1",
+          "code": "N1",
+          "data": {
+            "label": "JLPT N1",
+            "note": "Most difficult JLPT level; official summaries emphasize understanding Japanese used in a broad range of real-life scenes."
+          }
+        },
+        {
+          "key": "jlpt:N2",
+          "code": "N2",
+          "data": {
+            "label": "JLPT N2",
+            "note": "Advanced JLPT level; official summaries place N1/N2 in broad real-life Japanese use."
+          }
+        },
+        {
+          "key": "jlpt:N3",
+          "code": "N3",
+          "data": {
+            "label": "JLPT N3",
+            "note": "Bridge level between N4/N5 basic classroom Japanese and N1/N2 advanced real-life Japanese."
+          }
+        },
+        {
+          "key": "jlpt:N5",
+          "code": "N5",
+          "data": {
+            "label": "JLPT N5",
+            "note": "Level alignment only."
+          }
+        },
+        {
+          "key": "jlpt:N4",
+          "code": "N4",
+          "data": {
+            "label": "JLPT N4",
+            "note": "Level alignment only."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "tae-kim",
+      "country": "US",
+      "name": "Tae Kim's Guide to Learning Japanese",
+      "version": "web",
+      "sourceUrl": "https://guidetojapanese.org/learn/",
+      "textIncluded": false,
+      "license": "License varies by version; use as coverage reference only.",
+      "topicCount": 2,
+      "topics": [
+        {
+          "key": "tae-kim:basic-grammar-sequence",
+          "code": "basic-grammar-sequence",
+          "data": {
+            "label": "Basic grammar sequence coverage check",
+            "note": "Reference-only alignment."
+          }
+        },
+        {
+          "key": "tae-kim:reference-grammar-use",
+          "code": "reference-grammar-use",
+          "data": {
+            "label": "Reference grammar use",
+            "note": "Reference-only alignment for using explicit grammar explanations to diagnose form-function errors."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "jgram",
+      "country": "JP",
+      "name": "JGram-derived grammar index",
+      "version": "web",
+      "sourceUrl": "https://www.yookoso.com/jgram-japanese-grammar-database/",
+      "textIncluded": false,
+      "license": "License unclear; use as grammar-point checklist only.",
+      "topicCount": 2,
+      "topics": [
+        {
+          "key": "jgram:jlpt-grammar-index",
+          "code": "jlpt-grammar-index",
+          "data": {
+            "label": "JLPT grammar-point index cross-check",
+            "note": "Reference-only alignment."
+          }
+        },
+        {
+          "key": "jgram:grammar-lookup-workflow",
+          "code": "grammar-lookup-workflow",
+          "data": {
+            "label": "Grammar lookup workflow",
+            "note": "Reference-only alignment for using grammar-point indexes as a discovery and review aid."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "bjt",
+      "country": "JP",
+      "name": "BJT Business Japanese Proficiency Test",
+      "version": "current",
+      "sourceUrl": "https://www.kanken.or.jp/bjt/english/about/levelguide.html",
+      "textIncluded": false,
+      "license": "Official level metadata and citation only; no sample questions or test content.",
+      "topicCount": 15,
+      "topics": [
+        {
+          "key": "bjt:J5",
+          "code": "J5",
+          "data": {
+            "label": "BJT J5",
+            "scoreRange": "0-199",
+            "note": "Official level guideline: virtually no ability to communicate in Japanese in business situations."
+          }
+        },
+        {
+          "key": "bjt:J4",
+          "code": "J4",
+          "data": {
+            "label": "BJT J4",
+            "scoreRange": "200-319",
+            "note": "Official level guideline: minimal communication in limited business situations."
+          }
+        },
+        {
+          "key": "bjt:J3",
+          "code": "J3",
+          "data": {
+            "label": "BJT J3",
+            "scoreRange": "320-419",
+            "note": "Official level guideline: some communication in limited business situations."
+          }
+        },
+        {
+          "key": "bjt:J2",
+          "code": "J2",
+          "data": {
+            "label": "BJT J2",
+            "scoreRange": "420-529",
+            "note": "Official level guideline: appropriate communication in a limited range of business situations."
+          }
+        },
+        {
+          "key": "bjt:J1",
+          "code": "J1",
+          "data": {
+            "label": "BJT J1",
+            "scoreRange": "530-599",
+            "note": "Official level guideline: appropriate communication in a wide range of business situations."
+          }
+        },
+        {
+          "key": "bjt:J1+",
+          "code": "J1+",
+          "data": {
+            "label": "BJT J1+",
+            "scoreRange": "600-800",
+            "note": "Official level guideline: sufficient communication in any business situation."
+          }
+        },
+        {
+          "key": "bjt:workplace-communication",
+          "code": "workplace-communication",
+          "data": {
+            "label": "Workplace Japanese communication",
+            "note": "Citation-level umbrella alignment for business listening, reading, meetings, documents, and customs."
+          }
+        },
+        {
+          "key": "bjt:performance-reflection",
+          "code": "performance-reflection",
+          "data": {
+            "label": "Workplace performance reflection",
+            "note": "Citation-level alignment for reflecting on communicative adequacy in workplace tasks."
+          }
+        },
+        {
+          "key": "bjt:business-documents",
+          "code": "business-documents",
+          "data": {
+            "label": "Business documents and written workplace information",
+            "note": "Citation-level alignment for notices, emails, minutes, forms, proposals, reports, and executive summaries."
+          }
+        },
+        {
+          "key": "bjt:meeting-communication",
+          "code": "meeting-communication",
+          "data": {
+            "label": "Meeting communication and action tracking",
+            "note": "Citation-level alignment for meetings, action items, decisions, disagreement, consensus, and Q&A."
+          }
+        },
+        {
+          "key": "bjt:phone-client-communication",
+          "code": "phone-client-communication",
+          "data": {
+            "label": "Phone, client, and customer communication",
+            "note": "Citation-level alignment for telephone exchanges, appointments, complaint intake, and client-facing adjustment."
+          }
+        },
+        {
+          "key": "bjt:listening-reading-integration",
+          "code": "listening-reading-integration",
+          "data": {
+            "label": "Listening-reading integration in workplace tasks",
+            "note": "Citation-level alignment for combining spoken instructions with schedules, emails, tables, and documents."
+          }
+        },
+        {
+          "key": "bjt:problem-response",
+          "code": "problem-response",
+          "data": {
+            "label": "Problem response, apology, and escalation",
+            "note": "Citation-level alignment for delay reports, apology, corrective action, risk explanation, and escalation."
+          }
+        },
+        {
+          "key": "bjt:negotiation-proposal",
+          "code": "negotiation-proposal",
+          "data": {
+            "label": "Negotiation, proposal, and recommendation",
+            "note": "Citation-level alignment for constraints, options, tradeoffs, negotiation, proposals, and recommendations."
+          }
+        },
+        {
+          "key": "bjt:executive-communication",
+          "code": "executive-communication",
+          "data": {
+            "label": "Executive and senior stakeholder communication",
+            "note": "Citation-level alignment for high-stakes summaries, strategic recommendations, stakeholder management, and integrated business cases."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "yookoso-book2",
+      "country": "US",
+      "name": "Yookoso! Continuing with Contemporary Japanese",
+      "version": "2005 edition",
+      "sourceUrl": "https://archive.org/details/yookosocontinuin0000tohs",
+      "textIncluded": false,
+      "license": "Copyrighted textbook; seed uses metadata-only chapter and progression tags.",
+      "topicCount": 8,
+      "topics": [
+        {
+          "key": "yookoso-book2:intermediate-style-and-register",
+          "code": "intermediate-style-and-register",
+          "data": {
+            "label": "Intermediate style, register, and social context coverage",
+            "note": "Metadata-only alignment for speech level, role, politeness, and discourse context."
+          }
+        },
+        {
+          "key": "yookoso-book2:conditionals-and-clause-combining",
+          "code": "conditionals-and-clause-combining",
+          "data": {
+            "label": "Conditionals, embedded clauses, and clause-combining coverage",
+            "note": "Metadata-only alignment for intermediate sentence expansion and clause relation work."
+          }
+        },
+        {
+          "key": "yookoso-book2:giving-receiving-viewpoint",
+          "code": "giving-receiving-viewpoint",
+          "data": {
+            "label": "Giving-receiving, benefactive viewpoint, and interpersonal alignment coverage",
+            "note": "Metadata-only alignment for viewpoint-sensitive interaction patterns."
+          }
+        },
+        {
+          "key": "yookoso-book2:passive-causative-transitivity",
+          "code": "passive-causative-transitivity",
+          "data": {
+            "label": "Passive, causative, transitivity, and affected-event coverage",
+            "note": "Metadata-only alignment for event perspective and agency control."
+          }
+        },
+        {
+          "key": "yookoso-book2:extended-reading-listening",
+          "code": "extended-reading-listening",
+          "data": {
+            "label": "Extended reading and listening coverage",
+            "note": "Metadata-only alignment for longer narrative, explanatory, and everyday authentic input."
+          }
+        },
+        {
+          "key": "yookoso-book2:opinion-discussion",
+          "code": "opinion-discussion",
+          "data": {
+            "label": "Opinion, discussion, and interpersonal negotiation coverage",
+            "note": "Metadata-only alignment for intermediate opinion exchange, consensus, refusal, and follow-up questions."
+          }
+        },
+        {
+          "key": "yookoso-book2:intermediate-writing",
+          "code": "intermediate-writing",
+          "data": {
+            "label": "Intermediate paragraph, email, summary, and report writing coverage",
+            "note": "Metadata-only alignment for connected writing beyond short beginner messages."
+          }
+        },
+        {
+          "key": "yookoso-book2:autonomous-strategy",
+          "code": "autonomous-strategy",
+          "data": {
+            "label": "Intermediate autonomous strategy and reference-use coverage",
+            "note": "Metadata-only alignment for grammar lookup, example mining, feedback use, and portfolio reflection."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "jsl-processability-research",
+      "country": "AU",
+      "name": "Japanese second-language acquisition and Processability Theory research",
+      "version": "Iwasaki and colleagues metadata references",
+      "sourceUrl": "https://www.ecu.edu.au/schools/arts-and-humanities/staff/profiles/honorary-appointments/dr-junko-iwasaki",
+      "textIncluded": false,
+      "license": "Citation-level metadata only; no article, thesis, or book-chapter text included.",
+      "topicCount": 4,
+      "topics": [
+        {
+          "key": "jsl-processability-research:emergence-vs-accuracy",
+          "code": "emergence-vs-accuracy",
+          "data": {
+            "label": "Emergence and accuracy in Japanese SLA",
+            "note": "Citation-level alignment to Iwasaki and colleagues on separating first emergence from stable target-like use."
+          }
+        },
+        {
+          "key": "jsl-processability-research:verbal-morphology-processing",
+          "code": "verbal-morphology-processing",
+          "data": {
+            "label": "Japanese verbal morphology processability",
+            "note": "Citation-level alignment to research on Japanese verbal morphology and development over time."
+          }
+        },
+        {
+          "key": "jsl-processability-research:passive-causative-processing",
+          "code": "passive-causative-processing",
+          "data": {
+            "label": "Passive and causative processability",
+            "note": "Citation-level alignment to Processability Theory work on passive and causative development in Japanese L2."
+          }
+        },
+        {
+          "key": "jsl-processability-research:content-question-development",
+          "code": "content-question-development",
+          "data": {
+            "label": "Content-question development in Japanese L2",
+            "note": "Citation-level alignment to work on acquiring Japanese content questions in sequential bilingual and JSL development."
+          }
+        }
+      ]
+    }
+  ]
+}

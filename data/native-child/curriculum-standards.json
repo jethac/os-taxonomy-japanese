@@ -1,0 +1,421 @@
+{
+  "profile": "ja-L1-child",
+  "note": "Seed alignment records are citation-level summaries and codes. Full official standard text is not included in this seed.",
+  "codesOnlySources": [
+    "mext-es-ja-2017",
+    "jp-cos-lod",
+    "mext-kanji-grade",
+    "bunka-joyo-kanji-2010"
+  ],
+  "curriculumCount": 6,
+  "curricula": [
+    {
+      "slug": "mext-es-ja-2017",
+      "country": "JP",
+      "name": "Elementary School Course of Study: Japanese Language",
+      "version": "2017 notification",
+      "sourceUrl": "https://www.mext.go.jp/a_menu/shotou/new-cs/1387014.htm",
+      "textIncluded": false,
+      "license": "MEXT website terms / Government Standard Terms of Use 2.0; seed uses citation-level metadata only.",
+      "topicCount": 12,
+      "topics": [
+        {
+          "key": "mext-es-ja-2017:G1-2.knowledge",
+          "code": "G1-2.knowledge",
+          "data": {
+            "label": "Knowledge and skills, grades 1-2",
+            "note": "Citation-level alignment for early writing-system, vocabulary, and language knowledge."
+          }
+        },
+        {
+          "key": "mext-es-ja-2017:G1-2.speaking-listening",
+          "code": "G1-2.speaking-listening",
+          "data": {
+            "label": "Speaking and listening, grades 1-2",
+            "note": "Citation-level alignment for early oral interaction and listening."
+          }
+        },
+        {
+          "key": "mext-es-ja-2017:G1-2.writing",
+          "code": "G1-2.writing",
+          "data": {
+            "label": "Writing, grades 1-2",
+            "note": "Citation-level alignment for early sentence and experience writing."
+          }
+        },
+        {
+          "key": "mext-es-ja-2017:G1-2.reading",
+          "code": "G1-2.reading",
+          "data": {
+            "label": "Reading, grades 1-2",
+            "note": "Citation-level alignment for early story and poem reading."
+          }
+        },
+        {
+          "key": "mext-es-ja-2017:G3-4.knowledge",
+          "code": "G3-4.knowledge",
+          "data": {
+            "label": "Knowledge and skills, grades 3-4",
+            "note": "Citation-level alignment for vocabulary, kanji, grammar awareness, and dictionary use."
+          }
+        },
+        {
+          "key": "mext-es-ja-2017:G3-4.speaking-listening",
+          "code": "G3-4.speaking-listening",
+          "data": {
+            "label": "Speaking and listening, grades 3-4",
+            "note": "Citation-level alignment for questions, discussion, and short presentations."
+          }
+        },
+        {
+          "key": "mext-es-ja-2017:G3-4.writing",
+          "code": "G3-4.writing",
+          "data": {
+            "label": "Writing, grades 3-4",
+            "note": "Citation-level alignment for paragraph, report, and opinion writing."
+          }
+        },
+        {
+          "key": "mext-es-ja-2017:G3-4.reading",
+          "code": "G3-4.reading",
+          "data": {
+            "label": "Reading, grades 3-4",
+            "note": "Citation-level alignment for informational reading, literary reading, and text features."
+          }
+        },
+        {
+          "key": "mext-es-ja-2017:G5-6.knowledge",
+          "code": "G5-6.knowledge",
+          "data": {
+            "label": "Knowledge and skills, grades 5-6",
+            "note": "Citation-level alignment for advanced vocabulary, language variation, and language awareness."
+          }
+        },
+        {
+          "key": "mext-es-ja-2017:G5-6.speaking-listening",
+          "code": "G5-6.speaking-listening",
+          "data": {
+            "label": "Speaking and listening, grades 5-6",
+            "note": "Citation-level alignment for structured discussion and presentation."
+          }
+        },
+        {
+          "key": "mext-es-ja-2017:G5-6.writing",
+          "code": "G5-6.writing",
+          "data": {
+            "label": "Writing, grades 5-6",
+            "note": "Citation-level alignment for purpose, audience, organization, and revision."
+          }
+        },
+        {
+          "key": "mext-es-ja-2017:G5-6.reading",
+          "code": "G5-6.reading",
+          "data": {
+            "label": "Reading, grades 5-6",
+            "note": "Citation-level alignment for comparing texts and monitoring interpretation."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "mext-ls-ja-2017",
+      "country": "JP",
+      "name": "Lower Secondary School Course of Study: Japanese Language",
+      "version": "2017 notification",
+      "sourceUrl": "https://www.mext.go.jp/a_menu/shotou/new-cs/1387016.htm",
+      "textIncluded": false,
+      "license": "MEXT website terms / Government Standard Terms of Use 2.0; seed uses citation-level metadata only.",
+      "topicCount": 11,
+      "topics": [
+        {
+          "key": "mext-ls-ja-2017:G7.knowledge",
+          "code": "G7.knowledge",
+          "data": {
+            "label": "Lower secondary Japanese knowledge and skills, grade 7",
+            "note": "Citation-level alignment for first-year lower-secondary language knowledge."
+          }
+        },
+        {
+          "key": "mext-ls-ja-2017:G7.reading",
+          "code": "G7.reading",
+          "data": {
+            "label": "Lower secondary Japanese reading, grade 7",
+            "note": "Citation-level alignment for first-year lower-secondary reading."
+          }
+        },
+        {
+          "key": "mext-ls-ja-2017:G7.writing",
+          "code": "G7.writing",
+          "data": {
+            "label": "Lower secondary Japanese writing, grade 7",
+            "note": "Citation-level alignment for first-year lower-secondary writing."
+          }
+        },
+        {
+          "key": "mext-ls-ja-2017:G8.knowledge",
+          "code": "G8.knowledge",
+          "data": {
+            "label": "Lower secondary Japanese knowledge and skills, grade 8",
+            "note": "Citation-level alignment for second-year lower-secondary language knowledge."
+          }
+        },
+        {
+          "key": "mext-ls-ja-2017:G8.reading",
+          "code": "G8.reading",
+          "data": {
+            "label": "Lower secondary Japanese reading, grade 8",
+            "note": "Citation-level alignment for second-year lower-secondary reading."
+          }
+        },
+        {
+          "key": "mext-ls-ja-2017:G8.speaking-listening",
+          "code": "G8.speaking-listening",
+          "data": {
+            "label": "Lower secondary Japanese speaking and listening, grade 8",
+            "note": "Citation-level alignment for second-year lower-secondary discussion and presentation."
+          }
+        },
+        {
+          "key": "mext-ls-ja-2017:G9.knowledge",
+          "code": "G9.knowledge",
+          "data": {
+            "label": "Lower secondary Japanese knowledge and skills, grade 9",
+            "note": "Citation-level alignment for third-year lower-secondary language knowledge."
+          }
+        },
+        {
+          "key": "mext-ls-ja-2017:G9.reading",
+          "code": "G9.reading",
+          "data": {
+            "label": "Lower secondary Japanese reading, grade 9",
+            "note": "Citation-level alignment for third-year lower-secondary reading and classical-language foundations."
+          }
+        },
+        {
+          "key": "mext-ls-ja-2017:G9.writing",
+          "code": "G9.writing",
+          "data": {
+            "label": "Lower secondary Japanese writing, grade 9",
+            "note": "Citation-level alignment for third-year lower-secondary argument and composition."
+          }
+        },
+        {
+          "key": "mext-ls-ja-2017:G7.speaking-listening",
+          "code": "G7.speaking-listening",
+          "data": {
+            "label": "Lower secondary Japanese speaking and listening, grade 7",
+            "note": "Citation-level alignment for first-year lower-secondary listening, discussion, and oral expression."
+          }
+        },
+        {
+          "key": "mext-ls-ja-2017:G9.speaking-listening",
+          "code": "G9.speaking-listening",
+          "data": {
+            "label": "Lower secondary Japanese speaking and listening, grade 9",
+            "note": "Citation-level alignment for third-year lower-secondary listening, discussion, argument, and presentation."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "mext-hs-ja-2018",
+      "country": "JP",
+      "name": "High School Course of Study: Japanese Language",
+      "version": "2018 notification",
+      "sourceUrl": "https://www.mext.go.jp/a_menu/shotou/new-cs/1407074.htm",
+      "textIncluded": false,
+      "license": "MEXT website terms / Government Standard Terms of Use 2.0; seed uses citation-level metadata only.",
+      "topicCount": 9,
+      "topics": [
+        {
+          "key": "mext-hs-ja-2018:G10.contemporary-japanese",
+          "code": "G10.contemporary-japanese",
+          "data": {
+            "label": "High school contemporary Japanese, grade 10",
+            "note": "Citation-level alignment for high-school contemporary Japanese foundations."
+          }
+        },
+        {
+          "key": "mext-hs-ja-2018:G10.language-culture",
+          "code": "G10.language-culture",
+          "data": {
+            "label": "High school language culture, grade 10",
+            "note": "Citation-level alignment for language culture foundations."
+          }
+        },
+        {
+          "key": "mext-hs-ja-2018:G10.inquiry",
+          "code": "G10.inquiry",
+          "data": {
+            "label": "High school inquiry and information use, grade 10",
+            "note": "Citation-level alignment for inquiry reading/writing and information use."
+          }
+        },
+        {
+          "key": "mext-hs-ja-2018:G11.logical-japanese",
+          "code": "G11.logical-japanese",
+          "data": {
+            "label": "High school logical Japanese, grade 11",
+            "note": "Citation-level alignment for argument, logic, and academic prose."
+          }
+        },
+        {
+          "key": "mext-hs-ja-2018:G11.literary-japanese",
+          "code": "G11.literary-japanese",
+          "data": {
+            "label": "High school literary Japanese, grade 11",
+            "note": "Citation-level alignment for literary reading and interpretation."
+          }
+        },
+        {
+          "key": "mext-hs-ja-2018:G11.classical-foundations",
+          "code": "G11.classical-foundations",
+          "data": {
+            "label": "High school classical language foundations, grade 11",
+            "note": "Citation-level alignment for classical Japanese and kanbun foundations."
+          }
+        },
+        {
+          "key": "mext-hs-ja-2018:G12.logical-japanese",
+          "code": "G12.logical-japanese",
+          "data": {
+            "label": "High school advanced logical Japanese, grade 12",
+            "note": "Citation-level alignment for advanced argument and synthesis."
+          }
+        },
+        {
+          "key": "mext-hs-ja-2018:G12.literary-japanese",
+          "code": "G12.literary-japanese",
+          "data": {
+            "label": "High school advanced literary Japanese, grade 12",
+            "note": "Citation-level alignment for advanced literary and comparative interpretation."
+          }
+        },
+        {
+          "key": "mext-hs-ja-2018:G12.classical-exploration",
+          "code": "G12.classical-exploration",
+          "data": {
+            "label": "High school classical exploration, grade 12",
+            "note": "Citation-level alignment for classical exploration and cultural interpretation."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "jp-cos-lod",
+      "country": "JP",
+      "name": "Japanese Course of Study Linked Open Data",
+      "version": "current LOD code table",
+      "sourceUrl": "https://jp-cos.github.io/",
+      "textIncluded": false,
+      "license": "CC BY 4.0 according to Course of Study LOD about page; seed uses codes/labels only.",
+      "topicCount": 2,
+      "topics": [
+        {
+          "key": "jp-cos-lod:8210000100000000",
+          "code": "8210000100000000",
+          "data": {
+            "label": "Grade-wise kanji allocation table",
+            "note": "Stable LOD code for the elementary Japanese kanji allocation table."
+          }
+        },
+        {
+          "key": "jp-cos-lod:elementary-japanese-2017",
+          "code": "elementary-japanese-2017",
+          "data": {
+            "label": "Elementary school Japanese, 2017 notification",
+            "note": "General LOD alignment placeholder for elementary Japanese."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "mext-kanji-grade",
+      "country": "JP",
+      "name": "Grade-wise Kanji Allocation Table",
+      "version": "2017 revision",
+      "sourceUrl": "https://www.mext.go.jp/a_menu/shotou/new-cs/youryou/syo/koku/__icsFiles/afieldfile/2016/10/27/1234920.pdf",
+      "textIncluded": false,
+      "license": "MEXT source; seed uses character inventory and citation metadata.",
+      "topicCount": 6,
+      "topics": [
+        {
+          "key": "mext-kanji-grade:grade-1",
+          "code": "grade-1",
+          "data": {
+            "label": "Grade 1 kyoiku kanji allocation",
+            "note": "Inventory alignment for the first grade kanji set."
+          }
+        },
+        {
+          "key": "mext-kanji-grade:grade-2",
+          "code": "grade-2",
+          "data": {
+            "label": "Grade 2 kyoiku kanji allocation",
+            "note": "Inventory alignment for the grade 2 kanji set."
+          }
+        },
+        {
+          "key": "mext-kanji-grade:grade-3",
+          "code": "grade-3",
+          "data": {
+            "label": "Grade 3 kyoiku kanji allocation",
+            "note": "Inventory alignment for the grade 3 kanji set."
+          }
+        },
+        {
+          "key": "mext-kanji-grade:grade-4",
+          "code": "grade-4",
+          "data": {
+            "label": "Grade 4 kyoiku kanji allocation",
+            "note": "Inventory alignment for the grade 4 kanji set."
+          }
+        },
+        {
+          "key": "mext-kanji-grade:grade-5",
+          "code": "grade-5",
+          "data": {
+            "label": "Grade 5 kyoiku kanji allocation",
+            "note": "Inventory alignment for the grade 5 kanji set."
+          }
+        },
+        {
+          "key": "mext-kanji-grade:grade-6",
+          "code": "grade-6",
+          "data": {
+            "label": "Grade 6 kyoiku kanji allocation",
+            "note": "Inventory alignment for the grade 6 kanji set."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "bunka-joyo-kanji-2010",
+      "country": "JP",
+      "name": "Joyo Kanji Table",
+      "version": "Cabinet Notice No. 2, 2010",
+      "sourceUrl": "https://www.bunka.go.jp/kokugo_nihongo/sisaku/joho/joho/kijun/naikaku/kanji/index.html",
+      "textIncluded": false,
+      "license": "Agency for Cultural Affairs source; seed uses citation metadata only.",
+      "topicCount": 2,
+      "topics": [
+        {
+          "key": "bunka-joyo-kanji-2010:joyo-kanji",
+          "code": "joyo-kanji",
+          "data": {
+            "label": "Joyo kanji table",
+            "note": "Reference alignment for general-use kanji."
+          }
+        },
+        {
+          "key": "bunka-joyo-kanji-2010:okurigana",
+          "code": "okurigana",
+          "data": {
+            "label": "Okurigana and standard orthography reference",
+            "note": "Citation-level alignment for okurigana-related literacy topics."
+          }
+        }
+      ]
+    }
+  ]
+}

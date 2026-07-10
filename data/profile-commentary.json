@@ -1,0 +1,95 @@
+{
+  "version": "seed-0.0.1",
+  "profiles": {
+    "ja-L1-child": {
+      "title": "Native Japanese-speaking child",
+      "titleJa": "日本語を母語とする児童",
+      "summary": "The L1 child graph assumes spoken Japanese is already developing naturally. The school task is to turn that oral language into literate, reflective, and academically useful Japanese.",
+      "summaryJa": "L1児童向けグラフは、年齢相応の話しことばがすでに自然に育っていることを前提に、学校での読み書き、表現、振り返り、学習に使える日本語へと学びを広げます。",
+      "primaryAxis": "Age and elementary grade",
+      "primaryAxisJa": "年齢と学年",
+      "approach": [
+        "Start from print awareness, kana, handwriting, story comprehension, and classroom talk.",
+        "Treat kanji as a literacy system linked to school grades and vocabulary growth.",
+        "Introduce grammar mainly as language awareness for reading, writing, revision, and discussion.",
+        "Use MEXT, grade-level kanji, and native-language curriculum expectations as primary alignment."
+      ],
+      "approachJa": [
+        "文字への気づき、かな、書写、物語理解、教室での対話から始めます。",
+        "漢字を学年配当と語彙の広がりに結びついた読み書きの体系として扱います。",
+        "文法は、読解、作文、推敲、話し合いを支える言語への気づきとして導入します。",
+        "学習指導要領、学年別漢字配当、母語教育の到達像を主な対応軸にします。"
+      ]
+    },
+    "ja-L2-adult": {
+      "title": "Adult L2 / foreign-language learner",
+      "titleJa": "成人L2・外国語学習者",
+      "summary": "The L2 adult graph assumes the learner may have no Japanese input base. It foregrounds explicit forms, high-utility communication, pronunciation contrasts, proficiency levels, and eventually workplace Japanese through BJT.",
+      "summaryJa": "成人L2向けグラフは、日本語の音声・文字・語彙の知識がない出発点も想定し、明示的な形式、高頻度のコミュニケーション、発音の対立、習熟度、BJTにつながる職場日本語を重視します。",
+      "primaryAxis": "JF/CEFR-style proficiency",
+      "primaryAxisJa": "JF/CEFR型の習熟度",
+      "approach": [
+        "Start from kana, mora timing, self-introduction patterns, questions, and repair strategies.",
+        "Teach particles and conjugations explicitly because adult learners need form-function mappings.",
+        "Sequence grammar by communicative usefulness, linguistic dependency, and SLA evidence rather than school grade.",
+        "Use Yookoso, Tae Kim, JGram/Takoboto, JF, JLPT, BJT, and Japanese SLA research as secondary graph inputs."
+      ],
+      "approachJa": [
+        "かな、モーラのタイミング、自己紹介、質問、聞き返しの方略から始めます。",
+        "成人学習者が形と機能を対応づけられるよう、助詞と活用を明示的に扱います。",
+        "文法は学校の学年ではなく、コミュニケーション上の有用性、言語的な前提関係、第二言語習得の知見に沿って配置します。",
+        "JF、JLPT、BJT、教科書単元、文法索引を補助的な対応軸として使います。"
+      ]
+    }
+  },
+  "comparison": [
+    {
+      "dimension": "Starting point",
+      "dimensionJa": "出発点",
+      "l1": "Already has age-appropriate spoken Japanese and social routines.",
+      "l1Ja": "年齢相応の話しことばと社会的なやり取りをすでに身につけています。",
+      "l2": "May start with no Japanese sounds, scripts, vocabulary, or interaction routines.",
+      "l2Ja": "日本語の音、文字、語彙、やり取りの型がない状態から始める場合があります。"
+    },
+    {
+      "dimension": "Main early problem",
+      "dimensionJa": "初期の中心課題",
+      "l1": "Map known spoken language onto kana, print direction, handwriting, and school text conventions.",
+      "l1Ja": "知っている話しことばを、かな、文字方向、書写、学校文書の慣習へ結びつけます。",
+      "l2": "Build sound perception, kana, basic sentence patterns, particles, and survival interaction together.",
+      "l2Ja": "音の知覚、かな、基本文型、助詞、生活に必要なやり取りを並行して築きます。"
+    },
+    {
+      "dimension": "Kanji role",
+      "dimensionJa": "漢字の役割",
+      "l1": "Central school literacy path tied to grade allocation and vocabulary growth.",
+      "l1Ja": "学年配当と語彙の広がりに結びつく、学校リテラシーの中心的な経路です。",
+      "l2": "Important but usually staged by communicative need, textbook order, frequency, and reading goals.",
+      "l2Ja": "重要ですが、通常はコミュニケーション上の必要、頻度、読解目標に応じて段階化します。"
+    },
+    {
+      "dimension": "Grammar role",
+      "dimensionJa": "文法の役割",
+      "l1": "Mostly explicit language awareness that supports reading, writing, revision, and discussion.",
+      "l1Ja": "読解、作文、推敲、話し合いを支える明示的な言語への気づきです。",
+      "l2": "A core production and comprehension system that must often be taught explicitly from the start.",
+      "l2Ja": "産出と理解の中核となる体系で、多くの場合は初期から明示的に扱う必要があります。"
+    },
+    {
+      "dimension": "Primary alignment",
+      "dimensionJa": "主な対応軸",
+      "l1": "MEXT Course of Study, grade bands, kyoiku kanji, school writing and reading expectations.",
+      "l1Ja": "学習指導要領、学年区分、教育漢字、学校での読み書きの到達像です。",
+      "l2": "JF/CEFR, JLPT, BJT, textbook units, grammar indexes, communicative can-do tasks, and SLA evidence.",
+      "l2Ja": "JF/CEFR、JLPT、BJT、教科書単元、文法索引、コミュニケーション課題です。"
+    },
+    {
+      "dimension": "Graph axis",
+      "dimensionJa": "グラフの軸",
+      "l1": "Age and grade.",
+      "l1Ja": "年齢と学年です。",
+      "l2": "Proficiency level.",
+      "l2Ja": "習熟度レベルです。"
+    }
+  ]
+}

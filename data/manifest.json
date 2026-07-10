@@ -1,0 +1,86 @@
+{
+  "dataset": "Japanese Language Taxonomy",
+  "taxonomyVersion": "seed-0.0.1",
+  "generatedAt": "2026-07-09T05:18:20.370Z",
+  "status": "seed",
+  "profiles": [
+    "ja-L1-child",
+    "ja-L2-adult"
+  ],
+  "counts": {
+    "topics": 2219,
+    "topicsByProfile": {
+      "ja-L1-child": 1218,
+      "ja-L2-adult": 1001
+    },
+    "dependencies": 4392,
+    "dependenciesByProfile": {
+      "ja-L1-child": 2408,
+      "ja-L2-adult": 1984
+    },
+    "curricula": 14,
+    "curriculumStandards": 94,
+    "clusters": 171,
+    "characterSets": 11,
+    "lexemeSets": 143,
+    "sources": 16,
+    "profileCommentaries": 2
+  },
+  "files": {
+    "data/native-child/topics.json": {
+      "bytes": 2132825,
+      "sha256": "d8615612a0da4be5cfc60ed9da8ac4697db4702ea1e7fc570a885882ec9a4044"
+    },
+    "data/native-child/dependencies.json": {
+      "bytes": 618659,
+      "sha256": "daf8c507d606e5e69abf64d004ded5d443d1557685672ea7c563b30bd82f1bcd"
+    },
+    "data/native-child/curriculum-standards.json": {
+      "bytes": 15427,
+      "sha256": "a3d77639febe128c9370862d5b513c830aa843945a978184a4816e79aa748c94"
+    },
+    "data/native-child/clusters.json": {
+      "bytes": 39210,
+      "sha256": "e35d9f41671f41649c9cf9dc8e0c5b359ae188767c4c61d91ba272f64254406d"
+    },
+    "data/l2-adult/topics.json": {
+      "bytes": 3302023,
+      "sha256": "0ff724616a2b779bacc959ec4c0e4c8cd3c23d52d7c7522b86a272306cee8d75"
+    },
+    "data/l2-adult/dependencies.json": {
+      "bytes": 519298,
+      "sha256": "bc1ec8c79ee501f2834ca9f308f58aebbe3ffcce8b28e6a846997b1534d15e35"
+    },
+    "data/l2-adult/curriculum-standards.json": {
+      "bytes": 19217,
+      "sha256": "0358814f00c8398b2e612516939926347754cdc72c055f28c8d551f5258328b3"
+    },
+    "data/l2-adult/clusters.json": {
+      "bytes": 42430,
+      "sha256": "18444315524d9d6e1df6ef1c184a56356bcc6313b06ba050643470f3d4132ac3"
+    },
+    "data/shared/characters.json": {
+      "bytes": 7156,
+      "sha256": "b4a235d8926b3b53e58346cf18089dcaac9a736a8f4b7f44509cb11cc40bf788"
+    },
+    "data/shared/lexemes.json": {
+      "bytes": 147973,
+      "sha256": "18626da70d22284b6dae2c063fb61ab82909501a8da16833d870321e86c79b3e"
+    },
+    "data/shared/sources.json": {
+      "bytes": 10854,
+      "sha256": "c9c9e09c3adf3e4d971eaa5cc57998f6b22e54a0149756f91e45ad7c821b9915"
+    },
+    "data/profile-commentary.json": {
+      "bytes": 3083,
+      "sha256": "578fc13e4dd82d821759bf3c4aa9a3439bbd36b78dc89cc6706366cf9d18ea56"
+    }
+  },
+  "excluded": [
+    "full textbook prose",
+    "per-learner data",
+    "complete kanji metadata import",
+    "complete lexeme import",
+    "embeddings"
+  ]
+}

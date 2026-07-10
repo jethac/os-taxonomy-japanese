@@ -1,0 +1,5300 @@
+{
+  "version": "seed-0.0.1",
+  "lexemeSetCount": 143,
+  "lexemeSets": [
+    {
+      "id": "lex_story_discussion_basic",
+      "name": "Basic story discussion words",
+      "japaneseName": "物語を話し合う言葉",
+      "items": [
+        {
+          "lemma": "だれ",
+          "reading": "だれ",
+          "gloss": "who"
+        },
+        {
+          "lemma": "どこ",
+          "reading": "どこ",
+          "gloss": "where"
+        },
+        {
+          "lemma": "いつ",
+          "reading": "いつ",
+          "gloss": "when"
+        },
+        {
+          "lemma": "気持ち",
+          "reading": "きもち",
+          "gloss": "feeling"
+        }
+      ],
+      "notes": "Small seed lexeme set for early literature comprehension topics.",
+      "sourceTags": [
+        "mext-es-ja-2017"
+      ]
+    },
+    {
+      "id": "lex_classroom_interaction_basic",
+      "name": "Basic classroom interaction words",
+      "japaneseName": "教室で話し合う言葉",
+      "items": [
+        {
+          "lemma": "質問",
+          "reading": "しつもん",
+          "gloss": "question"
+        },
+        {
+          "lemma": "理由",
+          "reading": "りゆう",
+          "gloss": "reason"
+        },
+        {
+          "lemma": "考え",
+          "reading": "かんがえ",
+          "gloss": "idea"
+        },
+        {
+          "lemma": "発表",
+          "reading": "はっぴょう",
+          "gloss": "presentation"
+        }
+      ],
+      "notes": "Seed lexeme set for speaking, listening, and discussion topics.",
+      "sourceTags": [
+        "mext-es-ja-2017"
+      ]
+    },
+    {
+      "id": "lex_l2_self_introduction_basic",
+      "name": "Adult L2 self-introduction words",
+      "japaneseName": "自己紹介の基本語彙",
+      "items": [
+        {
+          "lemma": "名前",
+          "reading": "なまえ",
+          "gloss": "name"
+        },
+        {
+          "lemma": "学生",
+          "reading": "がくせい",
+          "gloss": "student"
+        },
+        {
+          "lemma": "先生",
+          "reading": "せんせい",
+          "gloss": "teacher"
+        },
+        {
+          "lemma": "日本語",
+          "reading": "にほんご",
+          "gloss": "Japanese language"
+        }
+      ],
+      "notes": "Original seed set for early adult L2 topics; not copied from textbook examples.",
+      "sourceTags": [
+        "yookoso-book1",
+        "jf-standard",
+        "jlpt"
+      ]
+    },
+    {
+      "id": "lex_l2_workplace_basic",
+      "name": "Adult L2 workplace Japanese words",
+      "japaneseName": "職場日本語の基本語彙",
+      "items": [
+        {
+          "lemma": "会議",
+          "reading": "かいぎ",
+          "gloss": "meeting"
+        },
+        {
+          "lemma": "報告",
+          "reading": "ほうこく",
+          "gloss": "report"
+        },
+        {
+          "lemma": "相談",
+          "reading": "そうだん",
+          "gloss": "consultation"
+        },
+        {
+          "lemma": "確認",
+          "reading": "かくにん",
+          "gloss": "confirmation"
+        },
+        {
+          "lemma": "提案",
+          "reading": "ていあん",
+          "gloss": "proposal"
+        }
+      ],
+      "notes": "Original seed vocabulary for BJT-aligned workplace communication topics.",
+      "sourceTags": [
+        "bjt"
+      ]
+    },
+    {
+      "id": "lex_language_culture_basic",
+      "name": "Basic language culture words",
+      "japaneseName": "言語文化の基本語彙",
+      "items": [
+        {
+          "lemma": "ことわざ",
+          "reading": "ことわざ",
+          "gloss": "proverb"
+        },
+        {
+          "lemma": "慣用句",
+          "reading": "かんようく",
+          "gloss": "idiom"
+        },
+        {
+          "lemma": "方言",
+          "reading": "ほうげん",
+          "gloss": "dialect"
+        },
+        {
+          "lemma": "敬語",
+          "reading": "けいご",
+          "gloss": "honorific language"
+        }
+      ],
+      "notes": "Seed vocabulary for language culture and variation topics.",
+      "sourceTags": [
+        "mext-es-ja-2017"
+      ]
+    },
+    {
+      "id": "lex_information_use_basic",
+      "name": "Basic information use words",
+      "japaneseName": "情報活用の基本語彙",
+      "items": [
+        {
+          "lemma": "見出し",
+          "reading": "みだし",
+          "gloss": "heading"
+        },
+        {
+          "lemma": "資料",
+          "reading": "しりょう",
+          "gloss": "source material"
+        },
+        {
+          "lemma": "要約",
+          "reading": "ようやく",
+          "gloss": "summary"
+        },
+        {
+          "lemma": "根拠",
+          "reading": "こんきょ",
+          "gloss": "evidence or basis"
+        }
+      ],
+      "notes": "Seed vocabulary for research, note-taking, and informational reading topics.",
+      "sourceTags": [
+        "mext-es-ja-2017"
+      ]
+    },
+    {
+      "id": "lex_composition_revision_basic",
+      "name": "Basic composition and revision words",
+      "japaneseName": "作文と推敲の基本語彙",
+      "items": [
+        {
+          "lemma": "題名",
+          "reading": "だいめい",
+          "gloss": "title"
+        },
+        {
+          "lemma": "段落",
+          "reading": "だんらく",
+          "gloss": "paragraph"
+        },
+        {
+          "lemma": "推敲",
+          "reading": "すいこう",
+          "gloss": "revision"
+        },
+        {
+          "lemma": "読者",
+          "reading": "どくしゃ",
+          "gloss": "reader"
+        }
+      ],
+      "notes": "Seed vocabulary for writing composition and revision topics.",
+      "sourceTags": [
+        "mext-es-ja-2017"
+      ]
+    },
+    {
+      "id": "lex_l2_advanced_discourse",
+      "name": "Adult L2 advanced discourse words",
+      "japaneseName": "上級談話の基本語彙",
+      "items": [
+        {
+          "lemma": "筆者",
+          "reading": "ひっしゃ",
+          "gloss": "author"
+        },
+        {
+          "lemma": "主張",
+          "reading": "しゅちょう",
+          "gloss": "claim"
+        },
+        {
+          "lemma": "根拠",
+          "reading": "こんきょ",
+          "gloss": "basis or evidence"
+        },
+        {
+          "lemma": "含意",
+          "reading": "がんい",
+          "gloss": "implication"
+        },
+        {
+          "lemma": "抽象",
+          "reading": "ちゅうしょう",
+          "gloss": "abstraction"
+        }
+      ],
+      "notes": "Original seed vocabulary for JLPT N2-N1 reading and discourse topics.",
+      "sourceTags": [
+        "jlpt"
+      ]
+    },
+    {
+      "id": "lex_l2_learning_meta_language",
+      "name": "Adult L2 learning and grammar metalanguage",
+      "japaneseName": "学習方略と文法用語",
+      "items": [
+        {
+          "lemma": "文型",
+          "reading": "ぶんけい",
+          "gloss": "sentence pattern"
+        },
+        {
+          "lemma": "活用",
+          "reading": "かつよう",
+          "gloss": "conjugation"
+        },
+        {
+          "lemma": "助詞",
+          "reading": "じょし",
+          "gloss": "particle"
+        },
+        {
+          "lemma": "敬語",
+          "reading": "けいご",
+          "gloss": "honorific language"
+        },
+        {
+          "lemma": "振り返り",
+          "reading": "ふりかえり",
+          "gloss": "reflection"
+        }
+      ],
+      "notes": "Original seed vocabulary for adult L2 learning-strategy and meta-language topics.",
+      "sourceTags": [
+        "jf-standard",
+        "tae-kim",
+        "jgram",
+        "bjt"
+      ]
+    },
+    {
+      "id": "lex_l2_daily_life_n5",
+      "name": "Adult L2 daily-life N5 words",
+      "japaneseName": "N5日常生活語彙",
+      "items": [
+        {
+          "lemma": "今日",
+          "reading": "きょう",
+          "gloss": "today"
+        },
+        {
+          "lemma": "明日",
+          "reading": "あした",
+          "gloss": "tomorrow"
+        },
+        {
+          "lemma": "友だち",
+          "reading": "ともだち",
+          "gloss": "friend"
+        },
+        {
+          "lemma": "学校",
+          "reading": "がっこう",
+          "gloss": "school"
+        },
+        {
+          "lemma": "仕事",
+          "reading": "しごと",
+          "gloss": "work"
+        }
+      ],
+      "notes": "Original seed vocabulary for N5 daily-life grammar and communication topics.",
+      "sourceTags": [
+        "jlpt",
+        "yookoso-book1"
+      ]
+    },
+    {
+      "id": "lex_l2_time_quantity_n5",
+      "name": "Adult L2 time and quantity words",
+      "japaneseName": "時・数量の基本語彙",
+      "items": [
+        {
+          "lemma": "時間",
+          "reading": "じかん",
+          "gloss": "time or hour"
+        },
+        {
+          "lemma": "半",
+          "reading": "はん",
+          "gloss": "half"
+        },
+        {
+          "lemma": "円",
+          "reading": "えん",
+          "gloss": "yen"
+        },
+        {
+          "lemma": "一つ",
+          "reading": "ひとつ",
+          "gloss": "one item"
+        },
+        {
+          "lemma": "二人",
+          "reading": "ふたり",
+          "gloss": "two people"
+        }
+      ],
+      "notes": "Original seed vocabulary for beginner time, price, counters, and quantities.",
+      "sourceTags": [
+        "jlpt",
+        "yookoso-book1"
+      ]
+    },
+    {
+      "id": "lex_l2_n4_function_words",
+      "name": "Adult L2 N4 function and relation words",
+      "japaneseName": "N4機能表現語彙",
+      "items": [
+        {
+          "lemma": "理由",
+          "reading": "りゆう",
+          "gloss": "reason"
+        },
+        {
+          "lemma": "予定",
+          "reading": "よてい",
+          "gloss": "plan or schedule"
+        },
+        {
+          "lemma": "経験",
+          "reading": "けいけん",
+          "gloss": "experience"
+        },
+        {
+          "lemma": "比べる",
+          "reading": "くらべる",
+          "gloss": "compare"
+        },
+        {
+          "lemma": "手伝う",
+          "reading": "てつだう",
+          "gloss": "help"
+        }
+      ],
+      "notes": "Original seed vocabulary for N4 grammar-function and everyday communication topics.",
+      "sourceTags": [
+        "jlpt",
+        "jgram",
+        "tae-kim"
+      ]
+    },
+    {
+      "id": "lex_l2_workplace_documents",
+      "name": "Adult L2 workplace document words",
+      "japaneseName": "職場文書の語彙",
+      "items": [
+        {
+          "lemma": "議事録",
+          "reading": "ぎじろく",
+          "gloss": "meeting minutes"
+        },
+        {
+          "lemma": "承認",
+          "reading": "しょうにん",
+          "gloss": "approval"
+        },
+        {
+          "lemma": "見積書",
+          "reading": "みつもりしょ",
+          "gloss": "quotation or estimate"
+        },
+        {
+          "lemma": "納期",
+          "reading": "のうき",
+          "gloss": "delivery deadline"
+        },
+        {
+          "lemma": "要件",
+          "reading": "ようけん",
+          "gloss": "requirement"
+        }
+      ],
+      "notes": "Original seed vocabulary for BJT document, approval, schedule, and task-tracking topics.",
+      "sourceTags": [
+        "bjt"
+      ]
+    },
+    {
+      "id": "lex_l2_client_problem_response",
+      "name": "Adult L2 client and problem-response words",
+      "japaneseName": "顧客対応・問題対応の語彙",
+      "items": [
+        {
+          "lemma": "苦情",
+          "reading": "くじょう",
+          "gloss": "complaint"
+        },
+        {
+          "lemma": "謝罪",
+          "reading": "しゃざい",
+          "gloss": "apology"
+        },
+        {
+          "lemma": "代案",
+          "reading": "だいあん",
+          "gloss": "alternative proposal"
+        },
+        {
+          "lemma": "懸念",
+          "reading": "けねん",
+          "gloss": "concern"
+        },
+        {
+          "lemma": "対応策",
+          "reading": "たいおうさく",
+          "gloss": "response measure"
+        }
+      ],
+      "notes": "Original seed vocabulary for BJT client communication, negotiation, risk, and problem-response topics.",
+      "sourceTags": [
+        "bjt"
+      ]
+    },
+    {
+      "id": "lex_reflection_strategy_basic",
+      "name": "Native Japanese reflection and strategy words",
+      "japaneseName": "振り返りと学習方略の語彙",
+      "items": [
+        {
+          "lemma": "振り返り",
+          "reading": "ふりかえり",
+          "gloss": "reflection"
+        },
+        {
+          "lemma": "目標",
+          "reading": "もくひょう",
+          "gloss": "goal"
+        },
+        {
+          "lemma": "課題",
+          "reading": "かだい",
+          "gloss": "issue or task"
+        },
+        {
+          "lemma": "改善",
+          "reading": "かいぜん",
+          "gloss": "improvement"
+        },
+        {
+          "lemma": "評価",
+          "reading": "ひょうか",
+          "gloss": "evaluation"
+        }
+      ],
+      "notes": "Original seed vocabulary for native-school reflection, self-assessment, and learning strategy topics.",
+      "sourceTags": [
+        "mext-es-ja-2017",
+        "mext-ls-ja-2017",
+        "mext-hs-ja-2018"
+      ]
+    },
+    {
+      "id": "lex_native_academic_vocabulary",
+      "name": "Native school academic vocabulary",
+      "japaneseName": "学校で使う抽象・学習語彙",
+      "items": [
+        {
+          "lemma": "原因",
+          "reading": "げんいん",
+          "gloss": "cause"
+        },
+        {
+          "lemma": "結果",
+          "reading": "けっか",
+          "gloss": "result"
+        },
+        {
+          "lemma": "比較",
+          "reading": "ひかく",
+          "gloss": "comparison"
+        },
+        {
+          "lemma": "構成",
+          "reading": "こうせい",
+          "gloss": "structure"
+        },
+        {
+          "lemma": "概念",
+          "reading": "がいねん",
+          "gloss": "concept"
+        }
+      ],
+      "notes": "Original seed vocabulary for native-school academic and abstract vocabulary topics.",
+      "sourceTags": [
+        "mext-es-ja-2017",
+        "mext-ls-ja-2017",
+        "mext-hs-ja-2018"
+      ]
+    },
+    {
+      "id": "lex_native_rhetoric_argument_vocabulary",
+      "name": "Native rhetoric and argument vocabulary",
+      "japaneseName": "論理・修辞・主張の語彙",
+      "items": [
+        {
+          "lemma": "主張",
+          "reading": "しゅちょう",
+          "gloss": "claim"
+        },
+        {
+          "lemma": "反論",
+          "reading": "はんろん",
+          "gloss": "counterargument"
+        },
+        {
+          "lemma": "根拠",
+          "reading": "こんきょ",
+          "gloss": "evidence or basis"
+        },
+        {
+          "lemma": "前提",
+          "reading": "ぜんてい",
+          "gloss": "premise"
+        },
+        {
+          "lemma": "修辞",
+          "reading": "しゅうじ",
+          "gloss": "rhetoric"
+        }
+      ],
+      "notes": "Original seed vocabulary for argument, logic, and rhetorical analysis topics.",
+      "sourceTags": [
+        "mext-ls-ja-2017",
+        "mext-hs-ja-2018"
+      ]
+    },
+    {
+      "id": "lex_native_classical_kanbun_vocabulary",
+      "name": "Native classical and kanbun vocabulary",
+      "japaneseName": "古典・漢文を読む語彙",
+      "items": [
+        {
+          "lemma": "古典",
+          "reading": "こてん",
+          "gloss": "classics"
+        },
+        {
+          "lemma": "漢文",
+          "reading": "かんぶん",
+          "gloss": "kanbun"
+        },
+        {
+          "lemma": "訓読",
+          "reading": "くんどく",
+          "gloss": "Japanese reading of Chinese text"
+        },
+        {
+          "lemma": "返り点",
+          "reading": "かえりてん",
+          "gloss": "reading-order mark"
+        },
+        {
+          "lemma": "故事成語",
+          "reading": "こじせいご",
+          "gloss": "classical idiom"
+        }
+      ],
+      "notes": "Original seed vocabulary for classical language and kanbun literacy topics.",
+      "sourceTags": [
+        "mext-ls-ja-2017",
+        "mext-hs-ja-2018"
+      ]
+    },
+    {
+      "id": "lex_l2_n3_intermediate_discourse",
+      "name": "Adult L2 N3 intermediate discourse words",
+      "japaneseName": "N3中級談話語彙",
+      "items": [
+        {
+          "lemma": "場合",
+          "reading": "ばあい",
+          "gloss": "case or situation"
+        },
+        {
+          "lemma": "結果",
+          "reading": "けっか",
+          "gloss": "result"
+        },
+        {
+          "lemma": "理由",
+          "reading": "りゆう",
+          "gloss": "reason"
+        },
+        {
+          "lemma": "目的",
+          "reading": "もくてき",
+          "gloss": "purpose"
+        },
+        {
+          "lemma": "様子",
+          "reading": "ようす",
+          "gloss": "state or appearance"
+        }
+      ],
+      "notes": "Original seed vocabulary for intermediate JLPT N3 grammar, reading, and writing topics.",
+      "sourceTags": [
+        "jlpt"
+      ]
+    },
+    {
+      "id": "lex_l2_n2_argument_register",
+      "name": "Adult L2 N2 argument and register words",
+      "japaneseName": "N2論述・待遇語彙",
+      "items": [
+        {
+          "lemma": "一方",
+          "reading": "いっぽう",
+          "gloss": "on the other hand"
+        },
+        {
+          "lemma": "対照",
+          "reading": "たいしょう",
+          "gloss": "contrast"
+        },
+        {
+          "lemma": "根拠",
+          "reading": "こんきょ",
+          "gloss": "basis or evidence"
+        },
+        {
+          "lemma": "配慮",
+          "reading": "はいりょ",
+          "gloss": "consideration"
+        },
+        {
+          "lemma": "調整",
+          "reading": "ちょうせい",
+          "gloss": "adjustment"
+        }
+      ],
+      "notes": "Original seed vocabulary for JLPT N2 argument, public-information reading, and formal interaction topics.",
+      "sourceTags": [
+        "jlpt"
+      ]
+    },
+    {
+      "id": "lex_l2_n1_public_discourse",
+      "name": "Adult L2 N1 public discourse words",
+      "japaneseName": "N1公共談話・抽象語彙",
+      "items": [
+        {
+          "lemma": "前提",
+          "reading": "ぜんてい",
+          "gloss": "premise"
+        },
+        {
+          "lemma": "示唆",
+          "reading": "しさ",
+          "gloss": "suggestion or implication"
+        },
+        {
+          "lemma": "妥当性",
+          "reading": "だとうせい",
+          "gloss": "validity"
+        },
+        {
+          "lemma": "体系",
+          "reading": "たいけい",
+          "gloss": "system"
+        },
+        {
+          "lemma": "普遍",
+          "reading": "ふへん",
+          "gloss": "universality"
+        }
+      ],
+      "notes": "Original seed vocabulary for JLPT N1 academic, policy, critical, and formal public-discourse topics.",
+      "sourceTags": [
+        "jlpt"
+      ]
+    },
+    {
+      "id": "lex_native_grammar_metalanguage",
+      "name": "Native school grammar metalanguage",
+      "japaneseName": "文法を考えるための用語",
+      "items": [
+        {
+          "lemma": "主語",
+          "reading": "しゅご",
+          "gloss": "subject"
+        },
+        {
+          "lemma": "述語",
+          "reading": "じゅつご",
+          "gloss": "predicate"
+        },
+        {
+          "lemma": "修飾語",
+          "reading": "しゅうしょくご",
+          "gloss": "modifier"
+        },
+        {
+          "lemma": "助詞",
+          "reading": "じょし",
+          "gloss": "particle"
+        },
+        {
+          "lemma": "活用",
+          "reading": "かつよう",
+          "gloss": "inflection"
+        }
+      ],
+      "notes": "Original seed vocabulary for native-school grammar awareness and language-knowledge topics.",
+      "sourceTags": [
+        "mext-es-ja-2017",
+        "mext-ls-ja-2017"
+      ]
+    },
+    {
+      "id": "lex_native_editing_conventions",
+      "name": "Native editing and transcription convention words",
+      "japaneseName": "表記・推敲・校正の語彙",
+      "items": [
+        {
+          "lemma": "字下げ",
+          "reading": "じさげ",
+          "gloss": "indentation"
+        },
+        {
+          "lemma": "段落",
+          "reading": "だんらく",
+          "gloss": "paragraph"
+        },
+        {
+          "lemma": "校正",
+          "reading": "こうせい",
+          "gloss": "proofreading"
+        },
+        {
+          "lemma": "引用",
+          "reading": "いんよう",
+          "gloss": "quotation"
+        },
+        {
+          "lemma": "表記",
+          "reading": "ひょうき",
+          "gloss": "written notation"
+        }
+      ],
+      "notes": "Original seed vocabulary for handwriting, manuscript conventions, proofreading, quotation, and citation-control topics.",
+      "sourceTags": [
+        "mext-es-ja-2017",
+        "mext-ls-ja-2017",
+        "mext-hs-ja-2018"
+      ]
+    },
+    {
+      "id": "lex_native_register_style",
+      "name": "Native register and style-control words",
+      "japaneseName": "文体・待遇・修辞の語彙",
+      "items": [
+        {
+          "lemma": "文体",
+          "reading": "ぶんたい",
+          "gloss": "style"
+        },
+        {
+          "lemma": "敬語",
+          "reading": "けいご",
+          "gloss": "honorific language"
+        },
+        {
+          "lemma": "待遇",
+          "reading": "たいぐう",
+          "gloss": "treatment or social stance"
+        },
+        {
+          "lemma": "婉曲",
+          "reading": "えんきょく",
+          "gloss": "indirect wording"
+        },
+        {
+          "lemma": "推敲",
+          "reading": "すいこう",
+          "gloss": "revision"
+        }
+      ],
+      "notes": "Original seed vocabulary for register, keigo, rhetoric, stance, and advanced style-control topics.",
+      "sourceTags": [
+        "mext-es-ja-2017",
+        "mext-ls-ja-2017",
+        "mext-hs-ja-2018"
+      ]
+    },
+    {
+      "id": "lex_native_literary_analysis",
+      "name": "Native literary analysis vocabulary",
+      "japaneseName": "文学を読むための分析語彙",
+      "items": [
+        {
+          "lemma": "場面",
+          "reading": "ばめん",
+          "gloss": "scene"
+        },
+        {
+          "lemma": "人物像",
+          "reading": "じんぶつぞう",
+          "gloss": "character portrayal"
+        },
+        {
+          "lemma": "転換点",
+          "reading": "てんかんてん",
+          "gloss": "turning point"
+        },
+        {
+          "lemma": "象徴",
+          "reading": "しょうちょう",
+          "gloss": "symbol"
+        },
+        {
+          "lemma": "解釈",
+          "reading": "かいしゃく",
+          "gloss": "interpretation"
+        }
+      ],
+      "notes": "Original seed vocabulary for grade-wise native literary reading, interpretation, and response topics.",
+      "sourceTags": [
+        "mext-es-ja-2017",
+        "mext-ls-ja-2017",
+        "mext-hs-ja-2018"
+      ]
+    },
+    {
+      "id": "lex_native_inquiry_source_work",
+      "name": "Native inquiry and source-work vocabulary",
+      "japaneseName": "探究と資料活用の語彙",
+      "items": [
+        {
+          "lemma": "資料",
+          "reading": "しりょう",
+          "gloss": "source material"
+        },
+        {
+          "lemma": "引用",
+          "reading": "いんよう",
+          "gloss": "quotation"
+        },
+        {
+          "lemma": "要約",
+          "reading": "ようやく",
+          "gloss": "summary"
+        },
+        {
+          "lemma": "比較",
+          "reading": "ひかく",
+          "gloss": "comparison"
+        },
+        {
+          "lemma": "統合",
+          "reading": "とうごう",
+          "gloss": "synthesis"
+        }
+      ],
+      "notes": "Original seed vocabulary for inquiry, notes, source comparison, quotation, paraphrase, and synthesis topics.",
+      "sourceTags": [
+        "mext-es-ja-2017",
+        "mext-ls-ja-2017",
+        "mext-hs-ja-2018"
+      ]
+    },
+    {
+      "id": "lex_native_genre_composition",
+      "name": "Native genre and composition vocabulary",
+      "japaneseName": "文章構成とジャンルの語彙",
+      "items": [
+        {
+          "lemma": "構成",
+          "reading": "こうせい",
+          "gloss": "structure"
+        },
+        {
+          "lemma": "見出し",
+          "reading": "みだし",
+          "gloss": "heading"
+        },
+        {
+          "lemma": "段落",
+          "reading": "だんらく",
+          "gloss": "paragraph"
+        },
+        {
+          "lemma": "論点",
+          "reading": "ろんてん",
+          "gloss": "point at issue"
+        },
+        {
+          "lemma": "推敲",
+          "reading": "すいこう",
+          "gloss": "revision"
+        }
+      ],
+      "notes": "Original seed vocabulary for composition, genre control, paragraphing, argument structure, and revision topics.",
+      "sourceTags": [
+        "mext-es-ja-2017",
+        "mext-ls-ja-2017",
+        "mext-hs-ja-2018"
+      ]
+    },
+    {
+      "id": "lex_l2_operations_project_management",
+      "name": "Adult L2 operations and project-management words",
+      "japaneseName": "業務運営・プロジェクト管理の語彙",
+      "items": [
+        {
+          "lemma": "進捗",
+          "reading": "しんちょく",
+          "gloss": "progress"
+        },
+        {
+          "lemma": "工程",
+          "reading": "こうてい",
+          "gloss": "process or schedule step"
+        },
+        {
+          "lemma": "仕様",
+          "reading": "しよう",
+          "gloss": "specification"
+        },
+        {
+          "lemma": "品質",
+          "reading": "ひんしつ",
+          "gloss": "quality"
+        },
+        {
+          "lemma": "課題",
+          "reading": "かだい",
+          "gloss": "issue or task"
+        }
+      ],
+      "notes": "Original seed vocabulary for BJT operations, project status, quality, task, and meeting topics.",
+      "sourceTags": [
+        "bjt"
+      ]
+    },
+    {
+      "id": "lex_l2_finance_contract_risk",
+      "name": "Adult L2 finance, contract, and risk words",
+      "japaneseName": "費用・契約・リスクの語彙",
+      "items": [
+        {
+          "lemma": "費用",
+          "reading": "ひよう",
+          "gloss": "cost"
+        },
+        {
+          "lemma": "契約",
+          "reading": "けいやく",
+          "gloss": "contract"
+        },
+        {
+          "lemma": "条件",
+          "reading": "じょうけん",
+          "gloss": "condition"
+        },
+        {
+          "lemma": "リスク",
+          "reading": "りすく",
+          "gloss": "risk"
+        },
+        {
+          "lemma": "見通し",
+          "reading": "みとおし",
+          "gloss": "outlook or forecast"
+        }
+      ],
+      "notes": "Original seed vocabulary for BJT cost, contract, scope, risk, and recommendation topics.",
+      "sourceTags": [
+        "bjt"
+      ]
+    },
+    {
+      "id": "lex_l2_executive_strategy_stakeholder",
+      "name": "Adult L2 executive strategy and stakeholder words",
+      "japaneseName": "経営・戦略・関係者調整の語彙",
+      "items": [
+        {
+          "lemma": "戦略",
+          "reading": "せんりゃく",
+          "gloss": "strategy"
+        },
+        {
+          "lemma": "利害関係者",
+          "reading": "りがいかんけいしゃ",
+          "gloss": "stakeholder"
+        },
+        {
+          "lemma": "合意形成",
+          "reading": "ごういけいせい",
+          "gloss": "consensus building"
+        },
+        {
+          "lemma": "影響",
+          "reading": "えいきょう",
+          "gloss": "impact"
+        },
+        {
+          "lemma": "優先順位",
+          "reading": "ゆうせんじゅんい",
+          "gloss": "priority order"
+        }
+      ],
+      "notes": "Original seed vocabulary for BJT executive, strategic, high-stakes, and multi-stakeholder topics.",
+      "sourceTags": [
+        "bjt"
+      ]
+    },
+    {
+      "id": "lex_l2_script_kanji_strategy",
+      "name": "Adult L2 script and kanji strategy words",
+      "japaneseName": "文字・漢字学習方略の語彙",
+      "items": [
+        {
+          "lemma": "部首",
+          "reading": "ぶしゅ",
+          "gloss": "radical"
+        },
+        {
+          "lemma": "音読み",
+          "reading": "おんよみ",
+          "gloss": "Sino-Japanese reading"
+        },
+        {
+          "lemma": "訓読み",
+          "reading": "くんよみ",
+          "gloss": "native Japanese reading"
+        },
+        {
+          "lemma": "送り仮名",
+          "reading": "おくりがな",
+          "gloss": "inflectional kana after kanji"
+        },
+        {
+          "lemma": "変換",
+          "reading": "へんかん",
+          "gloss": "conversion"
+        }
+      ],
+      "notes": "Original seed vocabulary for adult L2 script, kanji, orthography, and digital input strategy topics.",
+      "sourceTags": [
+        "jlpt",
+        "tae-kim",
+        "jgram"
+      ]
+    },
+    {
+      "id": "lex_l2_listening_phonology_strategy",
+      "name": "Adult L2 listening and phonology strategy words",
+      "japaneseName": "聴解・音声学習方略の語彙",
+      "items": [
+        {
+          "lemma": "拍",
+          "reading": "はく",
+          "gloss": "mora or beat"
+        },
+        {
+          "lemma": "アクセント",
+          "reading": "あくせんと",
+          "gloss": "accent"
+        },
+        {
+          "lemma": "イントネーション",
+          "reading": "いんとねーしょん",
+          "gloss": "intonation"
+        },
+        {
+          "lemma": "聞き返し",
+          "reading": "ききかえし",
+          "gloss": "asking again"
+        },
+        {
+          "lemma": "要点",
+          "reading": "ようてん",
+          "gloss": "main point"
+        }
+      ],
+      "notes": "Original seed vocabulary for adult L2 listening, prosody, repair, and gist/detail monitoring topics.",
+      "sourceTags": [
+        "jlpt",
+        "jf-standard"
+      ]
+    },
+    {
+      "id": "lex_l2_collocation_idiom_register",
+      "name": "Adult L2 collocation, idiom, and register words",
+      "japaneseName": "コロケーション・慣用句・文体語彙",
+      "items": [
+        {
+          "lemma": "表現",
+          "reading": "ひょうげん",
+          "gloss": "expression"
+        },
+        {
+          "lemma": "文脈",
+          "reading": "ぶんみゃく",
+          "gloss": "context"
+        },
+        {
+          "lemma": "慣用句",
+          "reading": "かんようく",
+          "gloss": "idiom"
+        },
+        {
+          "lemma": "比喩",
+          "reading": "ひゆ",
+          "gloss": "metaphor"
+        },
+        {
+          "lemma": "語感",
+          "reading": "ごかん",
+          "gloss": "word nuance"
+        }
+      ],
+      "notes": "Original seed vocabulary for adult L2 vocabulary depth, collocation, idiom, register, and lexical nuance topics.",
+      "sourceTags": [
+        "jlpt",
+        "jgram"
+      ]
+    },
+    {
+      "id": "lex_native_oral_discourse_moves",
+      "name": "Native oral discourse move vocabulary",
+      "japaneseName": "話し合いの進め方の語彙",
+      "items": [
+        {
+          "lemma": "発言",
+          "reading": "はつげん",
+          "gloss": "utterance or contribution"
+        },
+        {
+          "lemma": "質問",
+          "reading": "しつもん",
+          "gloss": "question"
+        },
+        {
+          "lemma": "確認",
+          "reading": "かくにん",
+          "gloss": "confirmation"
+        },
+        {
+          "lemma": "補足",
+          "reading": "ほそく",
+          "gloss": "supplement"
+        },
+        {
+          "lemma": "合意",
+          "reading": "ごうい",
+          "gloss": "agreement or consensus"
+        }
+      ],
+      "notes": "Original seed vocabulary for native-school pair talk, discussion turns, clarification, and consensus-building topics.",
+      "sourceTags": [
+        "mext-es-ja-2017",
+        "mext-ls-ja-2017",
+        "mext-hs-ja-2018"
+      ]
+    },
+    {
+      "id": "lex_native_presentation_debate",
+      "name": "Native presentation and debate vocabulary",
+      "japaneseName": "発表・討論の語彙",
+      "items": [
+        {
+          "lemma": "発表",
+          "reading": "はっぴょう",
+          "gloss": "presentation"
+        },
+        {
+          "lemma": "根拠",
+          "reading": "こんきょ",
+          "gloss": "evidence or basis"
+        },
+        {
+          "lemma": "反論",
+          "reading": "はんろん",
+          "gloss": "counterargument"
+        },
+        {
+          "lemma": "再反論",
+          "reading": "さいはんろん",
+          "gloss": "rebuttal"
+        },
+        {
+          "lemma": "質疑応答",
+          "reading": "しつぎおうとう",
+          "gloss": "question and answer"
+        }
+      ],
+      "notes": "Original seed vocabulary for native-school reports, speeches, debate, Q&A, and public presentation topics.",
+      "sourceTags": [
+        "mext-es-ja-2017",
+        "mext-ls-ja-2017",
+        "mext-hs-ja-2018"
+      ]
+    },
+    {
+      "id": "lex_native_interview_speech_media",
+      "name": "Native interview, speech, and media-listening vocabulary",
+      "japaneseName": "インタビュー・スピーチ・メディア聴解の語彙",
+      "items": [
+        {
+          "lemma": "取材",
+          "reading": "しゅざい",
+          "gloss": "information gathering or reporting"
+        },
+        {
+          "lemma": "要旨",
+          "reading": "ようし",
+          "gloss": "gist"
+        },
+        {
+          "lemma": "立場",
+          "reading": "たちば",
+          "gloss": "stance or position"
+        },
+        {
+          "lemma": "聴衆",
+          "reading": "ちょうしゅう",
+          "gloss": "audience"
+        },
+        {
+          "lemma": "論点",
+          "reading": "ろんてん",
+          "gloss": "point at issue"
+        }
+      ],
+      "notes": "Original seed vocabulary for interviews, public speech listening, media framing, panel synthesis, and audience-aware speaking.",
+      "sourceTags": [
+        "mext-es-ja-2017",
+        "mext-ls-ja-2017",
+        "mext-hs-ja-2018"
+      ]
+    },
+    {
+      "id": "lex_native_explanatory_text_features",
+      "name": "Native explanatory text feature vocabulary",
+      "japaneseName": "説明的文章の構造語彙",
+      "items": [
+        {
+          "lemma": "見出し",
+          "reading": "みだし",
+          "gloss": "heading"
+        },
+        {
+          "lemma": "図表",
+          "reading": "ずひょう",
+          "gloss": "figure or table"
+        },
+        {
+          "lemma": "要点",
+          "reading": "ようてん",
+          "gloss": "main point"
+        },
+        {
+          "lemma": "事例",
+          "reading": "じれい",
+          "gloss": "example"
+        },
+        {
+          "lemma": "結論",
+          "reading": "けつろん",
+          "gloss": "conclusion"
+        }
+      ],
+      "notes": "Original seed vocabulary for informational reading, text structure, diagrams, examples, and conclusions.",
+      "sourceTags": [
+        "mext-es-ja-2017",
+        "mext-ls-ja-2017",
+        "mext-hs-ja-2018"
+      ]
+    },
+    {
+      "id": "lex_native_media_information_literacy",
+      "name": "Native media and information literacy vocabulary",
+      "japaneseName": "メディア・情報活用の語彙",
+      "items": [
+        {
+          "lemma": "発信者",
+          "reading": "はっしんしゃ",
+          "gloss": "sender or publisher"
+        },
+        {
+          "lemma": "情報源",
+          "reading": "じょうほうげん",
+          "gloss": "information source"
+        },
+        {
+          "lemma": "信頼性",
+          "reading": "しんらいせい",
+          "gloss": "reliability"
+        },
+        {
+          "lemma": "偏り",
+          "reading": "かたより",
+          "gloss": "bias"
+        },
+        {
+          "lemma": "出典",
+          "reading": "しゅってん",
+          "gloss": "source citation"
+        }
+      ],
+      "notes": "Original seed vocabulary for source evaluation, media reading, attribution, and information ethics.",
+      "sourceTags": [
+        "mext-es-ja-2017",
+        "mext-ls-ja-2017",
+        "mext-hs-ja-2018"
+      ]
+    },
+    {
+      "id": "lex_native_evidence_reasoning_language",
+      "name": "Native evidence and reasoning language",
+      "japaneseName": "根拠と推論の語彙",
+      "items": [
+        {
+          "lemma": "根拠",
+          "reading": "こんきょ",
+          "gloss": "evidence or basis"
+        },
+        {
+          "lemma": "理由",
+          "reading": "りゆう",
+          "gloss": "reason"
+        },
+        {
+          "lemma": "推論",
+          "reading": "すいろん",
+          "gloss": "inference"
+        },
+        {
+          "lemma": "仮説",
+          "reading": "かせつ",
+          "gloss": "hypothesis"
+        },
+        {
+          "lemma": "妥当性",
+          "reading": "だとうせい",
+          "gloss": "validity"
+        }
+      ],
+      "notes": "Original seed vocabulary for evidence selection, argument reading, inquiry, and academic reasoning.",
+      "sourceTags": [
+        "mext-es-ja-2017",
+        "mext-ls-ja-2017",
+        "mext-hs-ja-2018"
+      ]
+    },
+    {
+      "id": "lex_l2_particle_focus_system",
+      "name": "Adult L2 particle and focus system words",
+      "japaneseName": "助詞と焦点化のメタ語彙",
+      "items": [
+        {
+          "lemma": "主題",
+          "reading": "しゅだい",
+          "gloss": "topic"
+        },
+        {
+          "lemma": "焦点",
+          "reading": "しょうてん",
+          "gloss": "focus"
+        },
+        {
+          "lemma": "対比",
+          "reading": "たいひ",
+          "gloss": "contrast"
+        },
+        {
+          "lemma": "到達点",
+          "reading": "とうたつてん",
+          "gloss": "endpoint or destination"
+        },
+        {
+          "lemma": "範囲",
+          "reading": "はんい",
+          "gloss": "range or scope"
+        }
+      ],
+      "notes": "Original seed vocabulary for L2 particle contrast, topic-comment parsing, focus, scope, and information structure.",
+      "sourceTags": [
+        "jlpt",
+        "jgram",
+        "tae-kim"
+      ]
+    },
+    {
+      "id": "lex_l2_grammar_diagnostics_metalanguage",
+      "name": "Adult L2 grammar-diagnostics metalanguage",
+      "japaneseName": "文法診断のメタ語彙",
+      "items": [
+        {
+          "lemma": "活用",
+          "reading": "かつよう",
+          "gloss": "conjugation"
+        },
+        {
+          "lemma": "節",
+          "reading": "せつ",
+          "gloss": "clause"
+        },
+        {
+          "lemma": "修飾",
+          "reading": "しゅうしょく",
+          "gloss": "modification"
+        },
+        {
+          "lemma": "名詞化",
+          "reading": "めいしか",
+          "gloss": "nominalization"
+        },
+        {
+          "lemma": "用法",
+          "reading": "ようほう",
+          "gloss": "usage or function"
+        }
+      ],
+      "notes": "Original seed vocabulary for adult learners using grammar references, contrast sets, error logs, and self-editing workflows.",
+      "sourceTags": [
+        "jf-standard",
+        "tae-kim",
+        "jgram"
+      ]
+    },
+    {
+      "id": "lex_l2_workplace_intercultural_pragmatics",
+      "name": "Adult L2 workplace intercultural pragmatics words",
+      "japaneseName": "職場異文化語用論の語彙",
+      "items": [
+        {
+          "lemma": "配慮",
+          "reading": "はいりょ",
+          "gloss": "consideration"
+        },
+        {
+          "lemma": "根回し",
+          "reading": "ねまわし",
+          "gloss": "pre-consensus preparation"
+        },
+        {
+          "lemma": "報連相",
+          "reading": "ほうれんそう",
+          "gloss": "reporting, contacting, consulting"
+        },
+        {
+          "lemma": "面子",
+          "reading": "めんつ",
+          "gloss": "face or social standing"
+        },
+        {
+          "lemma": "合意形成",
+          "reading": "ごういけいせい",
+          "gloss": "consensus building"
+        }
+      ],
+      "notes": "Original seed vocabulary for BJT-oriented workplace pragmatics, implicit expectations, escalation, and consensus tasks.",
+      "sourceTags": [
+        "bjt",
+        "jf-standard"
+      ]
+    },
+    {
+      "id": "lex_l2_advanced_discourse_compression",
+      "name": "Adult L2 advanced discourse compression words",
+      "japaneseName": "上級談話圧縮の語彙",
+      "items": [
+        {
+          "lemma": "省略",
+          "reading": "しょうりゃく",
+          "gloss": "ellipsis"
+        },
+        {
+          "lemma": "照応",
+          "reading": "しょうおう",
+          "gloss": "reference or anaphora"
+        },
+        {
+          "lemma": "含意",
+          "reading": "がんい",
+          "gloss": "implication"
+        },
+        {
+          "lemma": "再文脈化",
+          "reading": "さいぶんみゃくか",
+          "gloss": "recontextualization"
+        },
+        {
+          "lemma": "重層性",
+          "reading": "じゅうそうせい",
+          "gloss": "layered structure"
+        }
+      ],
+      "notes": "Original seed vocabulary for N1 formal prose, compressed nominal modification, reference tracking, and layered stance.",
+      "sourceTags": [
+        "jlpt",
+        "jgram"
+      ]
+    },
+    {
+      "id": "lex_native_orthography_notation",
+      "name": "Native orthography and notation vocabulary",
+      "japaneseName": "表記と記号の語彙",
+      "items": [
+        {
+          "lemma": "表記",
+          "reading": "ひょうき",
+          "gloss": "notation or written form"
+        },
+        {
+          "lemma": "句読点",
+          "reading": "くとうてん",
+          "gloss": "punctuation"
+        },
+        {
+          "lemma": "送り仮名",
+          "reading": "おくりがな",
+          "gloss": "okurigana"
+        },
+        {
+          "lemma": "仮名遣い",
+          "reading": "かなづかい",
+          "gloss": "kana usage"
+        },
+        {
+          "lemma": "字形",
+          "reading": "じけい",
+          "gloss": "character shape"
+        }
+      ],
+      "notes": "Original seed vocabulary for kana, punctuation, okurigana, notation, and written-form conventions in native schooling.",
+      "sourceTags": [
+        "mext-es-ja-2017",
+        "mext-ls-ja-2017",
+        "mext-hs-ja-2018"
+      ]
+    },
+    {
+      "id": "lex_native_transcription_proofreading",
+      "name": "Native transcription and proofreading vocabulary",
+      "japaneseName": "清書・校正の語彙",
+      "items": [
+        {
+          "lemma": "清書",
+          "reading": "せいしょ",
+          "gloss": "clean copy"
+        },
+        {
+          "lemma": "転記",
+          "reading": "てんき",
+          "gloss": "transcription"
+        },
+        {
+          "lemma": "校正",
+          "reading": "こうせい",
+          "gloss": "proofreading"
+        },
+        {
+          "lemma": "訂正",
+          "reading": "ていせい",
+          "gloss": "correction"
+        },
+        {
+          "lemma": "余白",
+          "reading": "よはく",
+          "gloss": "margin"
+        }
+      ],
+      "notes": "Original seed vocabulary for handwriting, transcription accuracy, editing marks, manuscript layout, and proofreading.",
+      "sourceTags": [
+        "mext-es-ja-2017",
+        "mext-ls-ja-2017",
+        "mext-hs-ja-2018"
+      ]
+    },
+    {
+      "id": "lex_native_digital_text_conventions",
+      "name": "Native digital text convention vocabulary",
+      "japaneseName": "デジタル文章作成の語彙",
+      "items": [
+        {
+          "lemma": "変換",
+          "reading": "へんかん",
+          "gloss": "conversion"
+        },
+        {
+          "lemma": "フォント",
+          "reading": "ふぉんと",
+          "gloss": "font"
+        },
+        {
+          "lemma": "レイアウト",
+          "reading": "れいあうと",
+          "gloss": "layout"
+        },
+        {
+          "lemma": "アクセシビリティ",
+          "reading": "あくせしびりてぃ",
+          "gloss": "accessibility"
+        },
+        {
+          "lemma": "スタイル",
+          "reading": "すたいる",
+          "gloss": "style"
+        }
+      ],
+      "notes": "Original seed vocabulary for typed Japanese, kana-kanji conversion, public-text layout, font variation, and accessibility-aware notation.",
+      "sourceTags": [
+        "mext-es-ja-2017",
+        "mext-ls-ja-2017",
+        "mext-hs-ja-2018"
+      ]
+    },
+    {
+      "id": "lex_native_reference_style_control",
+      "name": "Native reference and style-control vocabulary",
+      "japaneseName": "出典・文体管理の語彙",
+      "items": [
+        {
+          "lemma": "出典",
+          "reading": "しゅってん",
+          "gloss": "source citation"
+        },
+        {
+          "lemma": "引用",
+          "reading": "いんよう",
+          "gloss": "quotation"
+        },
+        {
+          "lemma": "体裁",
+          "reading": "ていさい",
+          "gloss": "format or presentation"
+        },
+        {
+          "lemma": "統一",
+          "reading": "とういつ",
+          "gloss": "consistency"
+        },
+        {
+          "lemma": "照合",
+          "reading": "しょうごう",
+          "gloss": "collation or cross-checking"
+        }
+      ],
+      "notes": "Original seed vocabulary for citation format, style guides, consistency checks, public copyediting, and final proof control.",
+      "sourceTags": [
+        "mext-es-ja-2017",
+        "mext-ls-ja-2017",
+        "mext-hs-ja-2018"
+      ]
+    },
+    {
+      "id": "lex_native_literary_response_moves",
+      "name": "Native literary response move vocabulary",
+      "japaneseName": "文学的反応を表す語彙",
+      "items": [
+        {
+          "lemma": "印象",
+          "reading": "いんしょう",
+          "gloss": "impression"
+        },
+        {
+          "lemma": "根拠",
+          "reading": "こんきょ",
+          "gloss": "evidence or basis"
+        },
+        {
+          "lemma": "場面",
+          "reading": "ばめん",
+          "gloss": "scene"
+        },
+        {
+          "lemma": "転換",
+          "reading": "てんかん",
+          "gloss": "shift or turn"
+        },
+        {
+          "lemma": "解釈",
+          "reading": "かいしゃく",
+          "gloss": "interpretation"
+        }
+      ],
+      "notes": "Original seed vocabulary for evidence-backed literary response from elementary retelling through secondary interpretation.",
+      "sourceTags": [
+        "mext-es-ja-2017",
+        "mext-ls-ja-2017",
+        "mext-hs-ja-2018"
+      ]
+    },
+    {
+      "id": "lex_native_language_culture_variation",
+      "name": "Native language culture and variation vocabulary",
+      "japaneseName": "言語文化・言葉の多様性の語彙",
+      "items": [
+        {
+          "lemma": "方言",
+          "reading": "ほうげん",
+          "gloss": "dialect"
+        },
+        {
+          "lemma": "共通語",
+          "reading": "きょうつうご",
+          "gloss": "common language"
+        },
+        {
+          "lemma": "敬語",
+          "reading": "けいご",
+          "gloss": "honorific language"
+        },
+        {
+          "lemma": "語り口",
+          "reading": "かたりくち",
+          "gloss": "narrative voice or manner of telling"
+        },
+        {
+          "lemma": "言語文化",
+          "reading": "げんごぶんか",
+          "gloss": "language culture"
+        }
+      ],
+      "notes": "Original seed vocabulary for dialect, register, speech levels, honorifics, classical continuity, and cultural expression.",
+      "sourceTags": [
+        "mext-es-ja-2017",
+        "mext-ls-ja-2017",
+        "mext-hs-ja-2018"
+      ]
+    },
+    {
+      "id": "lex_native_classical_modern_bridge",
+      "name": "Native classical-modern bridge vocabulary",
+      "japaneseName": "古典と現代をつなぐ語彙",
+      "items": [
+        {
+          "lemma": "古典",
+          "reading": "こてん",
+          "gloss": "classical text"
+        },
+        {
+          "lemma": "現代語訳",
+          "reading": "げんだいごやく",
+          "gloss": "modern-language translation"
+        },
+        {
+          "lemma": "引用",
+          "reading": "いんよう",
+          "gloss": "quotation"
+        },
+        {
+          "lemma": "本歌取り",
+          "reading": "ほんかどり",
+          "gloss": "allusive variation on a source poem"
+        },
+        {
+          "lemma": "継承",
+          "reading": "けいしょう",
+          "gloss": "inheritance or transmission"
+        }
+      ],
+      "notes": "Original seed vocabulary for connecting classical quotations, allusions, kanbun, modern paraphrase, and cultural continuity.",
+      "sourceTags": [
+        "mext-es-ja-2017",
+        "mext-ls-ja-2017",
+        "mext-hs-ja-2018"
+      ]
+    },
+    {
+      "id": "lex_native_reflective_interpretation",
+      "name": "Native reflective interpretation vocabulary",
+      "japaneseName": "解釈を振り返る語彙",
+      "items": [
+        {
+          "lemma": "振り返り",
+          "reading": "ふりかえり",
+          "gloss": "reflection"
+        },
+        {
+          "lemma": "観点",
+          "reading": "かんてん",
+          "gloss": "viewpoint or criterion"
+        },
+        {
+          "lemma": "改善",
+          "reading": "かいぜん",
+          "gloss": "improvement"
+        },
+        {
+          "lemma": "別解",
+          "reading": "べっかい",
+          "gloss": "alternative interpretation"
+        },
+        {
+          "lemma": "見通し",
+          "reading": "みとおし",
+          "gloss": "prospect or plan"
+        }
+      ],
+      "notes": "Original seed vocabulary for reflection logs, reading goals, interpretation revision, and portfolio transfer across genres.",
+      "sourceTags": [
+        "mext-es-ja-2017",
+        "mext-ls-ja-2017",
+        "mext-hs-ja-2018"
+      ]
+    },
+    {
+      "id": "lex_l2_listening_task_signals",
+      "name": "Adult L2 listening task signal words",
+      "japaneseName": "聴解タスクの手がかり語彙",
+      "items": [
+        {
+          "lemma": "要点",
+          "reading": "ようてん",
+          "gloss": "main point"
+        },
+        {
+          "lemma": "条件",
+          "reading": "じょうけん",
+          "gloss": "condition"
+        },
+        {
+          "lemma": "変更",
+          "reading": "へんこう",
+          "gloss": "change"
+        },
+        {
+          "lemma": "意図",
+          "reading": "いと",
+          "gloss": "intention"
+        },
+        {
+          "lemma": "判断",
+          "reading": "はんだん",
+          "gloss": "judgment or decision"
+        }
+      ],
+      "notes": "Original seed vocabulary for L2 listening tasks that require gist, constraint, stance, change, and action tracking.",
+      "sourceTags": [
+        "jlpt",
+        "bjt",
+        "jf-standard"
+      ]
+    },
+    {
+      "id": "lex_l2_productive_interaction_routines",
+      "name": "Adult L2 productive interaction routines",
+      "japaneseName": "産出会話ルーティン語彙",
+      "items": [
+        {
+          "lemma": "確認",
+          "reading": "かくにん",
+          "gloss": "confirmation"
+        },
+        {
+          "lemma": "相談",
+          "reading": "そうだん",
+          "gloss": "consultation"
+        },
+        {
+          "lemma": "提案",
+          "reading": "ていあん",
+          "gloss": "proposal"
+        },
+        {
+          "lemma": "補足",
+          "reading": "ほそく",
+          "gloss": "supplement"
+        },
+        {
+          "lemma": "言い換え",
+          "reading": "いいかえ",
+          "gloss": "rephrasing"
+        }
+      ],
+      "notes": "Original seed vocabulary for adult L2 speaking, repair, consultation, turn management, presentation, and Q&A tasks.",
+      "sourceTags": [
+        "jlpt",
+        "bjt",
+        "jf-standard"
+      ]
+    },
+    {
+      "id": "lex_l2_writing_task_genres",
+      "name": "Adult L2 writing task genre vocabulary",
+      "japaneseName": "文章タスク・ジャンル語彙",
+      "items": [
+        {
+          "lemma": "記入",
+          "reading": "きにゅう",
+          "gloss": "form entry"
+        },
+        {
+          "lemma": "返信",
+          "reading": "へんしん",
+          "gloss": "reply"
+        },
+        {
+          "lemma": "要約",
+          "reading": "ようやく",
+          "gloss": "summary"
+        },
+        {
+          "lemma": "意見",
+          "reading": "いけん",
+          "gloss": "opinion"
+        },
+        {
+          "lemma": "根拠",
+          "reading": "こんきょ",
+          "gloss": "evidence or basis"
+        }
+      ],
+      "notes": "Original seed vocabulary for L2 forms, notes, email replies, summaries, opinion paragraphs, and formal writing tasks.",
+      "sourceTags": [
+        "jlpt",
+        "bjt"
+      ]
+    },
+    {
+      "id": "lex_l2_bjt_briefing_response",
+      "name": "Adult L2 BJT briefing and response vocabulary",
+      "japaneseName": "BJT報告・応答語彙",
+      "items": [
+        {
+          "lemma": "課題",
+          "reading": "かだい",
+          "gloss": "issue or task"
+        },
+        {
+          "lemma": "対応",
+          "reading": "たいおう",
+          "gloss": "response or handling"
+        },
+        {
+          "lemma": "優先順位",
+          "reading": "ゆうせんじゅんい",
+          "gloss": "priority order"
+        },
+        {
+          "lemma": "判断材料",
+          "reading": "はんだんざいりょう",
+          "gloss": "decision input"
+        },
+        {
+          "lemma": "懸念",
+          "reading": "けねん",
+          "gloss": "concern"
+        }
+      ],
+      "notes": "Original seed vocabulary for BJT-oriented briefings, decision-risk listening, escalation messages, and senior Q&A.",
+      "sourceTags": [
+        "bjt"
+      ]
+    },
+    {
+      "id": "lex_native_secondary_discourse_markers",
+      "name": "Native secondary discourse marker vocabulary",
+      "japaneseName": "中等段階の論述標識語彙",
+      "items": [
+        {
+          "lemma": "論点",
+          "reading": "ろんてん",
+          "gloss": "point at issue"
+        },
+        {
+          "lemma": "補足",
+          "reading": "ほそく",
+          "gloss": "supplementary explanation"
+        },
+        {
+          "lemma": "留保",
+          "reading": "りゅうほ",
+          "gloss": "qualification or reservation"
+        },
+        {
+          "lemma": "反証",
+          "reading": "はんしょう",
+          "gloss": "counterevidence"
+        },
+        {
+          "lemma": "妥当",
+          "reading": "だとう",
+          "gloss": "valid or appropriate"
+        }
+      ],
+      "notes": "Original seed vocabulary for secondary argument, metadiscourse, and seminar exchange.",
+      "sourceTags": [
+        "mext-ls-ja-2017",
+        "mext-hs-ja-2018"
+      ]
+    },
+    {
+      "id": "lex_native_classical_reading_operations",
+      "name": "Native classical reading operation vocabulary",
+      "japaneseName": "古典読解操作の語彙",
+      "items": [
+        {
+          "lemma": "係り結び",
+          "reading": "かかりむすび",
+          "gloss": "classical kakari-musubi agreement"
+        },
+        {
+          "lemma": "助動詞",
+          "reading": "じょどうし",
+          "gloss": "auxiliary verb"
+        },
+        {
+          "lemma": "返り点",
+          "reading": "かえりてん",
+          "gloss": "kanbun return mark"
+        },
+        {
+          "lemma": "訓読",
+          "reading": "くんどく",
+          "gloss": "Japanese reading of kanbun"
+        },
+        {
+          "lemma": "和歌",
+          "reading": "わか",
+          "gloss": "classical Japanese poem"
+        }
+      ],
+      "notes": "Original seed vocabulary for supported kobun and kanbun reading operations.",
+      "sourceTags": [
+        "mext-ls-ja-2017",
+        "mext-hs-ja-2018"
+      ]
+    },
+    {
+      "id": "lex_native_media_rhetoric_register",
+      "name": "Native media rhetoric and register vocabulary",
+      "japaneseName": "メディアの修辞と文体の語彙",
+      "items": [
+        {
+          "lemma": "語調",
+          "reading": "ごちょう",
+          "gloss": "tone"
+        },
+        {
+          "lemma": "省略",
+          "reading": "しょうりゃく",
+          "gloss": "omission"
+        },
+        {
+          "lemma": "比喩",
+          "reading": "ひゆ",
+          "gloss": "figurative expression"
+        },
+        {
+          "lemma": "強調",
+          "reading": "きょうちょう",
+          "gloss": "emphasis"
+        },
+        {
+          "lemma": "誘導",
+          "reading": "ゆうどう",
+          "gloss": "leading or guiding"
+        }
+      ],
+      "notes": "Original seed vocabulary for public discourse, speech, news, and media framing.",
+      "sourceTags": [
+        "mext-ls-ja-2017",
+        "mext-hs-ja-2018"
+      ]
+    },
+    {
+      "id": "lex_native_inquiry_metacognition",
+      "name": "Native inquiry metacognition vocabulary",
+      "japaneseName": "探究と省察の語彙",
+      "items": [
+        {
+          "lemma": "検証",
+          "reading": "けんしょう",
+          "gloss": "verification"
+        },
+        {
+          "lemma": "課題設定",
+          "reading": "かだいせってい",
+          "gloss": "problem setting"
+        },
+        {
+          "lemma": "観点",
+          "reading": "かんてん",
+          "gloss": "criterion or viewpoint"
+        },
+        {
+          "lemma": "省察",
+          "reading": "せいさつ",
+          "gloss": "reflection"
+        },
+        {
+          "lemma": "転用",
+          "reading": "てんよう",
+          "gloss": "transfer to another use"
+        }
+      ],
+      "notes": "Original seed vocabulary for inquiry logs, portfolio reflection, and strategy transfer.",
+      "sourceTags": [
+        "mext-ls-ja-2017",
+        "mext-hs-ja-2018"
+      ]
+    },
+    {
+      "id": "lex_native_academic_oral_moves",
+      "name": "Native academic oral move vocabulary",
+      "japaneseName": "学術的な話し合いの語彙",
+      "items": [
+        {
+          "lemma": "論点整理",
+          "reading": "ろんてんせいり",
+          "gloss": "organizing issues"
+        },
+        {
+          "lemma": "質疑",
+          "reading": "しつぎ",
+          "gloss": "questions and answers"
+        },
+        {
+          "lemma": "合意形成",
+          "reading": "ごういけいせい",
+          "gloss": "consensus building"
+        },
+        {
+          "lemma": "要約",
+          "reading": "ようやく",
+          "gloss": "summary"
+        },
+        {
+          "lemma": "再提示",
+          "reading": "さいていじ",
+          "gloss": "restatement or re-presentation"
+        }
+      ],
+      "notes": "Original seed vocabulary for seminars, colloquia, debates, and research symposia.",
+      "sourceTags": [
+        "mext-ls-ja-2017",
+        "mext-hs-ja-2018"
+      ]
+    },
+    {
+      "id": "lex_native_early_literacy_accuracy",
+      "name": "Native early literacy accuracy vocabulary",
+      "japaneseName": "初期リテラシーの正確さを表す語彙",
+      "items": [
+        {
+          "lemma": "音",
+          "reading": "おと",
+          "gloss": "sound"
+        },
+        {
+          "lemma": "文字",
+          "reading": "もじ",
+          "gloss": "character"
+        },
+        {
+          "lemma": "写す",
+          "reading": "うつす",
+          "gloss": "copy"
+        },
+        {
+          "lemma": "確かめる",
+          "reading": "たしかめる",
+          "gloss": "check"
+        },
+        {
+          "lemma": "直す",
+          "reading": "なおす",
+          "gloss": "fix or revise"
+        }
+      ],
+      "notes": "Original seed vocabulary for kana, copying, checking, and early proofreading routines.",
+      "sourceTags": [
+        "mext-es-ja-2017"
+      ]
+    },
+    {
+      "id": "lex_native_elementary_kanji_word_building",
+      "name": "Native elementary kanji word-building vocabulary",
+      "japaneseName": "小学校の漢字語形成語彙",
+      "items": [
+        {
+          "lemma": "部首",
+          "reading": "ぶしゅ",
+          "gloss": "radical"
+        },
+        {
+          "lemma": "熟語",
+          "reading": "じゅくご",
+          "gloss": "compound word"
+        },
+        {
+          "lemma": "同音異義語",
+          "reading": "どうおんいぎご",
+          "gloss": "homophone with different meaning"
+        },
+        {
+          "lemma": "送り仮名",
+          "reading": "おくりがな",
+          "gloss": "okurigana"
+        },
+        {
+          "lemma": "語群",
+          "reading": "ごぐん",
+          "gloss": "word group"
+        }
+      ],
+      "notes": "Original seed vocabulary for grouped kanji learning, components, okurigana, and compound-word reasoning.",
+      "sourceTags": [
+        "mext-es-ja-2017"
+      ]
+    },
+    {
+      "id": "lex_native_elementary_story_response",
+      "name": "Native elementary story-response vocabulary",
+      "japaneseName": "小学校の物語応答語彙",
+      "items": [
+        {
+          "lemma": "場面",
+          "reading": "ばめん",
+          "gloss": "scene"
+        },
+        {
+          "lemma": "人物",
+          "reading": "じんぶつ",
+          "gloss": "character"
+        },
+        {
+          "lemma": "気持ち",
+          "reading": "きもち",
+          "gloss": "feeling"
+        },
+        {
+          "lemma": "理由",
+          "reading": "りゆう",
+          "gloss": "reason"
+        },
+        {
+          "lemma": "変化",
+          "reading": "へんか",
+          "gloss": "change"
+        }
+      ],
+      "notes": "Original seed vocabulary for elementary literary discussion, character reasoning, and text-based response.",
+      "sourceTags": [
+        "mext-es-ja-2017"
+      ]
+    },
+    {
+      "id": "lex_native_elementary_informational_inquiry",
+      "name": "Native elementary informational inquiry vocabulary",
+      "japaneseName": "小学校の情報活用語彙",
+      "items": [
+        {
+          "lemma": "問い",
+          "reading": "とい",
+          "gloss": "question"
+        },
+        {
+          "lemma": "調べる",
+          "reading": "しらべる",
+          "gloss": "investigate"
+        },
+        {
+          "lemma": "資料",
+          "reading": "しりょう",
+          "gloss": "source material"
+        },
+        {
+          "lemma": "図表",
+          "reading": "ずひょう",
+          "gloss": "chart or table"
+        },
+        {
+          "lemma": "出典",
+          "reading": "しゅってん",
+          "gloss": "source citation"
+        }
+      ],
+      "notes": "Original seed vocabulary for elementary informational reading, source use, and inquiry routines.",
+      "sourceTags": [
+        "mext-es-ja-2017"
+      ]
+    },
+    {
+      "id": "lex_native_elementary_composition_talk",
+      "name": "Native elementary composition and talk vocabulary",
+      "japaneseName": "小学校の作文と話し合い語彙",
+      "items": [
+        {
+          "lemma": "題名",
+          "reading": "だいめい",
+          "gloss": "title"
+        },
+        {
+          "lemma": "段落",
+          "reading": "だんらく",
+          "gloss": "paragraph"
+        },
+        {
+          "lemma": "発表",
+          "reading": "はっぴょう",
+          "gloss": "presentation"
+        },
+        {
+          "lemma": "質問",
+          "reading": "しつもん",
+          "gloss": "question"
+        },
+        {
+          "lemma": "推敲",
+          "reading": "すいこう",
+          "gloss": "revision"
+        }
+      ],
+      "notes": "Original seed vocabulary for elementary writing, presentation, peer questions, and revision.",
+      "sourceTags": [
+        "mext-es-ja-2017"
+      ]
+    },
+    {
+      "id": "lex_l2_reference_grammar_workflow",
+      "name": "Adult L2 reference grammar workflow vocabulary",
+      "japaneseName": "参照文法を使うための語彙",
+      "items": [
+        {
+          "lemma": "用法",
+          "reading": "ようほう",
+          "gloss": "usage"
+        },
+        {
+          "lemma": "例文",
+          "reading": "れいぶん",
+          "gloss": "example sentence"
+        },
+        {
+          "lemma": "誤用",
+          "reading": "ごよう",
+          "gloss": "misuse"
+        },
+        {
+          "lemma": "比較",
+          "reading": "ひかく",
+          "gloss": "comparison"
+        },
+        {
+          "lemma": "置き換え",
+          "reading": "おきかえ",
+          "gloss": "substitution"
+        }
+      ],
+      "notes": "Original seed vocabulary for Tae Kim/JGram-style lookup, contrast sets, and adult learner error diagnosis.",
+      "sourceTags": [
+        "jlpt",
+        "jgram",
+        "tae-kim",
+        "jf-standard",
+        "bjt"
+      ]
+    },
+    {
+      "id": "lex_l2_particle_case_scope",
+      "name": "Adult L2 particle case and scope vocabulary",
+      "japaneseName": "助詞・格・範囲の語彙",
+      "items": [
+        {
+          "lemma": "格",
+          "reading": "かく",
+          "gloss": "case role"
+        },
+        {
+          "lemma": "焦点",
+          "reading": "しょうてん",
+          "gloss": "focus"
+        },
+        {
+          "lemma": "範囲",
+          "reading": "はんい",
+          "gloss": "scope or range"
+        },
+        {
+          "lemma": "対比",
+          "reading": "たいひ",
+          "gloss": "contrast"
+        },
+        {
+          "lemma": "省略",
+          "reading": "しょうりゃく",
+          "gloss": "omission"
+        }
+      ],
+      "notes": "Original seed vocabulary for particle diagnostics, focus particles, topic-comment parsing, and casual omission.",
+      "sourceTags": [
+        "jlpt",
+        "jgram",
+        "tae-kim",
+        "jf-standard",
+        "bjt"
+      ]
+    },
+    {
+      "id": "lex_l2_morphology_error_patterns",
+      "name": "Adult L2 morphology error-pattern vocabulary",
+      "japaneseName": "活用誤りを診断する語彙",
+      "items": [
+        {
+          "lemma": "活用",
+          "reading": "かつよう",
+          "gloss": "conjugation"
+        },
+        {
+          "lemma": "語幹",
+          "reading": "ごかん",
+          "gloss": "stem"
+        },
+        {
+          "lemma": "派生",
+          "reading": "はせい",
+          "gloss": "derivation"
+        },
+        {
+          "lemma": "態",
+          "reading": "たい",
+          "gloss": "voice"
+        },
+        {
+          "lemma": "自他",
+          "reading": "じた",
+          "gloss": "transitive/intransitive distinction"
+        }
+      ],
+      "notes": "Original seed vocabulary for verb/adjective form checking, transitivity, causative/passive contrasts, and production repair.",
+      "sourceTags": [
+        "jlpt",
+        "jgram",
+        "tae-kim",
+        "jf-standard",
+        "bjt"
+      ]
+    },
+    {
+      "id": "lex_l2_cultural_reference_reading",
+      "name": "Adult L2 cultural and discourse-reference vocabulary",
+      "japaneseName": "文化参照と談話読解の語彙",
+      "items": [
+        {
+          "lemma": "含意",
+          "reading": "がんい",
+          "gloss": "implication"
+        },
+        {
+          "lemma": "前提",
+          "reading": "ぜんてい",
+          "gloss": "presupposition"
+        },
+        {
+          "lemma": "出典",
+          "reading": "しゅってん",
+          "gloss": "source"
+        },
+        {
+          "lemma": "文脈",
+          "reading": "ぶんみゃく",
+          "gloss": "context"
+        },
+        {
+          "lemma": "引用",
+          "reading": "いんよう",
+          "gloss": "quotation"
+        }
+      ],
+      "notes": "Original seed vocabulary for advanced reading, allusion, source positioning, and critical synthesis.",
+      "sourceTags": [
+        "jlpt",
+        "jgram",
+        "tae-kim",
+        "jf-standard",
+        "bjt"
+      ]
+    },
+    {
+      "id": "lex_l2_bjt_cross_cultural_decision",
+      "name": "Adult L2 BJT cross-cultural decision vocabulary",
+      "japaneseName": "BJT異文化意思決定語彙",
+      "items": [
+        {
+          "lemma": "利害関係者",
+          "reading": "りがいかんけいしゃ",
+          "gloss": "stakeholder"
+        },
+        {
+          "lemma": "合意形成",
+          "reading": "ごういけいせい",
+          "gloss": "consensus building"
+        },
+        {
+          "lemma": "暗黙の了解",
+          "reading": "あんもくのりょうかい",
+          "gloss": "tacit understanding"
+        },
+        {
+          "lemma": "優先順位",
+          "reading": "ゆうせんじゅんい",
+          "gloss": "priority order"
+        },
+        {
+          "lemma": "振り返り",
+          "reading": "ふりかえり",
+          "gloss": "reflection"
+        }
+      ],
+      "notes": "Original seed vocabulary for BJT workplace pragmatics, escalation, decision memos, and post-task reflection.",
+      "sourceTags": [
+        "bjt",
+        "jf-standard"
+      ]
+    },
+    {
+      "id": "lex_native_bridge_notation_kanji",
+      "name": "Native bridge notation and kanji vocabulary",
+      "japaneseName": "小中接続の表記・漢字語彙",
+      "items": [
+        {
+          "lemma": "表記",
+          "reading": "ひょうき",
+          "gloss": "notation"
+        },
+        {
+          "lemma": "用字",
+          "reading": "ようじ",
+          "gloss": "character choice"
+        },
+        {
+          "lemma": "語源",
+          "reading": "ごげん",
+          "gloss": "word origin"
+        },
+        {
+          "lemma": "派生語",
+          "reading": "はせいご",
+          "gloss": "derived word"
+        },
+        {
+          "lemma": "校正",
+          "reading": "こうせい",
+          "gloss": "proofreading"
+        }
+      ],
+      "notes": "Original seed vocabulary for upper-elementary to lower-secondary notation, kanji, and proofreading topics.",
+      "sourceTags": [
+        "mext-es-ja-2017",
+        "mext-ls-ja-2017",
+        "mext-hs-ja-2018"
+      ]
+    },
+    {
+      "id": "lex_native_bridge_argument_media",
+      "name": "Native bridge argument and media vocabulary",
+      "japaneseName": "小中接続の論証・メディア語彙",
+      "items": [
+        {
+          "lemma": "論点",
+          "reading": "ろんてん",
+          "gloss": "issue or point in dispute"
+        },
+        {
+          "lemma": "反証",
+          "reading": "はんしょう",
+          "gloss": "counterevidence"
+        },
+        {
+          "lemma": "枠組み",
+          "reading": "わくぐみ",
+          "gloss": "frame"
+        },
+        {
+          "lemma": "偏り",
+          "reading": "かたより",
+          "gloss": "bias"
+        },
+        {
+          "lemma": "根拠資料",
+          "reading": "こんきょしりょう",
+          "gloss": "evidence source"
+        }
+      ],
+      "notes": "Original seed vocabulary for argument, source comparison, media framing, and evidence-centered discussion.",
+      "sourceTags": [
+        "mext-es-ja-2017",
+        "mext-ls-ja-2017",
+        "mext-hs-ja-2018"
+      ]
+    },
+    {
+      "id": "lex_native_bridge_classical_language",
+      "name": "Native bridge classical language vocabulary",
+      "japaneseName": "小中接続の古典入門語彙",
+      "items": [
+        {
+          "lemma": "古語",
+          "reading": "こご",
+          "gloss": "classical word"
+        },
+        {
+          "lemma": "注釈",
+          "reading": "ちゅうしゃく",
+          "gloss": "annotation"
+        },
+        {
+          "lemma": "語順",
+          "reading": "ごじゅん",
+          "gloss": "word order"
+        },
+        {
+          "lemma": "現代語訳",
+          "reading": "げんだいごやく",
+          "gloss": "modern-language translation"
+        },
+        {
+          "lemma": "引用",
+          "reading": "いんよう",
+          "gloss": "quotation"
+        }
+      ],
+      "notes": "Original seed vocabulary for classical quotation, kobun, and kanbun bridge topics.",
+      "sourceTags": [
+        "mext-es-ja-2017",
+        "mext-ls-ja-2017",
+        "mext-hs-ja-2018"
+      ]
+    },
+    {
+      "id": "lex_native_bridge_research_discussion",
+      "name": "Native bridge research and discussion vocabulary",
+      "japaneseName": "小中接続の探究・話し合い語彙",
+      "items": [
+        {
+          "lemma": "仮説",
+          "reading": "かせつ",
+          "gloss": "hypothesis"
+        },
+        {
+          "lemma": "分類",
+          "reading": "ぶんるい",
+          "gloss": "classification"
+        },
+        {
+          "lemma": "発言意図",
+          "reading": "はつげんいと",
+          "gloss": "speaker intention"
+        },
+        {
+          "lemma": "合意",
+          "reading": "ごうい",
+          "gloss": "agreement or consensus"
+        },
+        {
+          "lemma": "未解決",
+          "reading": "みかいけつ",
+          "gloss": "unresolved"
+        }
+      ],
+      "notes": "Original seed vocabulary for inquiry notes, discussion protocols, debate listening, and reflection.",
+      "sourceTags": [
+        "mext-es-ja-2017",
+        "mext-ls-ja-2017",
+        "mext-hs-ja-2018"
+      ]
+    },
+    {
+      "id": "lex_native_bridge_style_revision",
+      "name": "Native bridge style and revision vocabulary",
+      "japaneseName": "小中接続の文体・推敲語彙",
+      "items": [
+        {
+          "lemma": "文体",
+          "reading": "ぶんたい",
+          "gloss": "style"
+        },
+        {
+          "lemma": "読者意識",
+          "reading": "どくしゃいしき",
+          "gloss": "reader awareness"
+        },
+        {
+          "lemma": "一貫性",
+          "reading": "いっかんせい",
+          "gloss": "consistency"
+        },
+        {
+          "lemma": "制約",
+          "reading": "せいやく",
+          "gloss": "constraint"
+        },
+        {
+          "lemma": "限界",
+          "reading": "げんかい",
+          "gloss": "limitation"
+        }
+      ],
+      "notes": "Original seed vocabulary for style, register, report revision, source limits, and high-school inquiry preparation.",
+      "sourceTags": [
+        "mext-es-ja-2017",
+        "mext-ls-ja-2017",
+        "mext-hs-ja-2018"
+      ]
+    },
+    {
+      "id": "lex_native_hs_logical_methodology",
+      "name": "Native high-school logical methodology vocabulary",
+      "japaneseName": "高校論理国語の方法語彙",
+      "items": [
+        {
+          "lemma": "前提",
+          "reading": "ぜんてい",
+          "gloss": "premise"
+        },
+        {
+          "lemma": "方法",
+          "reading": "ほうほう",
+          "gloss": "method"
+        },
+        {
+          "lemma": "限界",
+          "reading": "げんかい",
+          "gloss": "limitation"
+        },
+        {
+          "lemma": "反証可能性",
+          "reading": "はんしょうかのうせい",
+          "gloss": "falsifiability"
+        },
+        {
+          "lemma": "概念規定",
+          "reading": "がいねんきてい",
+          "gloss": "conceptual definition"
+        }
+      ],
+      "notes": "Original seed vocabulary for high-school logical Japanese, methodology, warrants, and limitation analysis.",
+      "sourceTags": [
+        "mext-hs-ja-2018"
+      ]
+    },
+    {
+      "id": "lex_native_hs_literary_criticism",
+      "name": "Native high-school literary criticism vocabulary",
+      "japaneseName": "高校文学批評の語彙",
+      "items": [
+        {
+          "lemma": "語り",
+          "reading": "かたり",
+          "gloss": "narration"
+        },
+        {
+          "lemma": "視座",
+          "reading": "しざ",
+          "gloss": "viewpoint or standpoint"
+        },
+        {
+          "lemma": "象徴体系",
+          "reading": "しょうちょうたいけい",
+          "gloss": "symbolic system"
+        },
+        {
+          "lemma": "受容",
+          "reading": "じゅよう",
+          "gloss": "reception"
+        },
+        {
+          "lemma": "批評",
+          "reading": "ひひょう",
+          "gloss": "criticism"
+        }
+      ],
+      "notes": "Original seed vocabulary for literary-critical lenses, narrative technique, reception, and counterinterpretation.",
+      "sourceTags": [
+        "mext-hs-ja-2018"
+      ]
+    },
+    {
+      "id": "lex_native_hs_classical_kanbun_advanced",
+      "name": "Native high-school advanced classical and kanbun vocabulary",
+      "japaneseName": "高校古典・漢文発展語彙",
+      "items": [
+        {
+          "lemma": "助動詞",
+          "reading": "じょどうし",
+          "gloss": "auxiliary verb"
+        },
+        {
+          "lemma": "係り結び",
+          "reading": "かかりむすび",
+          "gloss": "kakari-musubi agreement"
+        },
+        {
+          "lemma": "訓読",
+          "reading": "くんどく",
+          "gloss": "Japanese reading of kanbun"
+        },
+        {
+          "lemma": "典拠",
+          "reading": "てんきょ",
+          "gloss": "source or authority"
+        },
+        {
+          "lemma": "受容史",
+          "reading": "じゅようし",
+          "gloss": "reception history"
+        }
+      ],
+      "notes": "Original seed vocabulary for high-school classical grammar, kanbun paraphrase, reception, and comparative commentary.",
+      "sourceTags": [
+        "mext-hs-ja-2018"
+      ]
+    },
+    {
+      "id": "lex_native_hs_public_synthesis",
+      "name": "Native high-school public synthesis vocabulary",
+      "japaneseName": "高校公共的統合の語彙",
+      "items": [
+        {
+          "lemma": "争点",
+          "reading": "そうてん",
+          "gloss": "point of dispute"
+        },
+        {
+          "lemma": "利害関係者",
+          "reading": "りがいかんけいしゃ",
+          "gloss": "stakeholder"
+        },
+        {
+          "lemma": "出典管理",
+          "reading": "しゅってんかんり",
+          "gloss": "source management"
+        },
+        {
+          "lemma": "統合",
+          "reading": "とうごう",
+          "gloss": "synthesis"
+        },
+        {
+          "lemma": "提言",
+          "reading": "ていげん",
+          "gloss": "recommendation"
+        }
+      ],
+      "notes": "Original seed vocabulary for public issue synthesis, source roles, symposium moderation, and capstone argument.",
+      "sourceTags": [
+        "mext-hs-ja-2018"
+      ]
+    },
+    {
+      "id": "lex_native_hs_publication_editing",
+      "name": "Native high-school publication editing vocabulary",
+      "japaneseName": "高校発信・編集の語彙",
+      "items": [
+        {
+          "lemma": "校閲",
+          "reading": "こうえつ",
+          "gloss": "review or copyediting"
+        },
+        {
+          "lemma": "スタイルシート",
+          "reading": "すたいるしーと",
+          "gloss": "style sheet"
+        },
+        {
+          "lemma": "可読性",
+          "reading": "かどくせい",
+          "gloss": "readability"
+        },
+        {
+          "lemma": "引用形式",
+          "reading": "いんようけいしき",
+          "gloss": "citation format"
+        },
+        {
+          "lemma": "アクセシビリティ",
+          "reading": "あくせしびりてぃ",
+          "gloss": "accessibility"
+        }
+      ],
+      "notes": "Original seed vocabulary for advanced style sheets, reference collation, multiscript accessibility, and publication proofing.",
+      "sourceTags": [
+        "mext-hs-ja-2018"
+      ]
+    },
+    {
+      "id": "lex_l2_bjt_onboarding_facility",
+      "name": "Adult L2 BJT onboarding and facility vocabulary",
+      "japaneseName": "BJT入社・施設案内の語彙",
+      "items": [
+        {
+          "lemma": "受付",
+          "reading": "うけつけ",
+          "gloss": "reception"
+        },
+        {
+          "lemma": "入館証",
+          "reading": "にゅうかんしょう",
+          "gloss": "entry badge"
+        },
+        {
+          "lemma": "部署",
+          "reading": "ぶしょ",
+          "gloss": "department"
+        },
+        {
+          "lemma": "会議室",
+          "reading": "かいぎしつ",
+          "gloss": "meeting room"
+        },
+        {
+          "lemma": "担当者",
+          "reading": "たんとうしゃ",
+          "gloss": "person in charge"
+        }
+      ],
+      "notes": "Original seed vocabulary for BJT J5-J4 onboarding, reception, department, and facility navigation tasks.",
+      "sourceTags": [
+        "bjt"
+      ]
+    },
+    {
+      "id": "lex_l2_bjt_attendance_shift",
+      "name": "Adult L2 BJT attendance and shift vocabulary",
+      "japaneseName": "BJT勤怠・シフト語彙",
+      "items": [
+        {
+          "lemma": "出勤",
+          "reading": "しゅっきん",
+          "gloss": "coming to work"
+        },
+        {
+          "lemma": "欠勤",
+          "reading": "けっきん",
+          "gloss": "absence from work"
+        },
+        {
+          "lemma": "遅刻",
+          "reading": "ちこく",
+          "gloss": "lateness"
+        },
+        {
+          "lemma": "早退",
+          "reading": "そうたい",
+          "gloss": "leaving early"
+        },
+        {
+          "lemma": "引き継ぎ",
+          "reading": "ひきつぎ",
+          "gloss": "handover"
+        }
+      ],
+      "notes": "Original seed vocabulary for BJT J5-J4 attendance, shift schedules, handovers, and short workplace notices.",
+      "sourceTags": [
+        "bjt"
+      ]
+    },
+    {
+      "id": "lex_l2_bjt_routine_task_execution",
+      "name": "Adult L2 BJT routine task execution vocabulary",
+      "japaneseName": "BJT定型業務遂行語彙",
+      "items": [
+        {
+          "lemma": "優先",
+          "reading": "ゆうせん",
+          "gloss": "priority"
+        },
+        {
+          "lemma": "確認",
+          "reading": "かくにん",
+          "gloss": "confirmation"
+        },
+        {
+          "lemma": "未対応",
+          "reading": "みたいおう",
+          "gloss": "not yet handled"
+        },
+        {
+          "lemma": "完了",
+          "reading": "かんりょう",
+          "gloss": "completion"
+        },
+        {
+          "lemma": "保留",
+          "reading": "ほりゅう",
+          "gloss": "pending or on hold"
+        }
+      ],
+      "notes": "Original seed vocabulary for J5-J3 task priority, status, checklists, blockers, and routine progress reports.",
+      "sourceTags": [
+        "bjt"
+      ]
+    },
+    {
+      "id": "lex_l2_bjt_frontline_customer",
+      "name": "Adult L2 BJT frontline and customer vocabulary",
+      "japaneseName": "BJT接客・顧客対応語彙",
+      "items": [
+        {
+          "lemma": "来客",
+          "reading": "らいきゃく",
+          "gloss": "visitor"
+        },
+        {
+          "lemma": "折り返し",
+          "reading": "おりかえし",
+          "gloss": "call back"
+        },
+        {
+          "lemma": "問い合わせ",
+          "reading": "といあわせ",
+          "gloss": "inquiry"
+        },
+        {
+          "lemma": "要望",
+          "reading": "ようぼう",
+          "gloss": "request or need"
+        },
+        {
+          "lemma": "お待たせしました",
+          "reading": "おまたせしました",
+          "gloss": "thank you for waiting"
+        }
+      ],
+      "notes": "Original seed vocabulary for J4-J3 phone, visitor, inquiry, waiting-time, and basic customer-facing tasks.",
+      "sourceTags": [
+        "bjt"
+      ]
+    },
+    {
+      "id": "lex_l2_bjt_meeting_action_tracking",
+      "name": "Adult L2 BJT meeting and action tracking vocabulary",
+      "japaneseName": "BJT会議・アクション管理語彙",
+      "items": [
+        {
+          "lemma": "議題",
+          "reading": "ぎだい",
+          "gloss": "agenda item"
+        },
+        {
+          "lemma": "期限",
+          "reading": "きげん",
+          "gloss": "deadline"
+        },
+        {
+          "lemma": "担当",
+          "reading": "たんとう",
+          "gloss": "responsibility or person in charge"
+        },
+        {
+          "lemma": "改善案",
+          "reading": "かいぜんあん",
+          "gloss": "improvement proposal"
+        },
+        {
+          "lemma": "変更点",
+          "reading": "へんこうてん",
+          "gloss": "changed point"
+        }
+      ],
+      "notes": "Original seed vocabulary for J3 agenda reading, meeting action items, routine suggestions, and requirement-change clarification.",
+      "sourceTags": [
+        "bjt"
+      ]
+    },
+    {
+      "id": "lex_native_lower_elem_kana_checking",
+      "name": "Native lower-elementary kana checking vocabulary",
+      "japaneseName": "低学年かな確認語彙",
+      "items": [
+        {
+          "lemma": "音",
+          "reading": "おと",
+          "gloss": "sound"
+        },
+        {
+          "lemma": "形",
+          "reading": "かたち",
+          "gloss": "shape"
+        },
+        {
+          "lemma": "小さい字",
+          "reading": "ちいさいじ",
+          "gloss": "small kana"
+        },
+        {
+          "lemma": "のばす音",
+          "reading": "のばすおと",
+          "gloss": "long sound"
+        },
+        {
+          "lemma": "たしかめる",
+          "reading": "たしかめる",
+          "gloss": "check"
+        }
+      ],
+      "notes": "Original seed vocabulary for lower-elementary kana segmentation, spelling review, small-kana placement, and self-check routines.",
+      "sourceTags": [
+        "mext-es-ja-2017"
+      ]
+    },
+    {
+      "id": "lex_native_lower_elem_kanji_routines",
+      "name": "Native lower-elementary kanji routine vocabulary",
+      "japaneseName": "低学年漢字学習語彙",
+      "items": [
+        {
+          "lemma": "画数",
+          "reading": "かくすう",
+          "gloss": "stroke count"
+        },
+        {
+          "lemma": "部品",
+          "reading": "ぶひん",
+          "gloss": "component"
+        },
+        {
+          "lemma": "読み方",
+          "reading": "よみかた",
+          "gloss": "reading"
+        },
+        {
+          "lemma": "意味",
+          "reading": "いみ",
+          "gloss": "meaning"
+        },
+        {
+          "lemma": "熟語",
+          "reading": "じゅくご",
+          "gloss": "compound word"
+        }
+      ],
+      "notes": "Original seed vocabulary for kanji meaning links, stroke-count comparison, component position, multiple reading, and compound relation work.",
+      "sourceTags": [
+        "mext-es-ja-2017"
+      ]
+    },
+    {
+      "id": "lex_native_lower_elem_dictionary_work",
+      "name": "Native lower-elementary dictionary and lookup vocabulary",
+      "japaneseName": "低学年辞書・調べ方語彙",
+      "items": [
+        {
+          "lemma": "見出し語",
+          "reading": "みだしご",
+          "gloss": "headword"
+        },
+        {
+          "lemma": "五十音",
+          "reading": "ごじゅうおん",
+          "gloss": "kana order"
+        },
+        {
+          "lemma": "例",
+          "reading": "れい",
+          "gloss": "example"
+        },
+        {
+          "lemma": "用例",
+          "reading": "ようれい",
+          "gloss": "usage example"
+        },
+        {
+          "lemma": "調べる",
+          "reading": "しらべる",
+          "gloss": "look up"
+        }
+      ],
+      "notes": "Original seed vocabulary for picture dictionaries, gojuon order, headword repair, kanji lookup logs, and context-dictionary comparison.",
+      "sourceTags": [
+        "mext-es-ja-2017"
+      ]
+    },
+    {
+      "id": "lex_native_lower_elem_manuscript_revision",
+      "name": "Native lower-elementary manuscript and revision vocabulary",
+      "japaneseName": "低学年原稿・推敲語彙",
+      "items": [
+        {
+          "lemma": "ます目",
+          "reading": "ますめ",
+          "gloss": "manuscript square"
+        },
+        {
+          "lemma": "直す",
+          "reading": "なおす",
+          "gloss": "revise or fix"
+        },
+        {
+          "lemma": "くわしく",
+          "reading": "くわしく",
+          "gloss": "in more detail"
+        },
+        {
+          "lemma": "順序",
+          "reading": "じゅんじょ",
+          "gloss": "order"
+        },
+        {
+          "lemma": "読み手",
+          "reading": "よみて",
+          "gloss": "reader"
+        }
+      ],
+      "notes": "Original seed vocabulary for sentence copying, clean rewriting, sentence order, paragraph focus, and revision checklist work.",
+      "sourceTags": [
+        "mext-es-ja-2017"
+      ]
+    },
+    {
+      "id": "lex_native_lower_elem_evidence_notes",
+      "name": "Native lower-elementary evidence and note vocabulary",
+      "japaneseName": "低学年根拠・メモ語彙",
+      "items": [
+        {
+          "lemma": "手がかり",
+          "reading": "てがかり",
+          "gloss": "clue"
+        },
+        {
+          "lemma": "理由",
+          "reading": "りゆう",
+          "gloss": "reason"
+        },
+        {
+          "lemma": "要点",
+          "reading": "ようてん",
+          "gloss": "main point"
+        },
+        {
+          "lemma": "メモ",
+          "reading": "めも",
+          "gloss": "note"
+        },
+        {
+          "lemma": "くらべる",
+          "reading": "くらべる",
+          "gloss": "compare"
+        }
+      ],
+      "notes": "Original seed vocabulary for lower-elementary source notes, literary evidence, discussion questions, and informational comparison work.",
+      "sourceTags": [
+        "mext-es-ja-2017"
+      ]
+    },
+    {
+      "id": "lex_l2_jlpt_orthography_lookup",
+      "name": "Adult L2 JLPT orthography and lookup vocabulary",
+      "japaneseName": "JLPT表記・検索語彙",
+      "items": [
+        {
+          "lemma": "同音異義語",
+          "reading": "どうおんいぎご",
+          "gloss": "homophone with different meaning"
+        },
+        {
+          "lemma": "変換",
+          "reading": "へんかん",
+          "gloss": "digital conversion"
+        },
+        {
+          "lemma": "表記",
+          "reading": "ひょうき",
+          "gloss": "notation or orthography"
+        },
+        {
+          "lemma": "略語",
+          "reading": "りゃくご",
+          "gloss": "abbreviation"
+        },
+        {
+          "lemma": "語種",
+          "reading": "ごしゅ",
+          "gloss": "word origin or lexical stratum"
+        }
+      ],
+      "notes": "Original seed vocabulary for adult L2 kana-kanji lookup, conversion checks, orthographic register, and advanced abbreviation reading.",
+      "sourceTags": [
+        "jlpt",
+        "jgram",
+        "tae-kim",
+        "jf-standard"
+      ]
+    },
+    {
+      "id": "lex_l2_jlpt_particle_clause_logic",
+      "name": "Adult L2 JLPT particle and clause-logic vocabulary",
+      "japaneseName": "JLPT助詞・節関係語彙",
+      "items": [
+        {
+          "lemma": "係り先",
+          "reading": "かかりさき",
+          "gloss": "dependency target"
+        },
+        {
+          "lemma": "限定",
+          "reading": "げんてい",
+          "gloss": "limitation"
+        },
+        {
+          "lemma": "追加",
+          "reading": "ついか",
+          "gloss": "addition"
+        },
+        {
+          "lemma": "除外",
+          "reading": "じょがい",
+          "gloss": "exclusion"
+        },
+        {
+          "lemma": "照応",
+          "reading": "しょうおう",
+          "gloss": "reference or anaphora"
+        }
+      ],
+      "notes": "Original seed vocabulary for particle scope, clause dependency, focus, exclusion, and advanced rhetorical particle analysis.",
+      "sourceTags": [
+        "jlpt",
+        "jgram",
+        "tae-kim",
+        "jf-standard"
+      ]
+    },
+    {
+      "id": "lex_l2_jlpt_morphology_voice_aspect",
+      "name": "Adult L2 JLPT morphology, voice, and aspect vocabulary",
+      "japaneseName": "JLPT活用・態・アスペクト語彙",
+      "items": [
+        {
+          "lemma": "活用表",
+          "reading": "かつようひょう",
+          "gloss": "conjugation table"
+        },
+        {
+          "lemma": "補助動詞",
+          "reading": "ほじょどうし",
+          "gloss": "auxiliary verb"
+        },
+        {
+          "lemma": "相",
+          "reading": "そう",
+          "gloss": "aspect"
+        },
+        {
+          "lemma": "受身",
+          "reading": "うけみ",
+          "gloss": "passive voice"
+        },
+        {
+          "lemma": "使役",
+          "reading": "しえき",
+          "gloss": "causative voice"
+        }
+      ],
+      "notes": "Original seed vocabulary for verb group routines, te-form functions, passive/causative perspective, auxiliary stacking, and formal verbal style.",
+      "sourceTags": [
+        "jlpt",
+        "jgram",
+        "tae-kim",
+        "jf-standard"
+      ]
+    },
+    {
+      "id": "lex_l2_jlpt_syntax_nominalization_connectors",
+      "name": "Adult L2 JLPT syntax and connector vocabulary",
+      "japaneseName": "JLPT構文・接続語彙",
+      "items": [
+        {
+          "lemma": "連体修飾",
+          "reading": "れんたいしゅうしょく",
+          "gloss": "noun modification"
+        },
+        {
+          "lemma": "名詞化",
+          "reading": "めいしか",
+          "gloss": "nominalization"
+        },
+        {
+          "lemma": "条件",
+          "reading": "じょうけん",
+          "gloss": "condition"
+        },
+        {
+          "lemma": "譲歩",
+          "reading": "じょうほ",
+          "gloss": "concession"
+        },
+        {
+          "lemma": "接続表現",
+          "reading": "せつぞくひょうげん",
+          "gloss": "connector expression"
+        }
+      ],
+      "notes": "Original seed vocabulary for noun-phrase scope, relative clauses, conditionals, formal nouns, connector function, and compressed syntax.",
+      "sourceTags": [
+        "jlpt",
+        "jgram",
+        "tae-kim",
+        "jf-standard"
+      ]
+    },
+    {
+      "id": "lex_l2_jlpt_strategy_intercultural_feedback",
+      "name": "Adult L2 JLPT strategy and intercultural feedback vocabulary",
+      "japaneseName": "JLPT学習方略・異文化フィードバック語彙",
+      "items": [
+        {
+          "lemma": "振り返り",
+          "reading": "ふりかえり",
+          "gloss": "reflection"
+        },
+        {
+          "lemma": "負担",
+          "reading": "ふたん",
+          "gloss": "burden"
+        },
+        {
+          "lemma": "内外",
+          "reading": "うちそと",
+          "gloss": "inside/outside relationship"
+        },
+        {
+          "lemma": "含意",
+          "reading": "がんい",
+          "gloss": "implication"
+        },
+        {
+          "lemma": "修正案",
+          "reading": "しゅうせいあん",
+          "gloss": "revision proposal"
+        }
+      ],
+      "notes": "Original seed vocabulary for adult L2 error replay, reference triangulation, native feedback, aizuchi, request burden, uchi-soto, and indirect refusal repair.",
+      "sourceTags": [
+        "jlpt",
+        "jf-standard",
+        "tae-kim",
+        "jgram"
+      ]
+    },
+    {
+      "id": "lex_native_upper_elem_inquiry_sources",
+      "name": "Native upper-elementary inquiry source vocabulary",
+      "japaneseName": "高学年調査資料語彙",
+      "items": [
+        {
+          "lemma": "出典",
+          "reading": "しゅってん",
+          "gloss": "source citation"
+        },
+        {
+          "lemma": "資料",
+          "reading": "しりょう",
+          "gloss": "source material"
+        },
+        {
+          "lemma": "信頼性",
+          "reading": "しんらいせい",
+          "gloss": "reliability"
+        },
+        {
+          "lemma": "比較する",
+          "reading": "ひかくする",
+          "gloss": "compare"
+        },
+        {
+          "lemma": "統合する",
+          "reading": "とうごうする",
+          "gloss": "integrate"
+        }
+      ],
+      "notes": "Original seed vocabulary for source checking, multi-source note sorting, visual evidence, and synthesis in grades 5-6.",
+      "sourceTags": [
+        "mext-es-ja-2017"
+      ]
+    },
+    {
+      "id": "lex_native_upper_elem_argument_evidence",
+      "name": "Native upper-elementary argument and evidence vocabulary",
+      "japaneseName": "高学年意見・根拠語彙",
+      "items": [
+        {
+          "lemma": "主張",
+          "reading": "しゅちょう",
+          "gloss": "claim"
+        },
+        {
+          "lemma": "根拠",
+          "reading": "こんきょ",
+          "gloss": "evidence or grounds"
+        },
+        {
+          "lemma": "反論",
+          "reading": "はんろん",
+          "gloss": "counterargument"
+        },
+        {
+          "lemma": "説得力",
+          "reading": "せっとくりょく",
+          "gloss": "persuasiveness"
+        },
+        {
+          "lemma": "結論",
+          "reading": "けつろん",
+          "gloss": "conclusion"
+        }
+      ],
+      "notes": "Original seed vocabulary for marking author claims, building argument paragraphs, counterclaims, and evidence-based Q&A.",
+      "sourceTags": [
+        "mext-es-ja-2017"
+      ]
+    },
+    {
+      "id": "lex_native_upper_elem_kanji_compounds",
+      "name": "Native upper-elementary kanji compound vocabulary",
+      "japaneseName": "高学年漢字熟語語彙",
+      "items": [
+        {
+          "lemma": "抽象語",
+          "reading": "ちゅうしょうご",
+          "gloss": "abstract word"
+        },
+        {
+          "lemma": "熟語",
+          "reading": "じゅくご",
+          "gloss": "compound word"
+        },
+        {
+          "lemma": "同音異義語",
+          "reading": "どうおんいぎご",
+          "gloss": "homophone with different meaning"
+        },
+        {
+          "lemma": "語構成",
+          "reading": "ごこうせい",
+          "gloss": "word formation"
+        },
+        {
+          "lemma": "専門語",
+          "reading": "せんもんご",
+          "gloss": "specialized term"
+        }
+      ],
+      "notes": "Original seed vocabulary for kanji morpheme fields, compound paraphrase, homophone choice, register, and subject-area vocabulary.",
+      "sourceTags": [
+        "mext-es-ja-2017"
+      ]
+    },
+    {
+      "id": "lex_native_upper_elem_revision_discussion",
+      "name": "Native upper-elementary revision and discussion vocabulary",
+      "japaneseName": "高学年推敲・討論語彙",
+      "items": [
+        {
+          "lemma": "推敲",
+          "reading": "すいこう",
+          "gloss": "revision"
+        },
+        {
+          "lemma": "観点",
+          "reading": "かんてん",
+          "gloss": "viewpoint or criterion"
+        },
+        {
+          "lemma": "司会",
+          "reading": "しかい",
+          "gloss": "facilitation"
+        },
+        {
+          "lemma": "質疑応答",
+          "reading": "しつぎおうとう",
+          "gloss": "question and answer"
+        },
+        {
+          "lemma": "合意",
+          "reading": "ごうい",
+          "gloss": "agreement or consensus"
+        }
+      ],
+      "notes": "Original seed vocabulary for peer review, revision criteria, facilitation, debate notes, and presentation response routines.",
+      "sourceTags": [
+        "mext-es-ja-2017"
+      ]
+    },
+    {
+      "id": "lex_native_upper_elem_literary_response",
+      "name": "Native upper-elementary literary response vocabulary",
+      "japaneseName": "高学年文学読解語彙",
+      "items": [
+        {
+          "lemma": "主題",
+          "reading": "しゅだい",
+          "gloss": "theme"
+        },
+        {
+          "lemma": "視点",
+          "reading": "してん",
+          "gloss": "perspective"
+        },
+        {
+          "lemma": "表現効果",
+          "reading": "ひょうげんこうか",
+          "gloss": "expressive effect"
+        },
+        {
+          "lemma": "古典",
+          "reading": "こてん",
+          "gloss": "classical text"
+        },
+        {
+          "lemma": "比較読み",
+          "reading": "ひかくよみ",
+          "gloss": "comparative reading"
+        }
+      ],
+      "notes": "Original seed vocabulary for motif evidence, viewpoint, poetry effect, theme comparison, and classical phrase contexts.",
+      "sourceTags": [
+        "mext-es-ja-2017"
+      ]
+    },
+    {
+      "id": "lex_l2_bjt_integrated_case_risk",
+      "name": "Adult L2 BJT integrated case and risk vocabulary",
+      "japaneseName": "BJT統合ケース・リスク語彙",
+      "items": [
+        {
+          "lemma": "論点",
+          "reading": "ろんてん",
+          "gloss": "point at issue"
+        },
+        {
+          "lemma": "前提",
+          "reading": "ぜんてい",
+          "gloss": "premise or assumption"
+        },
+        {
+          "lemma": "制約",
+          "reading": "せいやく",
+          "gloss": "constraint"
+        },
+        {
+          "lemma": "優先度",
+          "reading": "ゆうせんど",
+          "gloss": "priority level"
+        },
+        {
+          "lemma": "影響範囲",
+          "reading": "えいきょうはんい",
+          "gloss": "scope of impact"
+        }
+      ],
+      "notes": "Original seed vocabulary for BJT integrated case analysis, unstated constraints, risk timing, and decision framing.",
+      "sourceTags": [
+        "bjt",
+        "jlpt",
+        "jf-standard"
+      ]
+    },
+    {
+      "id": "lex_l2_bjt_negotiation_decision",
+      "name": "Adult L2 BJT negotiation and decision vocabulary",
+      "japaneseName": "BJT交渉・意思決定語彙",
+      "items": [
+        {
+          "lemma": "代替案",
+          "reading": "だいたいあん",
+          "gloss": "alternative proposal"
+        },
+        {
+          "lemma": "譲歩",
+          "reading": "じょうほ",
+          "gloss": "concession"
+        },
+        {
+          "lemma": "合意条件",
+          "reading": "ごういじょうけん",
+          "gloss": "conditions for agreement"
+        },
+        {
+          "lemma": "落とし所",
+          "reading": "おとしどころ",
+          "gloss": "acceptable landing point"
+        },
+        {
+          "lemma": "保留",
+          "reading": "ほりゅう",
+          "gloss": "pending or on hold"
+        }
+      ],
+      "notes": "Original seed vocabulary for BJT J2/J1 negotiation, tradeoff discussion, concession, and decision logging.",
+      "sourceTags": [
+        "bjt",
+        "jf-standard"
+      ]
+    },
+    {
+      "id": "lex_l2_bjt_executive_briefing",
+      "name": "Adult L2 BJT executive briefing vocabulary",
+      "japaneseName": "BJTエグゼクティブ報告語彙",
+      "items": [
+        {
+          "lemma": "概要",
+          "reading": "がいよう",
+          "gloss": "overview"
+        },
+        {
+          "lemma": "判断材料",
+          "reading": "はんだんざいりょう",
+          "gloss": "basis for decision"
+        },
+        {
+          "lemma": "不確実性",
+          "reading": "ふかくじつせい",
+          "gloss": "uncertainty"
+        },
+        {
+          "lemma": "推奨案",
+          "reading": "すいしょうあん",
+          "gloss": "recommended option"
+        },
+        {
+          "lemma": "反対意見",
+          "reading": "はんたいいけん",
+          "gloss": "opposing view"
+        }
+      ],
+      "notes": "Original seed vocabulary for executive summaries, recommendation defense, board Q&A, and senior decision communication.",
+      "sourceTags": [
+        "bjt",
+        "jlpt",
+        "jf-standard"
+      ]
+    },
+    {
+      "id": "lex_l2_bjt_compliance_change",
+      "name": "Adult L2 BJT compliance and change vocabulary",
+      "japaneseName": "BJTコンプライアンス・変更対応語彙",
+      "items": [
+        {
+          "lemma": "遵守",
+          "reading": "じゅんしゅ",
+          "gloss": "compliance"
+        },
+        {
+          "lemma": "監査",
+          "reading": "かんさ",
+          "gloss": "audit"
+        },
+        {
+          "lemma": "例外",
+          "reading": "れいがい",
+          "gloss": "exception"
+        },
+        {
+          "lemma": "再発防止",
+          "reading": "さいはつぼうし",
+          "gloss": "prevention of recurrence"
+        },
+        {
+          "lemma": "説明責任",
+          "reading": "せつめいせきにん",
+          "gloss": "accountability"
+        }
+      ],
+      "notes": "Original seed vocabulary for policy exceptions, crisis response, compliance incidents, and organizational change messaging.",
+      "sourceTags": [
+        "bjt",
+        "jf-standard"
+      ]
+    },
+    {
+      "id": "lex_l2_bjt_jlpt_bridge_analysis",
+      "name": "Adult L2 BJT and JLPT bridge-analysis vocabulary",
+      "japaneseName": "BJT・JLPT橋渡し分析語彙",
+      "items": [
+        {
+          "lemma": "含意",
+          "reading": "がんい",
+          "gloss": "implication"
+        },
+        {
+          "lemma": "論旨",
+          "reading": "ろんし",
+          "gloss": "line of argument"
+        },
+        {
+          "lemma": "根拠",
+          "reading": "こんきょ",
+          "gloss": "grounds or evidence"
+        },
+        {
+          "lemma": "反証",
+          "reading": "はんしょう",
+          "gloss": "counterevidence"
+        },
+        {
+          "lemma": "評価語",
+          "reading": "ひょうかご",
+          "gloss": "evaluative wording"
+        }
+      ],
+      "notes": "Original seed vocabulary for linking JLPT N2/N1 reading, stance, and abstract lexis to BJT action recommendations.",
+      "sourceTags": [
+        "bjt",
+        "jlpt",
+        "jgram",
+        "jf-standard"
+      ]
+    },
+    {
+      "id": "lex_native_lowersec_argument_warrant",
+      "name": "Native lower-secondary argument and warrant vocabulary",
+      "japaneseName": "中学校論証・理由づけ語彙",
+      "items": [
+        {
+          "lemma": "論証",
+          "reading": "ろんしょう",
+          "gloss": "argumentation"
+        },
+        {
+          "lemma": "理由づけ",
+          "reading": "りゆうづけ",
+          "gloss": "warrant or reasoning"
+        },
+        {
+          "lemma": "反論",
+          "reading": "はんろん",
+          "gloss": "counterargument"
+        },
+        {
+          "lemma": "根拠の強さ",
+          "reading": "こんきょのつよさ",
+          "gloss": "strength of evidence"
+        },
+        {
+          "lemma": "妥当性",
+          "reading": "だとうせい",
+          "gloss": "validity or appropriateness"
+        }
+      ],
+      "notes": "Original seed vocabulary for lower-secondary claim, warrant, counterclaim, rebuttal, modality, and argument section work.",
+      "sourceTags": [
+        "mext-ls-ja-2017"
+      ]
+    },
+    {
+      "id": "lex_native_lowersec_source_media",
+      "name": "Native lower-secondary source and media vocabulary",
+      "japaneseName": "中学校資料・メディア語彙",
+      "items": [
+        {
+          "lemma": "出所",
+          "reading": "しゅっしょ",
+          "gloss": "source origin"
+        },
+        {
+          "lemma": "信ぴょう性",
+          "reading": "しんぴょうせい",
+          "gloss": "credibility"
+        },
+        {
+          "lemma": "偏り",
+          "reading": "かたより",
+          "gloss": "bias"
+        },
+        {
+          "lemma": "見出し",
+          "reading": "みだし",
+          "gloss": "headline"
+        },
+        {
+          "lemma": "比較資料",
+          "reading": "ひかくしりょう",
+          "gloss": "comparison source"
+        }
+      ],
+      "notes": "Original seed vocabulary for credibility checks, media framing, infographic audits, source gaps, and source integration.",
+      "sourceTags": [
+        "mext-ls-ja-2017"
+      ]
+    },
+    {
+      "id": "lex_native_lowersec_classical_entry",
+      "name": "Native lower-secondary classical entry vocabulary",
+      "japaneseName": "中学校古典入門語彙",
+      "items": [
+        {
+          "lemma": "音読",
+          "reading": "おんどく",
+          "gloss": "reading aloud"
+        },
+        {
+          "lemma": "語注",
+          "reading": "ごちゅう",
+          "gloss": "gloss note"
+        },
+        {
+          "lemma": "助動詞",
+          "reading": "じょどうし",
+          "gloss": "auxiliary verb"
+        },
+        {
+          "lemma": "返り点",
+          "reading": "かえりてん",
+          "gloss": "kanbun return mark"
+        },
+        {
+          "lemma": "典拠",
+          "reading": "てんきょ",
+          "gloss": "source or allusive origin"
+        }
+      ],
+      "notes": "Original seed vocabulary for supported kobun and kanbun reading, recitation, paraphrase, and allusion response in grades 7-9.",
+      "sourceTags": [
+        "mext-ls-ja-2017"
+      ]
+    },
+    {
+      "id": "lex_native_lowersec_discussion_debate",
+      "name": "Native lower-secondary discussion and debate vocabulary",
+      "japaneseName": "中学校討論・話し合い語彙",
+      "items": [
+        {
+          "lemma": "問い返し",
+          "reading": "といかえし",
+          "gloss": "follow-up question"
+        },
+        {
+          "lemma": "要点整理",
+          "reading": "ようてんせいり",
+          "gloss": "organizing main points"
+        },
+        {
+          "lemma": "反対尋問",
+          "reading": "はんたいじんもん",
+          "gloss": "cross-examination"
+        },
+        {
+          "lemma": "立論",
+          "reading": "りつろん",
+          "gloss": "constructive argument"
+        },
+        {
+          "lemma": "フロー",
+          "reading": "ふろー",
+          "gloss": "debate flow notes"
+        }
+      ],
+      "notes": "Original seed vocabulary for seminar question chains, facilitator moves, debate case outlines, cross-examination, and flow-note reflection.",
+      "sourceTags": [
+        "mext-ls-ja-2017"
+      ]
+    },
+    {
+      "id": "lex_native_lowersec_revision_transfer",
+      "name": "Native lower-secondary revision and transfer vocabulary",
+      "japaneseName": "中学校推敲・転移語彙",
+      "items": [
+        {
+          "lemma": "改善目標",
+          "reading": "かいぜんもくひょう",
+          "gloss": "revision goal"
+        },
+        {
+          "lemma": "読み手の知識",
+          "reading": "よみてのちしき",
+          "gloss": "reader knowledge"
+        },
+        {
+          "lemma": "引用範囲",
+          "reading": "いんようはんい",
+          "gloss": "quotation boundary"
+        },
+        {
+          "lemma": "課題の焦点化",
+          "reading": "かだいのしょうてんか",
+          "gloss": "focusing the inquiry problem"
+        },
+        {
+          "lemma": "学習の転移",
+          "reading": "がくしゅうのてんい",
+          "gloss": "transfer of learning"
+        }
+      ],
+      "notes": "Original seed vocabulary for revision goals, quote-paraphrase boundaries, audience-knowledge gaps, source gaps, and high-school transfer portfolios.",
+      "sourceTags": [
+        "mext-ls-ja-2017"
+      ]
+    },
+    {
+      "id": "lex_l2_yookoso_book2_style_register",
+      "name": "Adult L2 intermediate style and register vocabulary",
+      "japaneseName": "中級スタイル・レジスター語彙",
+      "items": [
+        {
+          "lemma": "普通体",
+          "reading": "ふつうたい",
+          "gloss": "plain style"
+        },
+        {
+          "lemma": "丁寧体",
+          "reading": "ていねいたい",
+          "gloss": "polite style"
+        },
+        {
+          "lemma": "立場",
+          "reading": "たちば",
+          "gloss": "position or standpoint"
+        },
+        {
+          "lemma": "場面",
+          "reading": "ばめん",
+          "gloss": "situation"
+        },
+        {
+          "lemma": "言い換え",
+          "reading": "いいかえ",
+          "gloss": "paraphrase"
+        }
+      ],
+      "notes": "Original seed vocabulary for intermediate style shifts, role-sensitive requests, and social context repair.",
+      "sourceTags": [
+        "yookoso-book2",
+        "jlpt",
+        "jf-standard"
+      ]
+    },
+    {
+      "id": "lex_l2_yookoso_book2_clause_viewpoint",
+      "name": "Adult L2 intermediate clause and viewpoint vocabulary",
+      "japaneseName": "中級節・視点語彙",
+      "items": [
+        {
+          "lemma": "条件",
+          "reading": "じょうけん",
+          "gloss": "condition"
+        },
+        {
+          "lemma": "場合",
+          "reading": "ばあい",
+          "gloss": "case or situation"
+        },
+        {
+          "lemma": "視点",
+          "reading": "してん",
+          "gloss": "viewpoint"
+        },
+        {
+          "lemma": "受け身",
+          "reading": "うけみ",
+          "gloss": "passive voice"
+        },
+        {
+          "lemma": "使役",
+          "reading": "しえき",
+          "gloss": "causative voice"
+        }
+      ],
+      "notes": "Original seed vocabulary for conditionals, embedded questions, passive, causative, transitivity, and event viewpoint.",
+      "sourceTags": [
+        "yookoso-book2",
+        "jlpt",
+        "tae-kim",
+        "jgram"
+      ]
+    },
+    {
+      "id": "lex_l2_yookoso_book2_discussion",
+      "name": "Adult L2 intermediate discussion vocabulary",
+      "japaneseName": "中級話し合い語彙",
+      "items": [
+        {
+          "lemma": "意見",
+          "reading": "いけん",
+          "gloss": "opinion"
+        },
+        {
+          "lemma": "理由",
+          "reading": "りゆう",
+          "gloss": "reason"
+        },
+        {
+          "lemma": "賛成",
+          "reading": "さんせい",
+          "gloss": "agreement"
+        },
+        {
+          "lemma": "反対",
+          "reading": "はんたい",
+          "gloss": "opposition"
+        },
+        {
+          "lemma": "代案",
+          "reading": "だいあん",
+          "gloss": "alternative proposal"
+        }
+      ],
+      "notes": "Original seed vocabulary for intermediate opinion exchange, refusal, alternatives, consensus, and follow-up interaction.",
+      "sourceTags": [
+        "yookoso-book2",
+        "jlpt",
+        "jf-standard"
+      ]
+    },
+    {
+      "id": "lex_l2_yookoso_book2_connected_writing",
+      "name": "Adult L2 intermediate connected writing vocabulary",
+      "japaneseName": "中級まとまりのある作文語彙",
+      "items": [
+        {
+          "lemma": "要約",
+          "reading": "ようやく",
+          "gloss": "summary"
+        },
+        {
+          "lemma": "段落",
+          "reading": "だんらく",
+          "gloss": "paragraph"
+        },
+        {
+          "lemma": "展開",
+          "reading": "てんかい",
+          "gloss": "development"
+        },
+        {
+          "lemma": "接続表現",
+          "reading": "せつぞくひょうげん",
+          "gloss": "connector expression"
+        },
+        {
+          "lemma": "推敲",
+          "reading": "すいこう",
+          "gloss": "revision"
+        }
+      ],
+      "notes": "Original seed vocabulary for intermediate paragraphs, summaries, opinion emails, event reports, and revision logs.",
+      "sourceTags": [
+        "yookoso-book2",
+        "jlpt",
+        "jf-standard"
+      ]
+    },
+    {
+      "id": "lex_l2_yookoso_book2_authentic_input",
+      "name": "Adult L2 intermediate authentic-input vocabulary",
+      "japaneseName": "中級生教材入力語彙",
+      "items": [
+        {
+          "lemma": "本文",
+          "reading": "ほんぶん",
+          "gloss": "main text"
+        },
+        {
+          "lemma": "文脈",
+          "reading": "ぶんみゃく",
+          "gloss": "context"
+        },
+        {
+          "lemma": "省略",
+          "reading": "しょうりゃく",
+          "gloss": "omission"
+        },
+        {
+          "lemma": "推測",
+          "reading": "すいそく",
+          "gloss": "inference"
+        },
+        {
+          "lemma": "用例",
+          "reading": "ようれい",
+          "gloss": "usage example"
+        }
+      ],
+      "notes": "Original seed vocabulary for intermediate article reading, listening inference, casual reduction, sentence mining, and example reuse boundaries.",
+      "sourceTags": [
+        "yookoso-book2",
+        "jlpt",
+        "tae-kim",
+        "jgram"
+      ]
+    },
+    {
+      "id": "lex_native_hs_data_media_literacy",
+      "name": "Native high-school data and media literacy vocabulary",
+      "japaneseName": "高校データ・メディア読解語彙",
+      "items": [
+        {
+          "lemma": "統計",
+          "reading": "とうけい",
+          "gloss": "statistics"
+        },
+        {
+          "lemma": "相関",
+          "reading": "そうかん",
+          "gloss": "correlation"
+        },
+        {
+          "lemma": "標本",
+          "reading": "ひょうほん",
+          "gloss": "sample"
+        },
+        {
+          "lemma": "見出し",
+          "reading": "みだし",
+          "gloss": "headline"
+        },
+        {
+          "lemma": "印象操作",
+          "reading": "いんしょうそうさ",
+          "gloss": "impression management"
+        }
+      ],
+      "notes": "Original seed vocabulary for graph claims, infographic captions, data caveats, and media framing in high-school Japanese.",
+      "sourceTags": [
+        "mext-hs-ja-2018"
+      ]
+    },
+    {
+      "id": "lex_native_hs_inquiry_interview_notes",
+      "name": "Native high-school inquiry interview and note vocabulary",
+      "japaneseName": "高校探究インタビュー・ノート語彙",
+      "items": [
+        {
+          "lemma": "聞き取り",
+          "reading": "ききとり",
+          "gloss": "interview or listening inquiry"
+        },
+        {
+          "lemma": "利害関係者",
+          "reading": "りがいかんけいしゃ",
+          "gloss": "stakeholder"
+        },
+        {
+          "lemma": "記録",
+          "reading": "きろく",
+          "gloss": "record"
+        },
+        {
+          "lemma": "分類コード",
+          "reading": "ぶんるいこーど",
+          "gloss": "category code"
+        },
+        {
+          "lemma": "偏り",
+          "reading": "かたより",
+          "gloss": "bias"
+        }
+      ],
+      "notes": "Original seed vocabulary for inquiry interview design, evidence tagging, source trails, and stance-shift listening.",
+      "sourceTags": [
+        "mext-hs-ja-2018"
+      ]
+    },
+    {
+      "id": "lex_native_hs_argument_quality",
+      "name": "Native high-school argument quality vocabulary",
+      "japaneseName": "高校論証評価語彙",
+      "items": [
+        {
+          "lemma": "因果",
+          "reading": "いんが",
+          "gloss": "cause and effect"
+        },
+        {
+          "lemma": "類推",
+          "reading": "るいすい",
+          "gloss": "analogy"
+        },
+        {
+          "lemma": "留保",
+          "reading": "りゅうほ",
+          "gloss": "reservation or caveat"
+        },
+        {
+          "lemma": "反論",
+          "reading": "はんろん",
+          "gloss": "counterargument"
+        },
+        {
+          "lemma": "妥当性",
+          "reading": "だとうせい",
+          "gloss": "validity"
+        }
+      ],
+      "notes": "Original seed vocabulary for causal claims, analogy tests, statistical caveats, counterargument revision, and method register.",
+      "sourceTags": [
+        "mext-hs-ja-2018"
+      ]
+    },
+    {
+      "id": "lex_native_hs_comparative_literature_culture",
+      "name": "Native high-school comparative literature and culture vocabulary",
+      "japaneseName": "高校比較文学・言語文化語彙",
+      "items": [
+        {
+          "lemma": "語り手",
+          "reading": "かたりて",
+          "gloss": "narrator"
+        },
+        {
+          "lemma": "受容史",
+          "reading": "じゅようし",
+          "gloss": "reception history"
+        },
+        {
+          "lemma": "モチーフ",
+          "reading": "もちーふ",
+          "gloss": "motif"
+        },
+        {
+          "lemma": "典故",
+          "reading": "てんこ",
+          "gloss": "classical allusion"
+        },
+        {
+          "lemma": "現代語訳",
+          "reading": "げんだいごやく",
+          "gloss": "modern Japanese translation"
+        }
+      ],
+      "notes": "Original seed vocabulary for narrator reliability, poetic diction, kanbun allusion, reception caveats, and classical quotation notes.",
+      "sourceTags": [
+        "mext-hs-ja-2018"
+      ]
+    },
+    {
+      "id": "lex_native_hs_publication_ethics",
+      "name": "Native high-school publication ethics vocabulary",
+      "japaneseName": "高校発信倫理語彙",
+      "items": [
+        {
+          "lemma": "透明性",
+          "reading": "とうめいせい",
+          "gloss": "transparency"
+        },
+        {
+          "lemma": "同意",
+          "reading": "どうい",
+          "gloss": "consent"
+        },
+        {
+          "lemma": "著作権",
+          "reading": "ちょさくけん",
+          "gloss": "copyright"
+        },
+        {
+          "lemma": "引用範囲",
+          "reading": "いんようはんい",
+          "gloss": "quotation boundary"
+        },
+        {
+          "lemma": "アクセシビリティ",
+          "reading": "あくせしびりてぃ",
+          "gloss": "accessibility"
+        }
+      ],
+      "notes": "Original seed vocabulary for public abstracts, accessibility copyediting, bibliography audits, and source transparency notes.",
+      "sourceTags": [
+        "mext-hs-ja-2018"
+      ]
+    },
+    {
+      "id": "lex_l2_adv_media_policy_stance",
+      "name": "Adult L2 advanced media, policy, and stance vocabulary",
+      "japaneseName": "上級メディア・政策・スタンス語彙",
+      "items": [
+        {
+          "lemma": "論調",
+          "reading": "ろんちょう",
+          "gloss": "tone or line of argument"
+        },
+        {
+          "lemma": "含意",
+          "reading": "がんい",
+          "gloss": "implication"
+        },
+        {
+          "lemma": "留保",
+          "reading": "りゅうほ",
+          "gloss": "reservation or caveat"
+        },
+        {
+          "lemma": "反証",
+          "reading": "はんしょう",
+          "gloss": "counterevidence"
+        },
+        {
+          "lemma": "統計上",
+          "reading": "とうけいじょう",
+          "gloss": "statistically or in statistical terms"
+        }
+      ],
+      "notes": "Original seed vocabulary for JLPT N2/N1 media, policy, stance, caveat, and evidence reading.",
+      "sourceTags": [
+        "jlpt",
+        "jf-standard",
+        "jgram"
+      ]
+    },
+    {
+      "id": "lex_l2_adv_executive_decision",
+      "name": "Adult L2 executive decision and risk vocabulary",
+      "japaneseName": "上級意思決定・リスク語彙",
+      "items": [
+        {
+          "lemma": "判断材料",
+          "reading": "はんだんざいりょう",
+          "gloss": "basis for decision"
+        },
+        {
+          "lemma": "優先順位",
+          "reading": "ゆうせんじゅんい",
+          "gloss": "priority order"
+        },
+        {
+          "lemma": "波及効果",
+          "reading": "はきゅうこうか",
+          "gloss": "ripple effect"
+        },
+        {
+          "lemma": "不確実性",
+          "reading": "ふかくじつせい",
+          "gloss": "uncertainty"
+        },
+        {
+          "lemma": "推奨案",
+          "reading": "すいしょうあん",
+          "gloss": "recommended option"
+        }
+      ],
+      "notes": "Original seed vocabulary for BJT J1/J1+ executive risk, scenario, board Q&A, and decision memo topics.",
+      "sourceTags": [
+        "bjt",
+        "jlpt",
+        "jf-standard"
+      ]
+    },
+    {
+      "id": "lex_l2_adv_compliance_change",
+      "name": "Adult L2 compliance, accountability, and change vocabulary",
+      "japaneseName": "上級コンプライアンス・説明責任語彙",
+      "items": [
+        {
+          "lemma": "説明責任",
+          "reading": "せつめいせきにん",
+          "gloss": "accountability"
+        },
+        {
+          "lemma": "再発防止",
+          "reading": "さいはつぼうし",
+          "gloss": "prevention of recurrence"
+        },
+        {
+          "lemma": "例外対応",
+          "reading": "れいがいたいおう",
+          "gloss": "exception handling"
+        },
+        {
+          "lemma": "監査",
+          "reading": "かんさ",
+          "gloss": "audit"
+        },
+        {
+          "lemma": "周知",
+          "reading": "しゅうち",
+          "gloss": "communication to all concerned"
+        }
+      ],
+      "notes": "Original seed vocabulary for BJT crisis, compliance, policy exceptions, change announcements, and accountability frames.",
+      "sourceTags": [
+        "bjt",
+        "jf-standard"
+      ]
+    },
+    {
+      "id": "lex_l2_adv_discourse_processing",
+      "name": "Adult L2 advanced discourse and processability vocabulary",
+      "japaneseName": "上級談話・処理可能性語彙",
+      "items": [
+        {
+          "lemma": "出現",
+          "reading": "しゅつげん",
+          "gloss": "emergence"
+        },
+        {
+          "lemma": "正確さ",
+          "reading": "せいかくさ",
+          "gloss": "accuracy"
+        },
+        {
+          "lemma": "処理負荷",
+          "reading": "しょりふか",
+          "gloss": "processing load"
+        },
+        {
+          "lemma": "自己修正",
+          "reading": "じこしゅうせい",
+          "gloss": "self-correction"
+        },
+        {
+          "lemma": "文脈依存",
+          "reading": "ぶんみゃくいぞん",
+          "gloss": "context-dependent"
+        }
+      ],
+      "notes": "Original seed vocabulary for advanced self-monitoring, native feedback, processability-informed logs, and corpus phrase mining.",
+      "sourceTags": [
+        "jlpt",
+        "jf-standard",
+        "jsl-processability-research"
+      ]
+    },
+    {
+      "id": "lex_l2_adv_cross_cultural_mediation",
+      "name": "Adult L2 high-stakes mediation vocabulary",
+      "japaneseName": "上級異文化調整語彙",
+      "items": [
+        {
+          "lemma": "根回し",
+          "reading": "ねまわし",
+          "gloss": "informal consensus building"
+        },
+        {
+          "lemma": "落とし所",
+          "reading": "おとしどころ",
+          "gloss": "acceptable landing point"
+        },
+        {
+          "lemma": "面子",
+          "reading": "めんつ",
+          "gloss": "face or reputation"
+        },
+        {
+          "lemma": "調整役",
+          "reading": "ちょうせいやく",
+          "gloss": "mediating role"
+        },
+        {
+          "lemma": "合意形成",
+          "reading": "ごういけいせい",
+          "gloss": "consensus building"
+        }
+      ],
+      "notes": "Original seed vocabulary for BJT J2-J1+ cross-cultural mediation, disagreement, expectation repair, and high-stakes facework.",
+      "sourceTags": [
+        "bjt",
+        "jf-standard"
+      ]
+    },
+    {
+      "id": "lex_native_early_oral_story_discourse",
+      "name": "Native early oral story discourse vocabulary",
+      "japaneseName": "低学年物語発話語彙",
+      "items": [
+        {
+          "lemma": "だれ",
+          "reading": "だれ",
+          "gloss": "who"
+        },
+        {
+          "lemma": "どうして",
+          "reading": "どうして",
+          "gloss": "why"
+        },
+        {
+          "lemma": "気持ち",
+          "reading": "きもち",
+          "gloss": "feeling"
+        },
+        {
+          "lemma": "声",
+          "reading": "こえ",
+          "gloss": "voice"
+        },
+        {
+          "lemma": "順番",
+          "reading": "じゅんばん",
+          "gloss": "order or turn"
+        }
+      ],
+      "notes": "Original seed vocabulary for early story questions, character voice, oral retell, and pair-response routines.",
+      "sourceTags": [
+        "mext-es-ja-2017"
+      ]
+    },
+    {
+      "id": "lex_native_early_reading_fluency_response",
+      "name": "Native early reading fluency and response vocabulary",
+      "japaneseName": "低学年音読・感想語彙",
+      "items": [
+        {
+          "lemma": "くり返し",
+          "reading": "くりかえし",
+          "gloss": "repetition"
+        },
+        {
+          "lemma": "間",
+          "reading": "ま",
+          "gloss": "pause or timing"
+        },
+        {
+          "lemma": "場面",
+          "reading": "ばめん",
+          "gloss": "scene"
+        },
+        {
+          "lemma": "好きなところ",
+          "reading": "すきなところ",
+          "gloss": "favorite part"
+        },
+        {
+          "lemma": "手がかり",
+          "reading": "てがかり",
+          "gloss": "clue"
+        }
+      ],
+      "notes": "Original seed vocabulary for echo reading, punctuation pauses, story scenes, favorite-detail reasons, and evidence response.",
+      "sourceTags": [
+        "mext-es-ja-2017"
+      ]
+    },
+    {
+      "id": "lex_native_early_inquiry_visual_notes",
+      "name": "Native early inquiry and visual-note vocabulary",
+      "japaneseName": "低学年探究・図表メモ語彙",
+      "items": [
+        {
+          "lemma": "しらべる",
+          "reading": "しらべる",
+          "gloss": "investigate"
+        },
+        {
+          "lemma": "絵",
+          "reading": "え",
+          "gloss": "picture"
+        },
+        {
+          "lemma": "表",
+          "reading": "ひょう",
+          "gloss": "table"
+        },
+        {
+          "lemma": "分かったこと",
+          "reading": "わかったこと",
+          "gloss": "what was learned"
+        },
+        {
+          "lemma": "出典",
+          "reading": "しゅってん",
+          "gloss": "source"
+        }
+      ],
+      "notes": "Original seed vocabulary for picture evidence, captions, tables, source cards, visual notes, and early inquiry reports.",
+      "sourceTags": [
+        "mext-es-ja-2017"
+      ]
+    },
+    {
+      "id": "lex_native_elem_sentence_paragraph_control",
+      "name": "Native elementary sentence and paragraph control vocabulary",
+      "japaneseName": "小学校文・段落制御語彙",
+      "items": [
+        {
+          "lemma": "くわしく",
+          "reading": "くわしく",
+          "gloss": "in detail"
+        },
+        {
+          "lemma": "つなぎ言葉",
+          "reading": "つなぎことば",
+          "gloss": "connecting words"
+        },
+        {
+          "lemma": "はじめ",
+          "reading": "はじめ",
+          "gloss": "beginning"
+        },
+        {
+          "lemma": "中心文",
+          "reading": "ちゅうしんぶん",
+          "gloss": "topic or central sentence"
+        },
+        {
+          "lemma": "まとまり",
+          "reading": "まとまり",
+          "gloss": "coherent unit"
+        }
+      ],
+      "notes": "Original seed vocabulary for adding details, connector choice, sentence strips, topic sentences, and paragraph focus.",
+      "sourceTags": [
+        "mext-es-ja-2017"
+      ]
+    },
+    {
+      "id": "lex_native_elem_register_word_choice",
+      "name": "Native elementary register and word-choice vocabulary",
+      "japaneseName": "小学校文体・語選択語彙",
+      "items": [
+        {
+          "lemma": "ていねい",
+          "reading": "ていねい",
+          "gloss": "polite"
+        },
+        {
+          "lemma": "ふつう",
+          "reading": "ふつう",
+          "gloss": "ordinary or plain"
+        },
+        {
+          "lemma": "強さ",
+          "reading": "つよさ",
+          "gloss": "intensity"
+        },
+        {
+          "lemma": "ぴったり",
+          "reading": "ぴったり",
+          "gloss": "fitting exactly"
+        },
+        {
+          "lemma": "読み手",
+          "reading": "よみて",
+          "gloss": "reader"
+        }
+      ],
+      "notes": "Original seed vocabulary for polite requests, feeling-word intensity, precise description, audience match, and revision for reader effect.",
+      "sourceTags": [
+        "mext-es-ja-2017"
+      ]
+    },
+    {
+      "id": "lex_l2_beginner_script_input_transfer",
+      "name": "Adult L2 beginner script and input-transfer vocabulary",
+      "japaneseName": "初級文字・入力転移語彙",
+      "items": [
+        {
+          "lemma": "行",
+          "reading": "ぎょう",
+          "gloss": "kana row or line"
+        },
+        {
+          "lemma": "濁点",
+          "reading": "だくてん",
+          "gloss": "voicing mark"
+        },
+        {
+          "lemma": "長音",
+          "reading": "ちょうおん",
+          "gloss": "long vowel"
+        },
+        {
+          "lemma": "変換",
+          "reading": "へんかん",
+          "gloss": "conversion"
+        },
+        {
+          "lemma": "入力",
+          "reading": "にゅうりょく",
+          "gloss": "input"
+        }
+      ],
+      "notes": "Original seed vocabulary for kana retrieval, sound-mark listening, katakana categories, and digital input transfer.",
+      "sourceTags": [
+        "jlpt",
+        "jf-standard",
+        "yookoso-book1"
+      ]
+    },
+    {
+      "id": "lex_l2_beginner_interaction_repair",
+      "name": "Adult L2 beginner interaction and repair vocabulary",
+      "japaneseName": "初級やりとり・修復語彙",
+      "items": [
+        {
+          "lemma": "もう一度",
+          "reading": "もういちど",
+          "gloss": "one more time"
+        },
+        {
+          "lemma": "ゆっくり",
+          "reading": "ゆっくり",
+          "gloss": "slowly"
+        },
+        {
+          "lemma": "確認",
+          "reading": "かくにん",
+          "gloss": "confirmation"
+        },
+        {
+          "lemma": "質問",
+          "reading": "しつもん",
+          "gloss": "question"
+        },
+        {
+          "lemma": "返事",
+          "reading": "へんじ",
+          "gloss": "reply"
+        }
+      ],
+      "notes": "Original seed vocabulary for survival repair, WH-answer slots, aizuchi, short exchanges, and clarification under beginner load.",
+      "sourceTags": [
+        "jlpt",
+        "jf-standard",
+        "yookoso-book1"
+      ]
+    },
+    {
+      "id": "lex_l2_beginner_short_message_literacy",
+      "name": "Adult L2 beginner short-message literacy vocabulary",
+      "japaneseName": "初級短文リテラシー語彙",
+      "items": [
+        {
+          "lemma": "予定",
+          "reading": "よてい",
+          "gloss": "schedule or plan"
+        },
+        {
+          "lemma": "場所",
+          "reading": "ばしょ",
+          "gloss": "place"
+        },
+        {
+          "lemma": "返信",
+          "reading": "へんしん",
+          "gloss": "reply"
+        },
+        {
+          "lemma": "変更",
+          "reading": "へんこう",
+          "gloss": "change"
+        },
+        {
+          "lemma": "お知らせ",
+          "reading": "おしらせ",
+          "gloss": "notice"
+        }
+      ],
+      "notes": "Original seed vocabulary for short notices, forms, schedules, emails, and beginner reading-writing transfer.",
+      "sourceTags": [
+        "jlpt",
+        "jf-standard",
+        "yookoso-book1"
+      ]
+    },
+    {
+      "id": "lex_l2_n4_daily_event_connection",
+      "name": "Adult L2 N4 daily-event connection vocabulary",
+      "japaneseName": "N4日常出来事接続語彙",
+      "items": [
+        {
+          "lemma": "理由",
+          "reading": "りゆう",
+          "gloss": "reason"
+        },
+        {
+          "lemma": "経験",
+          "reading": "けいけん",
+          "gloss": "experience"
+        },
+        {
+          "lemma": "予定変更",
+          "reading": "よていへんこう",
+          "gloss": "schedule change"
+        },
+        {
+          "lemma": "比べる",
+          "reading": "くらべる",
+          "gloss": "compare"
+        },
+        {
+          "lemma": "断る",
+          "reading": "ことわる",
+          "gloss": "decline or refuse"
+        }
+      ],
+      "notes": "Original seed vocabulary for N4 reason, comparison, invitation, refusal, schedule change, and experience-writing nodes.",
+      "sourceTags": [
+        "jlpt",
+        "jf-standard",
+        "yookoso-book1"
+      ]
+    },
+    {
+      "id": "lex_l2_beginner_workplace_bridge",
+      "name": "Adult L2 beginner workplace bridge vocabulary",
+      "japaneseName": "初級職場橋渡し語彙",
+      "items": [
+        {
+          "lemma": "担当",
+          "reading": "たんとう",
+          "gloss": "person in charge"
+        },
+        {
+          "lemma": "完了",
+          "reading": "かんりょう",
+          "gloss": "completion"
+        },
+        {
+          "lemma": "遅れ",
+          "reading": "おくれ",
+          "gloss": "delay"
+        },
+        {
+          "lemma": "在庫",
+          "reading": "ざいこ",
+          "gloss": "inventory"
+        },
+        {
+          "lemma": "確認事項",
+          "reading": "かくにんじこう",
+          "gloss": "items to confirm"
+        }
+      ],
+      "notes": "Original seed vocabulary for BJT J5/J4 workplace confirmation, short reports, delays, checklist problems, and supervisor clarification.",
+      "sourceTags": [
+        "bjt",
+        "jf-standard"
+      ]
+    },
+    {
+      "id": "lex_native_prefecture_map_words",
+      "name": "Native prefecture and map-reading words",
+      "japaneseName": "都道府県と地図を読む語彙",
+      "items": [
+        {
+          "lemma": "都道府県",
+          "reading": "とどうふけん",
+          "gloss": "prefectures"
+        },
+        {
+          "lemma": "県名",
+          "reading": "けんめい",
+          "gloss": "prefecture name"
+        },
+        {
+          "lemma": "地図",
+          "reading": "ちず",
+          "gloss": "map"
+        },
+        {
+          "lemma": "住所",
+          "reading": "じゅうしょ",
+          "gloss": "address"
+        },
+        {
+          "lemma": "地域",
+          "reading": "ちいき",
+          "gloss": "region or area"
+        }
+      ],
+      "notes": "Original seed vocabulary for reading prefecture-name kanji in maps, addresses, social-studies reports, and informational texts.",
+      "sourceTags": [
+        "mext-es-ja-2017",
+        "mext-kanji-grade",
+        "jp-cos-lod"
+      ]
+    },
+    {
+      "id": "lex_l2_beginner_verb_form_patterns",
+      "name": "Adult L2 beginner verb-form pattern words",
+      "japaneseName": "初級動詞活用パターン語彙",
+      "items": [
+        {
+          "lemma": "行く",
+          "reading": "いく",
+          "gloss": "go"
+        },
+        {
+          "lemma": "食べる",
+          "reading": "たべる",
+          "gloss": "eat"
+        },
+        {
+          "lemma": "する",
+          "reading": "する",
+          "gloss": "do"
+        },
+        {
+          "lemma": "来る",
+          "reading": "くる",
+          "gloss": "come"
+        },
+        {
+          "lemma": "ます形",
+          "reading": "ますけい",
+          "gloss": "masu-form"
+        }
+      ],
+      "notes": "Original seed vocabulary for dictionary-form recognition, verb group routines, polite forms, and te-form construction.",
+      "sourceTags": [
+        "yookoso-book1",
+        "jf-standard",
+        "jlpt",
+        "tae-kim"
+      ]
+    },
+    {
+      "id": "lex_l2_beginner_adjective_predicates",
+      "name": "Adult L2 beginner adjective predicate words",
+      "japaneseName": "初級形容詞述語語彙",
+      "items": [
+        {
+          "lemma": "高い",
+          "reading": "たかい",
+          "gloss": "expensive or high"
+        },
+        {
+          "lemma": "新しい",
+          "reading": "あたらしい",
+          "gloss": "new"
+        },
+        {
+          "lemma": "静か",
+          "reading": "しずか",
+          "gloss": "quiet"
+        },
+        {
+          "lemma": "好き",
+          "reading": "すき",
+          "gloss": "liked"
+        },
+        {
+          "lemma": "便利",
+          "reading": "べんり",
+          "gloss": "convenient"
+        }
+      ],
+      "notes": "Original seed vocabulary for contrasting i-adjective and na-adjective predicate behavior in beginner sentences.",
+      "sourceTags": [
+        "yookoso-book1",
+        "jf-standard",
+        "jlpt",
+        "tae-kim"
+      ]
+    },
+    {
+      "id": "lex_l2_beginner_location_existence",
+      "name": "Adult L2 beginner location and existence words",
+      "japaneseName": "初級存在・場所語彙",
+      "items": [
+        {
+          "lemma": "ここ",
+          "reading": "ここ",
+          "gloss": "here"
+        },
+        {
+          "lemma": "部屋",
+          "reading": "へや",
+          "gloss": "room"
+        },
+        {
+          "lemma": "机",
+          "reading": "つくえ",
+          "gloss": "desk"
+        },
+        {
+          "lemma": "あります",
+          "reading": "あります",
+          "gloss": "exist or have for inanimate referents"
+        },
+        {
+          "lemma": "います",
+          "reading": "います",
+          "gloss": "exist for animate referents"
+        }
+      ],
+      "notes": "Original seed vocabulary for ni/de location contrasts, existence sentences, and beginner object/person-location descriptions.",
+      "sourceTags": [
+        "yookoso-book1",
+        "jf-standard",
+        "jlpt",
+        "jgram"
+      ]
+    },
+    {
+      "id": "lex_l2_beginner_request_forms",
+      "name": "Adult L2 beginner request-form words",
+      "japaneseName": "初級依頼表現語彙",
+      "items": [
+        {
+          "lemma": "ください",
+          "reading": "ください",
+          "gloss": "please do or give"
+        },
+        {
+          "lemma": "お願いします",
+          "reading": "おねがいします",
+          "gloss": "please"
+        },
+        {
+          "lemma": "すみません",
+          "reading": "すみません",
+          "gloss": "excuse me or sorry"
+        },
+        {
+          "lemma": "もう一度",
+          "reading": "もういちど",
+          "gloss": "one more time"
+        },
+        {
+          "lemma": "ゆっくり",
+          "reading": "ゆっくり",
+          "gloss": "slowly"
+        }
+      ],
+      "notes": "Original seed vocabulary for te kudasai requests, survival repair, repetition requests, and softened beginner interaction.",
+      "sourceTags": [
+        "yookoso-book1",
+        "jf-standard",
+        "jlpt"
+      ]
+    },
+    {
+      "id": "lex_l2_n3_connector_clause_forms",
+      "name": "Adult L2 N3 connector and clause-form words",
+      "japaneseName": "N3接続・節構成語彙",
+      "items": [
+        {
+          "lemma": "場合",
+          "reading": "ばあい",
+          "gloss": "case or situation"
+        },
+        {
+          "lemma": "ため",
+          "reading": "ため",
+          "gloss": "reason or purpose"
+        },
+        {
+          "lemma": "のに",
+          "reading": "のに",
+          "gloss": "although or despite"
+        },
+        {
+          "lemma": "けれども",
+          "reading": "けれども",
+          "gloss": "but or although"
+        },
+        {
+          "lemma": "かどうか",
+          "reading": "かどうか",
+          "gloss": "whether or not"
+        }
+      ],
+      "notes": "Original seed vocabulary for N3 condition, reason, contrast, concession, and embedded-question clause work.",
+      "sourceTags": [
+        "jlpt",
+        "jgram",
+        "tae-kim",
+        "yookoso-book2"
+      ]
+    },
+    {
+      "id": "lex_l2_n3_nominalization_question_forms",
+      "name": "Adult L2 N3 nominalization and embedded-question words",
+      "japaneseName": "N3名詞節・埋め込み疑問語彙",
+      "items": [
+        {
+          "lemma": "こと",
+          "reading": "こと",
+          "gloss": "nominalizing thing or fact"
+        },
+        {
+          "lemma": "の",
+          "reading": "の",
+          "gloss": "nominalizer"
+        },
+        {
+          "lemma": "ということ",
+          "reading": "ということ",
+          "gloss": "the fact that"
+        },
+        {
+          "lemma": "かどうか",
+          "reading": "かどうか",
+          "gloss": "whether or not"
+        },
+        {
+          "lemma": "わけ",
+          "reading": "わけ",
+          "gloss": "reason or implication"
+        }
+      ],
+      "notes": "Original seed vocabulary for reporting uncertainty, knowledge, perception, and evaluation inside larger N3 clauses.",
+      "sourceTags": [
+        "jlpt",
+        "jgram",
+        "tae-kim",
+        "yookoso-book2"
+      ]
+    },
+    {
+      "id": "lex_l2_voice_accountability_forms",
+      "name": "Adult L2 passive, causative, and accountability words",
+      "japaneseName": "受身・使役・責任視点語彙",
+      "items": [
+        {
+          "lemma": "受身",
+          "reading": "うけみ",
+          "gloss": "passive voice"
+        },
+        {
+          "lemma": "使役",
+          "reading": "しえき",
+          "gloss": "causative voice"
+        },
+        {
+          "lemma": "使役受身",
+          "reading": "しえきうけみ",
+          "gloss": "causative-passive voice"
+        },
+        {
+          "lemma": "被害",
+          "reading": "ひがい",
+          "gloss": "adverse effect or damage"
+        },
+        {
+          "lemma": "責任",
+          "reading": "せきにん",
+          "gloss": "responsibility"
+        }
+      ],
+      "notes": "Original seed vocabulary for passive affect, causative permission/coercion, causative-passive pressure, and accountability perspective.",
+      "sourceTags": [
+        "jlpt",
+        "jgram",
+        "tae-kim",
+        "bjt"
+      ]
+    }
+  ]
+}
