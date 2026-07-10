@@ -48,6 +48,17 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+html:lang(ja) {
+  line-break: strict;
+  word-break: normal;
+}
+
+@supports (word-break: auto-phrase) {
+  html:lang(ja) {
+    word-break: auto-phrase;
+  }
+}
+
 button,
 input,
 select,
@@ -929,6 +940,14 @@ summary:focus-visible,
   color: #cbd1df;
   font-size: 12.5px;
   line-height: 1.58;
+}
+
+html:lang(ja) #topicDescription,
+html:lang(ja) .detailDisclosure p,
+html:lang(ja) .detailDisclosure li,
+html:lang(ja) .commentaryPanel p,
+html:lang(ja) .commentaryPanel li {
+  text-wrap: pretty;
 }
 
 .topicMetricRow {
