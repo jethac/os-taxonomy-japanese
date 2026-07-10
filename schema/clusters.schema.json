@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/japanese-language-taxonomy/schema/clusters.schema.json",
+  "title": "Japanese Language Taxonomy clusters",
+  "type": "object",
+  "required": ["version", "profile", "clusterCount", "clusters"],
+  "properties": {
+    "version": { "type": "string" },
+    "profile": { "enum": ["ja-L1-child", "ja-L2-adult"] },
+    "clusterCount": { "type": "integer", "minimum": 0 },
+    "clusters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["learnerProfile", "domain", "summary"],
+        "properties": {
+          "learnerProfile": { "enum": ["ja-L1-child", "ja-L2-adult"] },
+          "domain": { "type": "string" },
+          "ageRangeStart": { "type": ["integer", "null"] },
+          "ageRangeEnd": { "type": ["integer", "null"] },
+          "gradeRangeStart": { "type": ["integer", "null"] },
+          "gradeRangeEnd": { "type": ["integer", "null"] },
+          "levelRangeStart": { "type": ["string", "null"] },
+          "levelRangeEnd": { "type": ["string", "null"] },
+          "summary": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

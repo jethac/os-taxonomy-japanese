@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/japanese-language-taxonomy/schema/topics.schema.json",
+  "title": "Japanese Language Taxonomy topics",
+  "type": "object",
+  "required": ["version", "profile", "topicCount", "topics"],
+  "properties": {
+    "version": { "type": "string" },
+    "profile": { "enum": ["ja-L1-child", "ja-L2-adult"] },
+    "topicCount": { "type": "integer", "minimum": 0 },
+    "topics": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "learnerProfile",
+          "type",
+          "subject",
+          "domain",
+          "name",
+          "description",
+          "evidence",
+          "assessmentPrompt",
+          "standards"
+        ],
+        "properties": {
+          "id": { "type": "string", "pattern": "^jt_" },
+          "learnerProfile": { "enum": ["ja-L1-child", "ja-L2-adult"] },
+          "type": {
+            "enum": ["CONCEPTUAL", "PROCEDURAL", "REPRESENTATIONAL", "LANGUAGE", "META"]
+          },
+          "subject": { "const": "Japanese" },
+          "domain": { "type": "string" },
+          "name": { "type": "string" },
+          "japaneseName": { "type": ["string", "null"] },
+          "description": { "type": "string" },
+          "ageRangeStart": { "type": ["integer", "null"] },
+          "ageRangeEnd": { "type": ["integer", "null"] },
+          "gradeRangeStart": { "type": ["integer", "null"] },
+          "gradeRangeEnd": { "type": ["integer", "null"] },
+          "schoolStage": { "type": ["string", "null"] },
+          "levelRangeStart": { "type": ["string", "null"] },
+          "levelRangeEnd": { "type": ["string", "null"] },
+          "jfLevels": { "type": "array", "items": { "type": "string" } },
+          "jlptLevels": { "type": "array", "items": { "type": "string" } },
+          "bjtLevels": { "type": "array", "items": { "type": "string" } },
+          "actflLevels": { "type": "array", "items": { "type": "string" } },
+          "centrality": { "type": ["number", "null"] },
+          "evidence": { "type": "array", "items": { "type": "string" }, "minItems": 2, "maxItems": 5 },
+          "assessmentPrompt": { "type": "string" },
+          "standards": { "type": "array", "items": { "type": "string" } },
+          "sourceTags": { "type": "array", "items": { "type": "string" } },
+          "scriptRequirements": { "type": "array", "items": { "type": "string" } },
+          "linkedCharacters": { "type": "array", "items": { "type": "string" } },
+          "linkedLexemes": { "type": "array", "items": { "type": "string" } },
+          "textbookAlignments": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["source", "unit"],
+              "properties": {
+                "source": { "type": "string" },
+                "unit": { "type": "string" },
+                "note": { "type": "string" }
+              },
+              "additionalProperties": false
+            }
+          },
+          "mextAreas": { "type": "array", "items": { "type": "string" } }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/japanese-language-taxonomy/schema/shared-lexemes.schema.json",
+  "title": "Japanese Language Taxonomy shared lexeme sets",
+  "type": "object",
+  "required": ["version", "lexemeSetCount", "lexemeSets"],
+  "properties": {
+    "version": { "type": "string" },
+    "lexemeSetCount": { "type": "integer", "minimum": 0 },
+    "lexemeSets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "items", "sourceTags"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^lex_" },
+          "name": { "type": "string" },
+          "japaneseName": { "type": ["string", "null"] },
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["lemma", "reading"],
+              "properties": {
+                "lemma": { "type": "string" },
+                "reading": { "type": "string" },
+                "gloss": { "type": ["string", "null"] }
+              },
+              "additionalProperties": false
+            }
+          },
+          "notes": { "type": "string" },
+          "sourceTags": { "type": "array", "items": { "type": "string" } }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

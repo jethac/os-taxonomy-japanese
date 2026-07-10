@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/japanese-language-taxonomy/schema/shared-characters.schema.json",
+  "title": "Japanese Language Taxonomy shared character sets",
+  "type": "object",
+  "required": ["version", "characterSetCount", "characterSets"],
+  "properties": {
+    "version": { "type": "string" },
+    "characterSetCount": { "type": "integer", "minimum": 0 },
+    "characterSets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "kind", "name", "characters", "sourceTags"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^chars_" },
+          "kind": { "enum": ["kana", "kanji", "punctuation", "mixed"] },
+          "name": { "type": "string" },
+          "japaneseName": { "type": ["string", "null"] },
+          "characters": { "type": "array", "items": { "type": "string" } },
+          "grade": { "type": ["integer", "null"] },
+          "notes": { "type": "string" },
+          "sourceTags": { "type": "array", "items": { "type": "string" } }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/japanese-language-taxonomy/schema/shared-sources.schema.json",
+  "title": "Japanese Language Taxonomy shared sources",
+  "type": "object",
+  "required": ["version", "sourceCount", "sources"],
+  "properties": {
+    "version": { "type": "string" },
+    "sourceCount": { "type": "integer", "minimum": 0 },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "slug",
+          "profiles",
+          "name",
+          "category",
+          "sourceUrl",
+          "use",
+          "textIncluded",
+          "redistribution",
+          "licenseStatus",
+          "notes"
+        ],
+        "properties": {
+          "slug": { "type": "string" },
+          "profiles": {
+            "type": "array",
+            "items": { "enum": ["ja-L1-child", "ja-L2-adult", "shared"] }
+          },
+          "name": { "type": "string" },
+          "category": { "type": "string" },
+          "sourceUrl": { "type": ["string", "null"] },
+          "use": { "type": "string" },
+          "textIncluded": { "type": "boolean" },
+          "redistribution": { "type": "string" },
+          "licenseStatus": { "type": "string" },
+          "notes": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
