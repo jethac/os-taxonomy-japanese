@@ -239,6 +239,95 @@ for (const graph of graphs) {
   validateClusters(graph.profile, clusters, new Set(topics.topics.map((topic) => topic.domain)));
 }
 
+const capabilities = readJson('data/shared/capabilities.json');
+if (capabilities) {
+  const nativeIds = new Set(readJson('data/native-child/topics.json')?.topics?.map((topic) => topic.id) ?? []);
+  const l2Ids = new Set(readJson('data/l2-adult/topics.json')?.topics?.map((topic) => topic.id) ?? []);
+  const assignedNative = new Set();
+  const assignedL2 = new Set();
+  const capabilityIds = new Set();
+
+  assert(capabilities.status === 'seed-crosswalk', 'shared capabilities status must be seed-crosswalk');
+  for (const assessment of ['jlpt', 'bjt', 'mext']) {
+    const scope = capabilities.assessmentScopeNotes?.[assessment];
+    assert(typeof scope?.note === 'string' && scope.note.length > 0, `${assessment}: missing assessment scope note`);
+    assert(
+      typeof scope?.noteJa === 'string' && japaneseScriptPattern.test(scope.noteJa),
+      `${assessment}: missing Japanese assessment scope note`
+    );
+    assert(Array.isArray(scope?.sourceUrls) && scope.sourceUrls.length > 0, `${assessment}: missing scope sources`);
+    assert(scope.sourceUrls.every((url) => /^https:\/\//.test(url)), `${assessment}: invalid scope source URL`);
+  }
+  assert(capabilities.capabilityCount === capabilities.capabilities?.length, 'shared capabilities count mismatch');
+  assert(
+    capabilities.topicAssignmentCount === nativeIds.size + l2Ids.size,
+    'shared capabilities topicAssignmentCount does not match source topics'
+  );
+  assert(capabilities.topicsByRoute?.['ja-L1-child'] === nativeIds.size, 'shared capabilities native route count mismatch');
+  assert(capabilities.topicsByRoute?.['ja-L2-adult'] === l2Ids.size, 'shared capabilities L2 route count mismatch');
+
+  for (const capability of capabilities.capabilities ?? []) {
+    assert(/^jc_/.test(capability.id ?? ''), `shared capability has invalid id ${capability.id}`);
+    assert(!capabilityIds.has(capability.id), `shared capabilities duplicate id ${capability.id}`);
+    capabilityIds.add(capability.id);
+    assert(typeof capability.name === 'string' && capability.name.length > 0, `${capability.id}: missing name`);
+    assert(
+      typeof capability.japaneseName === 'string' && japaneseScriptPattern.test(capability.japaneseName),
+      `${capability.id}: missing Japanese name`
+    );
+    assert(typeof capability.summary === 'string' && capability.summary.length > 0, `${capability.id}: missing summary`);
+    assert(
+      typeof capability.summaryJa === 'string' && japaneseScriptPattern.test(capability.summaryJa),
+      `${capability.id}: missing Japanese summary`
+    );
+    assert(Number.isInteger(capability.stage) && capability.stage >= 1 && capability.stage <= 4, `${capability.id}: invalid stage`);
+    assert(Array.isArray(capability.l1TopicIds), `${capability.id}: l1TopicIds must be an array`);
+    assert(Array.isArray(capability.l2TopicIds), `${capability.id}: l2TopicIds must be an array`);
+
+    for (const topicId of capability.l1TopicIds ?? []) {
+      assert(nativeIds.has(topicId), `${capability.id}: unknown native topic ${topicId}`);
+      assert(!assignedNative.has(topicId), `${topicId}: assigned to multiple shared capabilities`);
+      assignedNative.add(topicId);
+    }
+    for (const topicId of capability.l2TopicIds ?? []) {
+      assert(l2Ids.has(topicId), `${capability.id}: unknown L2 topic ${topicId}`);
+      assert(!assignedL2.has(topicId), `${topicId}: assigned to multiple shared capabilities`);
+      assignedL2.add(topicId);
+    }
+
+    const expectedRouteStatus = capability.l1TopicIds.length && capability.l2TopicIds.length
+      ? 'shared'
+      : capability.l1TopicIds.length
+        ? 'native-only'
+        : 'l2-only';
+    assert(capability.routeStatus === expectedRouteStatus, `${capability.id}: routeStatus mismatch`);
+    for (const [assessment, validLevels] of [
+      ['jlpt', new Set(['N5', 'N4', 'N3', 'N2', 'N1'])],
+      ['bjt', new Set(['J5', 'J4', 'J3', 'J2', 'J1', 'J1+'])]
+    ]) {
+      const direct = capability.assessmentCoverage?.[assessment]?.directLevels ?? [];
+      const supporting = capability.assessmentCoverage?.[assessment]?.supportingLevels ?? [];
+      assert(Array.isArray(direct), `${capability.id}: ${assessment} directLevels must be an array`);
+      assert(Array.isArray(supporting), `${capability.id}: ${assessment} supportingLevels must be an array`);
+      assert(direct.every((level) => validLevels.has(level)), `${capability.id}: invalid ${assessment} direct level`);
+      assert(supporting.every((level) => validLevels.has(level)), `${capability.id}: invalid ${assessment} supporting level`);
+      assert(new Set(direct).size === direct.length, `${capability.id}: duplicate ${assessment} direct level`);
+      assert(new Set(supporting).size === supporting.length, `${capability.id}: duplicate ${assessment} supporting level`);
+      assert(
+        direct.every((level) => !supporting.includes(level)),
+        `${capability.id}: ${assessment} direct and supporting levels overlap`
+      );
+    }
+    assert(
+      typeof capability.assessmentCoverage?.mext?.covered === 'boolean',
+      `${capability.id}: MEXT coverage must be boolean`
+    );
+  }
+
+  assert(assignedNative.size === nativeIds.size, `shared capabilities leave ${nativeIds.size - assignedNative.size} native topics unassigned`);
+  assert(assignedL2.size === l2Ids.size, `shared capabilities leave ${l2Ids.size - assignedL2.size} L2 topics unassigned`);
+}
+
 const localization = readJson('data/locales/ja.json');
 if (localization) {
   assert(localization.locale === 'ja', 'Japanese localization pack locale must be ja');

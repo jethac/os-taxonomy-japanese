@@ -30,6 +30,7 @@ const files = [
   'data/shared/characters.json',
   'data/shared/lexemes.json',
   'data/shared/sources.json',
+  'data/shared/capabilities.json',
   'data/profile-commentary.json',
   'data/locales/ja.json'
 ];
@@ -45,6 +46,7 @@ const l2Clusters = readJson('data/l2-adult/clusters.json');
 const characters = readJson('data/shared/characters.json');
 const lexemes = readJson('data/shared/lexemes.json');
 const sources = readJson('data/shared/sources.json');
+const capabilities = readJson('data/shared/capabilities.json');
 const commentary = readJson('data/profile-commentary.json');
 const japaneseLocalization = readJson('data/locales/ja.json');
 
@@ -54,6 +56,7 @@ const manifest = {
   generatedAt,
   status: 'seed',
   profiles: ['ja-L1-child', 'ja-L2-adult'],
+  comparisonLayers: ['ja-shared-capability'],
   counts: {
     topics: nativeTopics.topicCount + l2Topics.topicCount,
     topicsByProfile: {
@@ -73,6 +76,8 @@ const manifest = {
     characterSets: characters.characterSetCount,
     lexemeSets: lexemes.lexemeSetCount,
     sources: sources.sourceCount,
+    sharedCapabilities: capabilities.capabilityCount,
+    capabilityTopicAssignments: capabilities.topicAssignmentCount,
     profileCommentaries: Object.keys(commentary.profiles).length,
     japaneseLocalizationEntries: japaneseLocalization.entryCount
   },

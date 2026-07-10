@@ -1,11 +1,14 @@
 {
   "dataset": "Japanese Language Taxonomy",
   "taxonomyVersion": "seed-0.0.1",
-  "generatedAt": "2026-07-10T14:56:08.222Z",
+  "generatedAt": "2026-07-10T16:58:08.922Z",
   "status": "seed",
   "profiles": [
     "ja-L1-child",
     "ja-L2-adult"
+  ],
+  "comparisonLayers": [
+    "ja-shared-capability"
   ],
   "counts": {
     "topics": 2219,
@@ -24,6 +27,8 @@
     "characterSets": 11,
     "lexemeSets": 143,
     "sources": 20,
+    "sharedCapabilities": 33,
+    "capabilityTopicAssignments": 2219,
     "profileCommentaries": 2,
     "japaneseLocalizationEntries": 10983
   },
@@ -71,6 +76,10 @@
     "data/shared/sources.json": {
       "bytes": 14842,
       "sha256": "d509167ccfb47ef5e9bbd2186eea0b2b29bfbe881bb717f9f872f33cb83f78a2"
+    },
+    "data/shared/capabilities.json": {
+      "bytes": 169172,
+      "sha256": "504790a1e57f02b977214fea29d793d5e163cd22e15a25787dacb60785d48ead"
     },
     "data/profile-commentary.json": {
       "bytes": 6411,

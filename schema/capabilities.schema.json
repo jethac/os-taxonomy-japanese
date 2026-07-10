@@ -1,0 +1,147 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/japanese-language-taxonomy/schema/capabilities.schema.json",
+  "title": "Shared Japanese capability crosswalk",
+  "type": "object",
+  "required": [
+    "version",
+    "status",
+    "note",
+    "assessmentScopeNotes",
+    "capabilityCount",
+    "topicAssignmentCount",
+    "topicsByRoute",
+    "capabilities"
+  ],
+  "properties": {
+    "version": { "type": "string" },
+    "status": { "const": "seed-crosswalk" },
+    "note": { "type": "string", "minLength": 1 },
+    "assessmentScopeNotes": {
+      "type": "object",
+      "required": ["jlpt", "bjt", "mext"],
+      "properties": {
+        "jlpt": { "$ref": "#/$defs/scopeNote" },
+        "bjt": { "$ref": "#/$defs/scopeNote" },
+        "mext": { "$ref": "#/$defs/scopeNote" }
+      },
+      "additionalProperties": false
+    },
+    "capabilityCount": { "type": "integer", "minimum": 1 },
+    "topicAssignmentCount": { "type": "integer", "minimum": 1 },
+    "topicsByRoute": {
+      "type": "object",
+      "required": ["ja-L1-child", "ja-L2-adult"],
+      "properties": {
+        "ja-L1-child": { "type": "integer", "minimum": 0 },
+        "ja-L2-adult": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
+    },
+    "capabilities": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "domain",
+          "stage",
+          "name",
+          "japaneseName",
+          "summary",
+          "summaryJa",
+          "routeStatus",
+          "l1TopicIds",
+          "l2TopicIds",
+          "coverage",
+          "assessmentCoverage"
+        ],
+        "properties": {
+          "id": { "type": "string", "pattern": "^jc_" },
+          "domain": { "type": "string", "minLength": 1 },
+          "stage": { "type": "integer", "minimum": 1, "maximum": 4 },
+          "name": { "type": "string", "minLength": 1 },
+          "japaneseName": { "type": "string", "minLength": 1 },
+          "summary": { "type": "string", "minLength": 1 },
+          "summaryJa": { "type": "string", "minLength": 1 },
+          "routeStatus": { "enum": ["shared", "native-only", "l2-only"] },
+          "l1TopicIds": {
+            "type": "array",
+            "items": { "type": "string", "pattern": "^jt_L1_" },
+            "uniqueItems": true
+          },
+          "l2TopicIds": {
+            "type": "array",
+            "items": { "type": "string", "pattern": "^jt_L2_" },
+            "uniqueItems": true
+          },
+          "coverage": {
+            "type": "object",
+            "required": ["nativeGrades", "mextAreas", "jlptLevels", "bjtLevels", "jfLevels"],
+            "properties": {
+              "nativeGrades": { "type": "array", "items": { "type": "integer", "minimum": 0, "maximum": 12 } },
+              "mextAreas": { "type": "array", "items": { "type": "string" } },
+              "jlptLevels": { "type": "array", "items": { "enum": ["N5", "N4", "N3", "N2", "N1"] } },
+              "bjtLevels": { "type": "array", "items": { "enum": ["J5", "J4", "J3", "J2", "J1", "J1+"] } },
+              "jfLevels": { "type": "array", "items": { "type": "string" } }
+            },
+            "additionalProperties": false
+          },
+          "assessmentCoverage": {
+            "type": "object",
+            "required": ["jlpt", "bjt", "mext"],
+            "properties": {
+              "jlpt": { "$ref": "#/$defs/jlptCoverage" },
+              "bjt": { "$ref": "#/$defs/bjtCoverage" },
+              "mext": {
+                "type": "object",
+                "required": ["covered"],
+                "properties": { "covered": { "type": "boolean" } },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "$defs": {
+    "scopeNote": {
+      "type": "object",
+      "required": ["note", "noteJa", "sourceUrls"],
+      "properties": {
+        "note": { "type": "string", "minLength": 1 },
+        "noteJa": { "type": "string", "minLength": 1 },
+        "sourceUrls": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "format": "uri" },
+          "uniqueItems": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "jlptCoverage": {
+      "type": "object",
+      "required": ["directLevels", "supportingLevels"],
+      "properties": {
+        "directLevels": { "type": "array", "items": { "enum": ["N5", "N4", "N3", "N2", "N1"] }, "uniqueItems": true },
+        "supportingLevels": { "type": "array", "items": { "enum": ["N5", "N4", "N3", "N2", "N1"] }, "uniqueItems": true }
+      },
+      "additionalProperties": false
+    },
+    "bjtCoverage": {
+      "type": "object",
+      "required": ["directLevels", "supportingLevels"],
+      "properties": {
+        "directLevels": { "type": "array", "items": { "enum": ["J5", "J4", "J3", "J2", "J1", "J1+"] }, "uniqueItems": true },
+        "supportingLevels": { "type": "array", "items": { "enum": ["J5", "J4", "J3", "J2", "J1", "J1+"] }, "uniqueItems": true }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

@@ -592,6 +592,121 @@ summary:focus-visible,
   display: none;
 }
 
+.compareControls {
+  position: absolute;
+  z-index: 8;
+  right: 82px;
+  bottom: 22px;
+  display: grid;
+  width: min(640px, 48vw);
+  grid-template-columns: minmax(130px, 0.72fr) minmax(210px, 1fr);
+  gap: 9px 12px;
+  padding: 12px 13px;
+  border: 1px solid rgba(143, 157, 196, 0.2);
+  border-radius: 18px;
+  background: rgba(9, 12, 22, 0.74);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(17px) saturate(1.16);
+  -webkit-backdrop-filter: blur(17px) saturate(1.16);
+}
+
+.compareControls[hidden] {
+  display: none;
+}
+
+.graphShell.hasCompareControls .legendPanel {
+  width: min(430px, 34vw);
+}
+
+.compareControlLead,
+.coverageLensControl {
+  display: grid;
+  align-content: center;
+  gap: 2px;
+}
+
+.compareControlLead span,
+.coverageLensControl span {
+  color: #8f99b2;
+  font-size: 8px;
+  font-weight: 820;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.compareControlLead strong {
+  color: #eef1f8;
+  font-size: 12px;
+  font-weight: 760;
+}
+
+.coverageLensControl select {
+  min-height: 33px;
+  padding: 5px 8px;
+}
+
+.comparisonViewSwitch {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 3px;
+  padding: 3px;
+  border-radius: 11px;
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.comparisonViewSwitch button {
+  min-height: 34px;
+  padding: 4px 7px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+  color: #9da7bd;
+  cursor: pointer;
+  font-size: 9.5px;
+  font-weight: 780;
+}
+
+.comparisonViewSwitch button:hover,
+.comparisonViewSwitch button[aria-pressed="true"] {
+  border-color: rgba(174, 188, 255, 0.25);
+  background: rgba(130, 151, 255, 0.12);
+  color: #f3f5ff;
+}
+
+.routeKey {
+  display: flex;
+  grid-column: 1 / -1;
+  flex-wrap: wrap;
+  gap: 5px 13px;
+  color: #949eb5;
+  font-size: 8.5px;
+  font-weight: 700;
+}
+
+.routeKey > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.routeKey i,
+.capabilityRouteCardTitle i {
+  width: 8px;
+  height: 8px;
+  flex: 0 0 auto;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+}
+
+.routeKeyNative { color: #79eadf; }
+.routeKeyL2 { color: #ff9caf; }
+.routeKeyDirect { color: #ffd385; }
+.routeKeyWeight {
+  margin-left: auto;
+  color: #78839b;
+}
+
 .graphShell.hasJlptNavigator .legendPanel {
   width: min(430px, 34vw);
 }
@@ -935,6 +1050,15 @@ summary:focus-visible,
   white-space: nowrap;
 }
 
+a.tag {
+  text-decoration: none;
+}
+
+a.tag:hover {
+  border-color: rgba(73, 217, 200, 0.5);
+  color: #8ef1e5;
+}
+
 #topicDescription {
   margin: 0 0 14px;
   color: #cbd1df;
@@ -1042,6 +1166,85 @@ ul {
 .detailDisclosure ul {
   margin: 5px 0 12px;
 }
+
+.capabilityRouteComparison {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 7px;
+  margin: 2px 0 12px;
+}
+
+.capabilityRouteComparison[hidden] {
+  display: none;
+}
+
+.capabilityRouteCard {
+  min-width: 0;
+  padding: 9px;
+  border: 1px solid rgba(144, 158, 198, 0.18);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.capabilityRouteCard.isNative { border-top-color: rgba(73, 217, 200, 0.68); }
+.capabilityRouteCard.isL2 { border-top-color: rgba(255, 127, 145, 0.68); }
+
+.capabilityRouteCardTitle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.capabilityRouteCard.isNative .capabilityRouteCardTitle { color: #79eadf; }
+.capabilityRouteCard.isL2 .capabilityRouteCardTitle { color: #ff9caf; }
+
+.capabilityRouteCardTitle strong {
+  min-width: 0;
+  flex: 1;
+  color: #eef1f8;
+  font-size: 10px;
+}
+
+.capabilityRouteCardTitle span {
+  font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.capabilityRouteCard > p {
+  margin: 7px 0;
+  color: #8f99b1;
+  font-size: 9.5px;
+  line-height: 1.4;
+}
+
+.routeTopicSamples {
+  display: grid;
+  gap: 3px;
+}
+
+.routeTopicButton {
+  overflow: hidden;
+  padding: 4px 5px;
+  border: 0;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.045);
+  color: #cdd3e1;
+  cursor: pointer;
+  font-size: 9.5px;
+  font-weight: 660;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.routeTopicButton:hover {
+  background: rgba(255, 255, 255, 0.09);
+  color: #fff;
+}
+
+.routeTag.native { border-color: rgba(73, 217, 200, 0.35); color: #79eadf; }
+.routeTag.l2 { border-color: rgba(255, 127, 145, 0.35); color: #ff9caf; }
 
 .linkButton {
   padding: 0;
@@ -1396,6 +1599,7 @@ textarea:hover {
 :root[data-theme="light"] .primaryControls,
 :root[data-theme="light"] .legendPanel,
 :root[data-theme="light"] .jlptNavigator,
+:root[data-theme="light"] .compareControls,
 :root[data-theme="light"] .detailRegion,
 :root[data-theme="light"] .filterPanel,
 :root[data-theme="light"] .graphTooltip {
@@ -1524,6 +1728,8 @@ textarea:hover {
 :root[data-theme="light"] .referenceCard,
 :root[data-theme="light"] .companionCard,
 :root[data-theme="light"] .sourceCard,
+:root[data-theme="light"] .capabilityRouteCard,
+:root[data-theme="light"] .routeTopicButton,
 :root[data-theme="light"] .coverageMetrics div {
   border-color: rgba(52, 64, 98, 0.17);
   background: rgba(255, 255, 255, 0.66);
@@ -1547,6 +1753,38 @@ textarea:hover {
 :root[data-theme="light"] .companionTitle,
 :root[data-theme="light"] .sourceTitle {
   color: #202b42;
+}
+
+:root[data-theme="light"] .compareControlLead strong,
+:root[data-theme="light"] .capabilityRouteCardTitle strong {
+  color: #202b42;
+}
+
+:root[data-theme="light"] .compareControlLead span,
+:root[data-theme="light"] .coverageLensControl span,
+:root[data-theme="light"] .routeKey,
+:root[data-theme="light"] .capabilityRouteCard > p {
+  color: #566279;
+}
+
+:root[data-theme="light"] .comparisonViewSwitch {
+  background: rgba(38, 49, 77, 0.055);
+}
+
+:root[data-theme="light"] .comparisonViewSwitch button {
+  color: #536078;
+}
+
+:root[data-theme="light"] .comparisonViewSwitch button:hover,
+:root[data-theme="light"] .comparisonViewSwitch button[aria-pressed="true"] {
+  border-color: rgba(45, 57, 91, 0.16);
+  background: rgba(45, 57, 91, 0.09);
+  color: #182238;
+}
+
+:root[data-theme="light"] .routeTopicButton:hover {
+  background: rgba(45, 57, 91, 0.09);
+  color: #172033;
 }
 
 :root[data-theme="light"] .jlptLevelButton.isActive {
@@ -1653,6 +1891,14 @@ textarea:hover {
   .graphShell.hasJlptNavigator .legendPanel {
     width: min(360px, 34vw);
   }
+
+  .graphShell.hasCompareControls .legendPanel {
+    width: min(360px, 34vw);
+  }
+
+  .compareControls {
+    width: min(560px, 54vw);
+  }
 }
 
 @media (max-width: 760px) {
@@ -1697,7 +1943,13 @@ textarea:hover {
   }
 
   .profileSwitch {
+    grid-column: 1 / -1;
+    grid-row: 1;
     min-width: 0;
+  }
+
+  .profileSwitch button {
+    flex: 1 1 0;
   }
 
   .profileSwitch button {
@@ -1707,7 +1959,7 @@ textarea:hover {
   }
 
   .searchControl {
-    grid-column: 1 / -1;
+    grid-column: 1;
     grid-row: 2;
     width: 100%;
     min-height: 38px;
@@ -1732,6 +1984,11 @@ textarea:hover {
     display: none;
   }
 
+  #filterToggle {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
   .utilityButton {
     min-height: 38px;
     padding: 0 9px;
@@ -1739,7 +1996,7 @@ textarea:hover {
   }
 
   .hero {
-    top: 194px;
+    top: 216px;
     left: 15px;
     width: calc(100% - 30px);
     transform: none;
@@ -1809,6 +2066,10 @@ textarea:hover {
     width: auto;
   }
 
+  .graphShell.hasCompareControls .legendPanel {
+    width: auto;
+  }
+
   .legendHeading {
     margin-bottom: 5px;
     font-size: 7.5px;
@@ -1849,6 +2110,30 @@ textarea:hover {
     border-radius: 14px;
   }
 
+  .compareControls {
+    right: 11px;
+    bottom: 88px;
+    left: 11px;
+    width: auto;
+    grid-template-columns: minmax(105px, 0.7fr) minmax(175px, 1fr);
+    gap: 7px 9px;
+    padding: 9px;
+    border-radius: 14px;
+  }
+
+  .comparisonViewSwitch button {
+    min-height: 39px;
+    padding: 3px 4px;
+    font-size: 8.5px;
+  }
+
+  .routeKey {
+    max-height: 16px;
+    overflow: hidden;
+    gap: 4px 9px;
+    font-size: 7.5px;
+  }
+
   .jlptNavigatorHeader {
     margin-bottom: 6px;
   }
@@ -1876,6 +2161,10 @@ textarea:hover {
 
   .graphShell.hasJlptNavigator .graphToolbar {
     bottom: 280px;
+  }
+
+  .graphShell.hasCompareControls .graphToolbar {
+    bottom: 262px;
   }
 
   .iconButton {
@@ -1940,6 +2229,10 @@ textarea:hover {
   .coverageMetrics,
   .coverageStrip {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .capabilityRouteComparison {
+    grid-template-columns: 1fr;
   }
 }
 

@@ -1,4 +1,16 @@
 const profiles = {
+  compare: {
+    key: 'ja-shared-capability',
+    dir: null,
+    label: 'Compare',
+    axisLabel: 'Capability progression',
+    axisValue(topic) {
+      return topic.stage ?? 1;
+    },
+    formatRange(topic) {
+      return capabilityStageLabel(topic.stage ?? 1);
+    }
+  },
   'native-child': {
     key: 'ja-L1-child',
     dir: 'native-child',
@@ -60,6 +72,17 @@ const jlptBridges = [
 ];
 
 const domainLabelsJa = {
+  'Grammar & Structure': '文法・構造',
+  'Information & Research': '情報・探究',
+  'Learning & Reflection': '学習・振り返り',
+  'Pragmatics & Culture': '語用論・文化',
+  'Reading & Literature': '読解・文学',
+  'Script & Orthography': '文字・表記',
+  'Sound & Listening': '音声・聴解',
+  'Speaking & Interaction': '発話・やり取り',
+  'Vocabulary & Meaning': '語彙・意味',
+  'Workplace & Intercultural': '職場・異文化',
+  'Writing & Expression': '作文・表現',
   'Business Communication & Workplace Japanese': 'ビジネスコミュニケーション・職場日本語',
   'Discussion & Presentation': '話し合い・発表',
   'Grammar & Language Awareness': '文法・言語への気づき',
@@ -122,6 +145,22 @@ const viewerCopy = {
     wordmark: 'Learning atlas',
     nativePath: 'Native path',
     adultPath: 'Adult L2',
+    comparePath: 'Compare',
+    sameMap: 'One map',
+    differentRoutes: 'different routes',
+    coverageLens: 'Coverage lens',
+    routeView: 'Routes',
+    differencesView: 'Differences',
+    coverageView: 'Coverage',
+    beyondView: 'Beyond exams',
+    nativeRoute: 'Native route',
+    l2Route: 'Adult L2 route',
+    directCoverage: 'Direct coverage',
+    ringWeight: 'Ring weight = modelled emphasis',
+    noCoverageLens: 'No assessment lens',
+    mextLens: 'MEXT school curriculum',
+    capabilities: 'Capabilities',
+    routes: 'Routes',
     filters: 'Filters',
     about: 'About',
     aboutPath: 'About this learning path',
@@ -222,6 +261,22 @@ const viewerCopy = {
     wordmark: '学習アトラス',
     nativePath: '母語話者',
     adultPath: '成人L2',
+    comparePath: '比較',
+    sameMap: 'ひとつの地図',
+    differentRoutes: '異なる学習経路',
+    coverageLens: 'カバレッジ表示',
+    routeView: '経路',
+    differencesView: '相違点',
+    coverageView: '範囲内',
+    beyondView: '試験範囲外',
+    nativeRoute: '母語話者の経路',
+    l2Route: '成人L2の経路',
+    directCoverage: '直接対象',
+    ringWeight: 'リングの太さ＝モデル上の重点',
+    noCoverageLens: '評価基準なし',
+    mextLens: '文科省学習指導要領',
+    capabilities: '能力領域',
+    routes: '経路',
     filters: '絞り込み',
     about: '概要',
     aboutPath: 'この学習経路について',
@@ -321,6 +376,17 @@ const viewerCopy = {
 
 const localizedProfiles = {
   en: {
+    compare: {
+      headline: 'One map, two journeys',
+      label: 'Shared capability map',
+      axis: 'Foundation to advanced',
+      summary: 'The points stay fixed. Native children and adult second-language learners reach the same broad Japanese capabilities through different routes, at different depths, and with different blind spots.',
+      approach: [
+        'Use the route rings to compare where native schooling and adult L2 instruction spend their attention.',
+        'Apply an assessment lens without mistaking exam coverage for the whole of Japanese ability.',
+        'Select any capability to inspect the underlying native and L2 topics side by side.'
+      ]
+    },
     'native-child': {
       headline: 'From first marks to fluent thought',
       label: 'Native child',
@@ -333,6 +399,17 @@ const localizedProfiles = {
     }
   },
   ja: {
+    compare: {
+      headline: 'ひとつの地図、二つの道筋',
+      label: '共通能力マップ',
+      axis: '基礎から高度へ',
+      summary: '点の位置は変わりません。母語話者の児童と成人の第二言語学習者は、異なる経路、深さ、空白を通って、日本語の共通する能力領域へ到達します。',
+      approach: [
+        '外側の経路リングで、学校教育と成人L2教育がどこに重点を置くかを比較します。',
+        '試験範囲を日本語能力の全体と取り違えず、独立した評価レンズとして重ねます。',
+        '能力領域を選ぶと、その下にある母語話者向けとL2向けの概念を並べて確認できます。'
+      ]
+    },
     'native-child': {
       headline: '最初の一画から、ことばで考える力へ',
       label: '母語話者の児童',
@@ -365,7 +442,9 @@ const state = {
   commentary: null,
   localization: null,
   jaTextBySource: new Map(),
-  profileId: 'native-child',
+  profileId: 'compare',
+  coverageLens: 'none',
+  comparisonView: 'routes',
   locale: 'en',
   theme: 'dark',
   selectedId: null,
@@ -445,6 +524,8 @@ const els = {
   profileTitle: document.querySelector('#profileTitle'),
   pathRibbon: document.querySelector('#pathRibbon'),
   graphCounts: document.querySelector('#graphCounts'),
+  compareControls: document.querySelector('#compareControls'),
+  coverageLensSelect: document.querySelector('#coverageLensSelect'),
   domainLegend: document.querySelector('#domainLegend'),
   jlptNavigator: document.querySelector('#jlptNavigator'),
   jlptSteps: document.querySelector('#jlptSteps'),
@@ -466,6 +547,9 @@ const els = {
   topicMeta: document.querySelector('#topicMeta'),
   topicDescription: document.querySelector('#topicDescription'),
   topicEvidence: document.querySelector('#topicEvidence'),
+  masterySummary: document.querySelector('#masterySummary'),
+  capabilityRouteComparison: document.querySelector('#capabilityRouteComparison'),
+  assessmentHeading: document.querySelector('#assessmentHeading'),
   topicAssessment: document.querySelector('#topicAssessment'),
   topicPrereqs: document.querySelector('#topicPrereqs'),
   topicUnlocks: document.querySelector('#topicUnlocks'),
@@ -609,15 +693,17 @@ async function init() {
   applyViewerPreferences({ renderContent: false });
   els.detailRegion.inert = true;
   els.filterPanel.inert = true;
-  const [nativeData, l2Data, commentary, shared, localization] = await Promise.all([
+  const [nativeData, l2Data, capabilityData, commentary, shared, localization] = await Promise.all([
     loadGraph('native-child'),
     loadGraph('l2-adult'),
+    fetchJson('/data/shared/capabilities.json'),
     fetchJson('/data/profile-commentary.json'),
     loadSharedData(),
     state.locale === 'ja' ? fetchJson('/data/locales/ja.json') : Promise.resolve(null)
   ]);
   state.datasets['native-child'] = nativeData;
   state.datasets['l2-adult'] = l2Data;
+  state.datasets.compare = buildCompareDataset(capabilityData, nativeData, l2Data);
   state.commentary = commentary;
   state.shared = shared;
   if (localization) installJapaneseLocalization(localization);
@@ -631,6 +717,30 @@ async function init() {
     button.addEventListener('click', () => void setViewerLocale(button.dataset.languageAction));
   });
   els.themeToggle.addEventListener('click', () => setViewerTheme(state.theme === 'dark' ? 'light' : 'dark'));
+  els.coverageLensSelect.addEventListener('change', () => {
+    state.coverageLens = els.coverageLensSelect.value;
+    if (state.coverageLens !== 'none' && state.comparisonView === 'routes') state.comparisonView = 'coverage';
+    if (state.coverageLens === 'none' && ['coverage', 'beyond'].includes(state.comparisonView)) state.comparisonView = 'routes';
+    syncComparisonControls();
+    renderGraph();
+    renderSelectedTopic();
+    renderStandardSummary();
+    updateFilterBadge();
+    updateHash();
+  });
+  document.querySelectorAll('[data-comparison-view]').forEach((button) => {
+    button.addEventListener('click', () => {
+      state.comparisonView = button.dataset.comparisonView;
+      if (['coverage', 'beyond'].includes(state.comparisonView) && state.coverageLens === 'none') {
+        state.coverageLens = 'jlpt:N1';
+      }
+      syncComparisonControls();
+      renderGraph();
+      renderSelectedTopic();
+      renderStandardSummary();
+      updateHash();
+    });
+  });
   els.searchInput.addEventListener('input', () => {
     state.search = els.searchInput.value.trim().toLowerCase();
     renderGraph();
@@ -671,10 +781,32 @@ async function init() {
   });
   els.jlptSelect.addEventListener('change', () => {
     const level = els.jlptSelect.value;
+    if (state.profileId === 'compare') {
+      state.coverageLens = level === 'all' ? 'none' : `jlpt:${level}`;
+      state.comparisonView = level === 'all' ? 'routes' : 'coverage';
+      syncComparisonControls();
+      renderGraph();
+      renderSelectedTopic();
+      renderStandardSummary();
+      updateFilterBadge();
+      updateHash();
+      return;
+    }
     applyJlptJourney(level === 'all' ? null : `level:${level}`);
   });
   els.bjtSelect.addEventListener('change', () => {
-    state.bjt = els.bjtSelect.value;
+    if (state.profileId === 'compare') {
+      const level = els.bjtSelect.value;
+      state.bjt = 'all';
+      state.coverageLens = level === 'all' ? 'none' : `bjt:${level}`;
+      state.comparisonView = level === 'all' ? 'routes' : 'coverage';
+      syncComparisonControls();
+      renderSelectedTopic();
+      renderStandardSummary();
+      updateHash();
+    } else {
+      state.bjt = els.bjtSelect.value;
+    }
     renderGraph();
     updateFilterBadge();
   });
@@ -798,6 +930,10 @@ function resetAllFilters() {
   state.bjt = 'all';
   state.traceMode = 'all';
   state.edgeMode = 'unlocks';
+  if (state.profileId === 'compare') {
+    state.coverageLens = 'none';
+    state.comparisonView = 'routes';
+  }
   syncControls();
   renderGraph();
   renderSelectedTopic();
@@ -871,7 +1007,8 @@ function updateFilterBadge() {
   const count =
     values.filter((value) => value !== 'all').length +
     (state.search ? 1 : 0) +
-    (state.jlptJourney?.startsWith('bridge:') ? 1 : 0);
+    (state.jlptJourney?.startsWith('bridge:') ? 1 : 0) +
+    (state.profileId === 'compare' && state.coverageLens !== 'none' ? 1 : 0);
   els.activeFilterCount.hidden = count === 0;
   els.activeFilterCount.textContent = String(count);
 }
@@ -901,6 +1038,141 @@ async function loadGraph(profileId) {
     byId,
     standardByKey
   };
+}
+
+function buildCompareDataset(capabilityData, nativeData, l2Data) {
+  const capabilityByTopic = new Map();
+  const topics = capabilityData.capabilities.map((capability) => {
+    for (const topicId of capability.l1TopicIds) capabilityByTopic.set(topicId, capability.id);
+    for (const topicId of capability.l2TopicIds) capabilityByTopic.set(topicId, capability.id);
+    const nativeTopics = capability.l1TopicIds.map((id) => nativeData.byId.get(id)).filter(Boolean);
+    const l2Topics = capability.l2TopicIds.map((id) => l2Data.byId.get(id)).filter(Boolean);
+    return {
+      ...capability,
+      kind: 'capability',
+      type: 'CONCEPTUAL',
+      description: capability.summary,
+      evidence: [],
+      assessmentPrompt: '',
+      standards: [],
+      sourceTags: unique([...nativeTopics, ...l2Topics].flatMap((topic) => topic.sourceTags ?? [])),
+      scriptRequirements: unique([...nativeTopics, ...l2Topics].flatMap((topic) => topic.scriptRequirements ?? [])),
+      linkedCharacters: unique([...nativeTopics, ...l2Topics].flatMap((topic) => topic.linkedCharacters ?? [])),
+      linkedLexemes: unique([...nativeTopics, ...l2Topics].flatMap((topic) => topic.linkedLexemes ?? [])),
+      textbookAlignments: [],
+      jfLevels: capability.coverage.jfLevels,
+      jlptLevels: capability.coverage.jlptLevels,
+      bjtLevels: capability.coverage.bjtLevels,
+      gradeRangeStart: numericMinimum(capability.coverage.nativeGrades),
+      gradeRangeEnd: numericMaximum(capability.coverage.nativeGrades),
+      routeCounts: {
+        native: capability.l1TopicIds.length,
+        l2: capability.l2TopicIds.length
+      }
+    };
+  });
+
+  const edgeByPair = new Map();
+  const addRouteEdges = (dataset, route) => {
+    for (const edge of dataset.dependencies) {
+      const topicId = capabilityByTopic.get(edge.topicId);
+      const prerequisiteId = capabilityByTopic.get(edge.prerequisiteId);
+      if (!topicId || !prerequisiteId || topicId === prerequisiteId) continue;
+      const key = `${prerequisiteId}>${topicId}`;
+      if (!edgeByPair.has(key)) {
+        edgeByPair.set(key, {
+          prerequisiteId,
+          topicId,
+          strength: edge.strength,
+          reason: 'Aggregated progression between learner-neutral capabilities.',
+          reasonJa: '学習者に依存しない能力領域間の進行を集約したものです。',
+          routes: [],
+          routeCounts: { native: 0, l2: 0 }
+        });
+      }
+      const aggregate = edgeByPair.get(key);
+      aggregate.routeCounts[route] += 1;
+      if (!aggregate.routes.includes(route)) aggregate.routes.push(route);
+      if (edge.strength === 'hard') aggregate.strength = 'hard';
+    }
+  };
+  addRouteEdges(nativeData, 'native');
+  addRouteEdges(l2Data, 'l2');
+
+  const aggregatedEdges = [...edgeByPair.values()];
+  const retained = new Set(
+    aggregatedEdges
+      .filter((edge) => edge.routeCounts.native + edge.routeCounts.l2 >= 8)
+      .map((edge) => `${edge.prerequisiteId}>${edge.topicId}`)
+  );
+  for (const topic of topics) {
+    const hasRetainedConnection = aggregatedEdges.some(
+      (edge) => retained.has(`${edge.prerequisiteId}>${edge.topicId}`) &&
+        (edge.prerequisiteId === topic.id || edge.topicId === topic.id)
+    );
+    if (hasRetainedConnection) continue;
+    const strongest = aggregatedEdges
+      .filter((edge) => edge.prerequisiteId === topic.id || edge.topicId === topic.id)
+      .sort((a, b) => (b.routeCounts.native + b.routeCounts.l2) - (a.routeCounts.native + a.routeCounts.l2))[0];
+    if (strongest) retained.add(`${strongest.prerequisiteId}>${strongest.topicId}`);
+  }
+  const edgeWeight = (edge) => edge.routeCounts.native + edge.routeCounts.l2;
+  const candidateEdges = aggregatedEdges
+    .filter((edge) => retained.has(`${edge.prerequisiteId}>${edge.topicId}`))
+    .sort((a, b) => edgeWeight(b) - edgeWeight(a) || a.prerequisiteId.localeCompare(b.prerequisiteId));
+  const acyclicEdges = [];
+  const outgoing = new Map();
+  const createsCycle = (edge) => {
+    const pending = [edge.topicId];
+    const visited = new Set();
+    while (pending.length) {
+      const id = pending.pop();
+      if (id === edge.prerequisiteId) return true;
+      if (visited.has(id)) continue;
+      visited.add(id);
+      pending.push(...(outgoing.get(id) ?? []));
+    }
+    return false;
+  };
+  const retainAcyclic = (edge) => {
+    if (acyclicEdges.includes(edge) || createsCycle(edge)) return false;
+    acyclicEdges.push(edge);
+    if (!outgoing.has(edge.prerequisiteId)) outgoing.set(edge.prerequisiteId, []);
+    outgoing.get(edge.prerequisiteId).push(edge.topicId);
+    return true;
+  };
+  for (const edge of candidateEdges) retainAcyclic(edge);
+  for (const topic of topics) {
+    if (acyclicEdges.some((edge) => edge.prerequisiteId === topic.id || edge.topicId === topic.id)) continue;
+    const candidates = aggregatedEdges
+      .filter((edge) => edge.prerequisiteId === topic.id || edge.topicId === topic.id)
+      .sort((a, b) => edgeWeight(b) - edgeWeight(a));
+    candidates.some(retainAcyclic);
+  }
+  const dependencies = acyclicEdges
+    .map((edge) => ({ ...edge, aggregateCount: edgeWeight(edge) }))
+    .sort((a, b) => a.prerequisiteId.localeCompare(b.prerequisiteId) || a.topicId.localeCompare(b.topicId));
+  const byId = new Map(topics.map((topic) => [topic.id, topic]));
+  return {
+    topics,
+    dependencies,
+    standards: { curricula: [] },
+    clusters: [],
+    byId,
+    standardByKey: new Map(),
+    sourceDatasets: { native: nativeData, l2: l2Data },
+    crosswalk: capabilityData
+  };
+}
+
+function numericMinimum(values) {
+  const numbers = (values ?? []).filter(Number.isFinite);
+  return numbers.length ? Math.min(...numbers) : null;
+}
+
+function numericMaximum(values) {
+  const numbers = (values ?? []).filter(Number.isFinite);
+  return numbers.length ? Math.max(...numbers) : null;
 }
 
 async function loadSharedData() {
@@ -1162,6 +1434,7 @@ function syncControls() {
   state.jlpt = jlpt.includes(state.jlpt) ? state.jlpt : 'all';
   state.bjt = bjt.includes(state.bjt) ? state.bjt : 'all';
   els.profileSelect.innerHTML = [
+    option('compare', t('comparePath')),
     option('native-child', t('nativePath')),
     option('l2-adult', t('adultPath'))
   ].join('');
@@ -1200,14 +1473,42 @@ function syncControls() {
   els.scriptSelect.value = state.script;
   els.jlptSelect.value = state.jlpt;
   els.bjtSelect.value = state.bjt;
+  if (state.profileId === 'compare') {
+    els.jlptSelect.value = state.coverageLens.startsWith('jlpt:') ? state.coverageLens.slice('jlpt:'.length) : 'all';
+    els.bjtSelect.value = state.coverageLens.startsWith('bjt:') ? state.coverageLens.slice('bjt:'.length) : 'all';
+  }
   els.jlptSelect.disabled = jlpt.length === 1;
   els.bjtSelect.disabled = bjt.length === 1;
+  const isCompare = state.profileId === 'compare';
+  els.clusterSelect.disabled = isCompare;
+  els.standardSelect.disabled = isCompare;
+  els.scriptSelect.disabled = isCompare;
+  els.typeSelect.disabled = isCompare;
   els.edgeModeSelect.value = state.edgeMode;
   els.traceModeSelect.value = state.traceMode;
   els.companionLayerSelect.value = state.companionLayer;
   els.profileSelect.value = state.profileId;
+  syncComparisonControls();
   syncProfileButtons();
   updateFilterBadge();
+}
+
+function syncComparisonControls() {
+  const isCompare = state.profileId === 'compare';
+  els.compareControls.hidden = !isCompare;
+  els.compareControls.closest('.graphShell')?.classList.toggle('hasCompareControls', isCompare);
+  const lensOptions = [
+    { value: 'none', label: t('noCoverageLens') },
+    ...jlptLevels.map((level) => ({ value: `jlpt:${level}`, label: `JLPT ${level}` })),
+    ...['J5', 'J4', 'J3', 'J2', 'J1', 'J1+'].map((level) => ({ value: `bjt:${level}`, label: `BJT ${level}` })),
+    { value: 'mext', label: t('mextLens') }
+  ];
+  if (!lensOptions.some((item) => item.value === state.coverageLens)) state.coverageLens = 'none';
+  els.coverageLensSelect.innerHTML = lensOptions.map((item) => option(item.value, item.label)).join('');
+  els.coverageLensSelect.value = state.coverageLens;
+  document.querySelectorAll('[data-comparison-view]').forEach((button) => {
+    button.setAttribute('aria-pressed', button.dataset.comparisonView === state.comparisonView ? 'true' : 'false');
+  });
 }
 
 function render() {
@@ -1218,8 +1519,21 @@ function render() {
 
 function renderProfileText() {
   const profile = profiles[state.profileId];
-  const commentary = state.commentary.profiles[profile.key];
   const localized = localizedProfiles[state.locale][state.profileId];
+  if (state.profileId === 'compare') {
+    els.heroTitle.innerHTML = `${escapeHtml(localized.headline)}<span>.</span>`;
+    els.profileTitle.textContent = `${localized.label} · ${localized.axis}`;
+    els.profileSummary.textContent = localized.summary;
+    els.commentaryTitle.textContent = state.locale === 'ja' ? '共通能力レイヤーについて' : 'About the shared capability layer';
+    els.commentarySummary.textContent = localized.summary;
+    els.approachList.innerHTML = `<ul>${localized.approach.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>`;
+    renderCoverageSnapshot(profile.key);
+    renderClusterSummary();
+    renderStandardSummary();
+    renderComparisonTable();
+    return;
+  }
+  const commentary = state.commentary.profiles[profile.key];
   const summary = state.locale === 'ja' ? commentary.summaryJa : commentary.summary;
   const approach = state.locale === 'ja' ? commentary.approachJa : commentary.approach;
   els.heroTitle.innerHTML = `${escapeHtml(localized.headline)}<span>.</span>`;
@@ -1231,6 +1545,10 @@ function renderProfileText() {
   renderCoverageSnapshot(profile.key);
   renderClusterSummary();
   renderStandardSummary();
+  renderComparisonTable();
+}
+
+function renderComparisonTable() {
   els.comparisonTable.innerHTML = `
     <div class="comparison">
       ${state.commentary.comparison
@@ -1252,6 +1570,18 @@ function renderProfileText() {
 
 function renderClusterSummary() {
   const dataset = getDataset();
+  if (state.profileId === 'compare') {
+    const shared = dataset.topics.filter((topic) => topic.routeStatus === 'shared').length;
+    els.clusterSummary.innerHTML = `
+      <section class="clusterCard">
+        <div class="clusterTitle">${state.locale === 'ja' ? '点は固定、経路だけが変わる' : 'Stable points, changing routes'}</div>
+        <p>${state.locale === 'ja'
+          ? `${dataset.topics.length}の能力領域のうち${shared}領域に両方の経路があります。リングと接続線は、同じ能力へ至る重点と順序の違いを示します。`
+          : `${shared} of ${dataset.topics.length} capabilities have both routes. Rings and connections show how emphasis and sequencing differ on the way to the same capability.`}</p>
+      </section>
+    `;
+    return;
+  }
   const cluster = selectedCluster(dataset);
   if (!cluster) {
     els.clusterSummary.innerHTML = `
@@ -1278,6 +1608,31 @@ function renderClusterSummary() {
 
 function renderStandardSummary() {
   const dataset = getDataset();
+  if (state.profileId === 'compare') {
+    const relations = dataset.topics.map((topic) => capabilityCoverageRelation(topic));
+    const direct = relations.filter((relation) => relation === 'direct').length;
+    const supporting = relations.filter((relation) => relation === 'supporting').length;
+    const unmeasured = relations.filter((relation) => relation === 'unmeasured').length;
+    const depthNote = state.coverageLens === 'mext'
+      ? ''
+      : state.locale === 'ja'
+        ? '同じ領域構成でも、レベル間の深さは同じとは限りません。'
+        : ' Two levels can share a footprint without demanding the same depth.';
+    const lensSummary = state.coverageLens === 'none'
+      ? (state.locale === 'ja'
+          ? 'JLPT・BJTの直接測定範囲、補助的に必要な能力、未測定の能力を分けています。「未測定」は「不要」を意味しません。'
+          : 'JLPT and BJT are separated into directly measured, supporting, and unmeasured capabilities. “Unmeasured” never means “unnecessary.”')
+      : (state.locale === 'ja'
+          ? `${coverageLensLabel(state.coverageLens)}：直接対象${direct}、補助的${supporting}、未測定${unmeasured}。${depthNote}`
+          : `${coverageLensLabel(state.coverageLens)}: ${direct} direct, ${supporting} supporting, and ${unmeasured} unmeasured capabilities.${depthNote}`);
+    els.standardSummary.innerHTML = `
+      <section class="standardCard">
+        <div class="standardTitle">${state.locale === 'ja' ? '評価は独立したレンズ' : 'Assessment is an independent lens'}</div>
+        <p>${escapeHtml(lensSummary)}</p>
+      </section>
+    `;
+    return;
+  }
   if (state.standard === 'all') {
     const standardCount = dataset.standards.curricula.reduce((sum, curriculum) => sum + curriculum.topics.length, 0);
     els.standardSummary.innerHTML = `
@@ -1318,6 +1673,23 @@ function renderStandardSummary() {
 function renderCoverageSnapshot(profileKey) {
   const dataset = getDataset();
   const domains = unique(dataset.topics.map((topic) => topic.domain));
+
+  if (profileKey === 'ja-shared-capability') {
+    const shared = dataset.topics.filter((topic) => topic.routeStatus === 'shared').length;
+    const nativeOnly = dataset.topics.filter((topic) => topic.routeStatus === 'native-only').length;
+    const l2Only = dataset.topics.filter((topic) => topic.routeStatus === 'l2-only').length;
+    els.coverageSnapshot.innerHTML = `
+      <div class="coverageMetrics">
+        ${coverageMetric(state.locale === 'ja' ? '共通領域' : 'Shared', shared)}
+        ${coverageMetric(state.locale === 'ja' ? '母語経路のみ' : 'Native only', nativeOnly)}
+        ${coverageMetric(state.locale === 'ja' ? 'L2経路のみ' : 'L2 only', l2Only)}
+      </div>
+      <div class="coverageLevels">
+        ${[1, 2, 3, 4].map((stage) => `<span class="tag">${escapeHtml(capabilityStageLabel(stage))}: ${dataset.topics.filter((topic) => topic.stage === stage).length}</span>`).join('')}
+      </div>
+    `;
+    return;
+  }
 
   if (profileKey === 'ja-L1-child') {
     const grades = Array.from({ length: 12 }, (_, index) => index + 1);
@@ -1472,7 +1844,9 @@ function renderGraph() {
   renderDomainLegend(domainList, domainColor, visibleTopics);
   renderJlptNavigator(dataset, jlptJourneyContext);
   renderPathRibbon(dataset, graphContext, filteredIds.size, jlptJourneyContext);
-  els.graphCounts.textContent = `${filteredIds.size}/${dataset.topics.length} ${t('topics').toLowerCase()} · ${dataset.dependencies.length} ${t('dependencies').toLowerCase()}`;
+  els.graphCounts.textContent = state.profileId === 'compare'
+    ? `${filteredIds.size}/${dataset.topics.length} ${t('capabilities').toLowerCase()} · ${dataset.dependencies.length} ${t('routes').toLowerCase()}`
+    : `${filteredIds.size}/${dataset.topics.length} ${t('topics').toLowerCase()} · ${dataset.dependencies.length} ${t('dependencies').toLowerCase()}`;
   focusSelectedGraphNode();
   scheduleGraphAnimation();
 }
@@ -1678,6 +2052,31 @@ function focusSelectedGraphNode() {
   state.graphZoomTarget = Math.max(1.08, Math.min(1.22, state.graphZoom));
 }
 
+function capabilityCoverageRelation(topic, lens = state.coverageLens) {
+  if (state.profileId !== 'compare' || topic.kind !== 'capability' || lens === 'none') return 'none';
+  if (lens === 'mext') return topic.assessmentCoverage?.mext?.covered ? 'direct' : 'unmeasured';
+  const [assessment, level] = lens.split(':');
+  const coverage = topic.assessmentCoverage?.[assessment];
+  if (!coverage) return 'unmeasured';
+  if ((coverage.directLevels ?? []).includes(level)) return 'direct';
+  if ((coverage.supportingLevels ?? []).includes(level)) return 'supporting';
+  return 'unmeasured';
+}
+
+function capabilityIsDeemphasized(topic, relation = capabilityCoverageRelation(topic)) {
+  if (state.profileId !== 'compare') return false;
+  if (relation === 'none' && ['coverage', 'beyond'].includes(state.comparisonView)) return false;
+  if (state.comparisonView === 'differences') {
+    if (topic.routeStatus !== 'shared') return false;
+    const smaller = Math.max(1, Math.min(topic.routeCounts.native, topic.routeCounts.l2));
+    const larger = Math.max(topic.routeCounts.native, topic.routeCounts.l2);
+    return larger / smaller < 2.5;
+  }
+  if (state.comparisonView === 'coverage') return relation === 'unmeasured';
+  if (state.comparisonView === 'beyond') return relation === 'direct' || relation === 'supporting';
+  return false;
+}
+
 function buildGraphRenderModel({
   dataset,
   positions,
@@ -1703,6 +2102,8 @@ function buildGraphRenderModel({
       if (!pos) return null;
       const selected = topic.id === state.selectedId;
       const dimmed = !filteredIds.has(topic.id);
+      const lensRelation = capabilityCoverageRelation(topic);
+      const lensDimmed = capabilityIsDeemphasized(topic, lensRelation);
       const degree = degreeById.get(topic.id) ?? 0;
       const baseRadius = Math.min(8.2, 2.7 + Math.log1p(degree) * 1.15);
       const relation = nodeRelationClass(topic.id, graphContext);
@@ -1714,6 +2115,7 @@ function buildGraphRenderModel({
       const showLabel = shouldShowNodeLabel({
         selected,
         dimmed,
+        lensDimmed,
         visibleTopicCount,
         relation,
         isLandmark: landmarkIds.has(topic.id)
@@ -1734,6 +2136,8 @@ function buildGraphRenderModel({
         fill: domainColor.get(topic.domain) ?? '#64748b',
         selected,
         dimmed,
+        lensDimmed,
+        lensRelation,
         contextDimmed: Boolean(graphContext.selectedId && !relation),
         relation,
         journeyRole,
@@ -1756,6 +2160,18 @@ function buildGraphRenderModel({
       if (!from || !to) return null;
       const relation = edgeRelationClass(edge, graphContext);
       const dimmed = !filteredIds.has(edge.topicId) || !filteredIds.has(edge.prerequisiteId);
+      const lensDimmed = Boolean(
+        positions.get(edge.topicId)?.topic &&
+        positions.get(edge.prerequisiteId)?.topic &&
+        capabilityIsDeemphasized(
+          positions.get(edge.topicId).topic,
+          capabilityCoverageRelation(positions.get(edge.topicId).topic)
+        ) &&
+        capabilityIsDeemphasized(
+          positions.get(edge.prerequisiteId).topic,
+          capabilityCoverageRelation(positions.get(edge.prerequisiteId).topic)
+        )
+      );
       const journeyEdge = Boolean(
         jlptJourneyContext?.ids.has(edge.topicId) && jlptJourneyContext.ids.has(edge.prerequisiteId)
       );
@@ -1765,6 +2181,7 @@ function buildGraphRenderModel({
         relation,
         journeyEdge,
         dimmed,
+        lensDimmed,
         contextDimmed: Boolean(graphContext.selectedId && !relation),
         fromId,
         toId,
@@ -1972,7 +2389,13 @@ function drawAxisCanvas(ctx, model) {
     ctx.fillText(formatTick(tick, profile), x1 - 10, y + 1);
   }
   ctx.fillStyle = palette.axisText;
-  const axisLabel = state.locale === 'ja' ? (profile.key === 'ja-L1-child' ? '学年' : 'レベル') : profile.axisLabel.toUpperCase();
+  const axisLabel = state.locale === 'ja'
+    ? profile.key === 'ja-L1-child'
+      ? '学年'
+      : profile.key === 'ja-shared-capability'
+        ? '能力の進行'
+        : 'レベル'
+    : profile.axisLabel.toUpperCase();
   ctx.fillText(axisLabel, x1 - 10, height * 0.13);
   ctx.restore();
 }
@@ -1985,6 +2408,9 @@ function drawEdgesCanvas(ctx, model) {
   const journeyEdges = [];
   const directPrerequisites = [];
   const directUnlocks = [];
+  const nativeRouteEdges = [];
+  const l2RouteEdges = [];
+  const sharedRouteEdges = [];
   const pathByColor = new Map();
 
   for (const edge of model.edges) {
@@ -2006,8 +2432,12 @@ function drawEdgesCanvas(ctx, model) {
       pathByColor.get(color).push(edge);
     } else if (edge.journeyEdge) {
       journeyEdges.push(edge);
-    } else if (edge.contextDimmed) {
+    } else if (edge.contextDimmed || edge.lensDimmed) {
       contextEdges.push(edge);
+    } else if (state.profileId === 'compare') {
+      if (edge.edge.routes?.length > 1) sharedRouteEdges.push(edge);
+      else if (edge.edge.routes?.includes('native')) nativeRouteEdges.push(edge);
+      else l2RouteEdges.push(edge);
     } else if (edge.edge.strength === 'soft') {
       softEdges.push(edge);
     } else {
@@ -2035,6 +2465,9 @@ function drawEdgesCanvas(ctx, model) {
   strokeBatch(contextEdges, { alpha: state.theme === 'light' ? 0.025 : 0.009, color: palette.edge, width: 0.45 });
   strokeBatch(softEdges, { alpha: state.theme === 'light' ? 0.075 : 0.045, color: palette.edge, width: 0.45 });
   strokeBatch(hardEdges, { alpha: state.theme === 'light' ? 0.15 : 0.1, color: palette.edge, width: 0.62 });
+  strokeBatch(sharedRouteEdges, { alpha: 0.23, color: '#aebcff', width: 0.82 });
+  strokeBatch(nativeRouteEdges, { alpha: 0.34, color: '#49d9c8', width: 0.92 });
+  strokeBatch(l2RouteEdges, { alpha: 0.34, color: '#ff7f91', width: 0.92 });
   strokeBatch(journeyEdges, { alpha: 0.42, color: '#aebcff', width: 1.05 });
   for (const [color, edges] of pathByColor) {
     strokeBatch(edges, { alpha: 0.64, color, width: 1.35 });
@@ -2053,6 +2486,7 @@ function drawNodesCanvas(ctx, model) {
   const prerequisiteNodes = [];
   const unlockNodes = [];
   const focusNodes = [];
+  const comparisonNodes = [];
 
   for (const node of model.nodes) {
     if (node.axisProgress > state.graphReveal) continue;
@@ -2060,7 +2494,15 @@ function drawNodesCanvas(ctx, model) {
     if (state.graphMotionQuality && !node.motionVisible && !node.relation && !node.journeyRole && !hovered && !node.selected) {
       continue;
     }
-    const alpha = node.dimmed ? 0.035 : node.contextDimmed ? 0.095 : 0.94;
+    const alpha = node.dimmed
+      ? 0.035
+      : node.contextDimmed
+        ? 0.095
+        : node.lensDimmed
+          ? state.theme === 'light' ? 0.18 : 0.13
+          : node.lensRelation === 'supporting'
+            ? 0.62
+            : 0.94;
     const key = `${node.fill}|${alpha}`;
     if (!fillGroups.has(key)) fillGroups.set(key, { color: node.fill, alpha, nodes: [] });
     fillGroups.get(key).nodes.push({ node, radius: Math.max(0.7, node.radius * (hovered ? 1.4 : 1)) });
@@ -2070,6 +2512,7 @@ function drawNodesCanvas(ctx, model) {
     if (node.relation === 'directPrereqNode') prerequisiteNodes.push(node);
     if (node.relation === 'directUnlockNode') unlockNodes.push(node);
     if (node.selected || hovered) focusNodes.push(node);
+    if (state.profileId === 'compare' && !node.dimmed) comparisonNodes.push(node);
   }
 
   ctx.save();
@@ -2108,6 +2551,50 @@ function drawNodesCanvas(ctx, model) {
   strokeNodeBatch(prerequisiteNodes, '#f6b95d', 1.35, 0.95);
   strokeNodeBatch(unlockNodes, '#49d9c8', 1.35, 0.95);
   ctx.restore();
+
+  if (comparisonNodes.length) {
+    ctx.save();
+    ctx.lineCap = 'round';
+    for (const node of comparisonNodes) {
+      const radius = Math.max(2.6, node.radius + 2.1);
+      const alpha = node.lensDimmed ? 0.18 : 0.94;
+      const routeWidth = (count) => clamp(0.95 + Math.log1p(count ?? 0) * 0.42 + (node.selected ? 0.5 : 0), 1.1, 3.1);
+      ctx.globalAlpha = alpha;
+      if (node.topic.routeStatus === 'shared') {
+        ctx.strokeStyle = '#49d9c8';
+        ctx.lineWidth = routeWidth(node.topic.routeCounts.native);
+        ctx.beginPath();
+        ctx.arc(node.x, node.y, radius, -Math.PI / 2, Math.PI / 2);
+        ctx.stroke();
+        ctx.strokeStyle = '#ff7f91';
+        ctx.lineWidth = routeWidth(node.topic.routeCounts.l2);
+        ctx.beginPath();
+        ctx.arc(node.x, node.y, radius, Math.PI / 2, Math.PI * 1.5);
+        ctx.stroke();
+      } else {
+        ctx.strokeStyle = node.topic.routeStatus === 'native-only' ? '#49d9c8' : '#ff7f91';
+        ctx.lineWidth = routeWidth(Math.max(node.topic.routeCounts.native, node.topic.routeCounts.l2));
+        circle(ctx, node.x, node.y, radius);
+        ctx.stroke();
+      }
+      if (node.lensRelation === 'direct') {
+        ctx.globalAlpha = node.lensDimmed ? 0.28 : 0.98;
+        ctx.strokeStyle = '#f6b95d';
+        ctx.lineWidth = 1.45;
+        circle(ctx, node.x, node.y, radius + 2.7);
+        ctx.stroke();
+      } else if (node.lensRelation === 'supporting' && !node.lensDimmed) {
+        ctx.globalAlpha = 0.78;
+        ctx.strokeStyle = '#f6b95d';
+        ctx.lineWidth = 0.9;
+        ctx.setLineDash([2, 2.5]);
+        circle(ctx, node.x, node.y, radius + 2.4);
+        ctx.stroke();
+        ctx.setLineDash([]);
+      }
+    }
+    ctx.restore();
+  }
 
   for (const node of focusNodes) {
     const hovered = node.id === state.graphHoverId;
@@ -2288,6 +2775,12 @@ window.__japaneseTaxonomyViewerSelect = (topicId) => selectTopicById(topicId);
 
 function axisFilterOptions(topics) {
   const profile = profiles[state.profileId];
+  if (profile.key === 'ja-shared-capability') {
+    return [
+      { value: 'all', label: state.locale === 'ja' ? 'すべての段階' : 'All stages' },
+      ...[1, 2, 3, 4].map((stage) => ({ value: `stage:${stage}`, label: capabilityStageLabel(stage) }))
+    ];
+  }
   if (profile.key === 'ja-L1-child') {
     const grades = new Set();
     let hasPreGrade = false;
@@ -2581,6 +3074,22 @@ function renderDomainLegend(domainList, domainColor, visibleTopics) {
 function renderPathRibbon(dataset, graphContext, visibleCount, jlptJourneyContext = null) {
   const selected = dataset.byId.get(graphContext.selectedId);
   if (!selected) {
+    if (state.profileId === 'compare') {
+      const emphasized = dataset.topics.filter((topic) => !capabilityIsDeemphasized(topic)).length;
+      const relations = dataset.topics.map((topic) => capabilityCoverageRelation(topic));
+      const relationChips = state.coverageLens === 'none' ? '' : `
+        <span class="pathChip pathTarget">${relations.filter((relation) => relation === 'direct').length} ${escapeHtml(coverageRelationLabel('direct'))}</span>
+        <span class="pathChip pathFoundation">${relations.filter((relation) => relation === 'supporting').length} ${escapeHtml(coverageRelationLabel('supporting'))}</span>
+        <span class="pathChip">${relations.filter((relation) => relation === 'unmeasured').length} ${escapeHtml(coverageRelationLabel('unmeasured'))}</span>
+      `;
+      els.pathRibbon.innerHTML = `
+        <span class="pathChip">${escapeHtml(visibleCount)} ${t('capabilities').toLowerCase()}</span>
+        <span class="pathChip pathFocus">${escapeHtml(comparisonViewLabel(state.comparisonView))}</span>
+        ${state.coverageLens === 'none' ? '' : `<span class="pathChip">${escapeHtml(coverageLensLabel(state.coverageLens))}</span>${relationChips}`}
+        ${state.comparisonView === 'routes' ? '' : `<span class="pathChip">${escapeHtml(emphasized)} ${state.locale === 'ja' ? '強調' : 'emphasized'}</span>`}
+      `;
+      return;
+    }
     if (!jlptJourneyContext) {
       els.pathRibbon.textContent = '';
       return;
@@ -2607,6 +3116,11 @@ function renderPathRibbon(dataset, graphContext, visibleCount, jlptJourneyContex
   `;
 }
 
+function comparisonViewLabel(view) {
+  const key = { routes: 'routeView', differences: 'differencesView', coverage: 'coverageView', beyond: 'beyondView' }[view];
+  return t(key ?? 'routeView');
+}
+
 function renderSelectedTopic() {
   const dataset = getDataset();
   const selected = dataset.byId.get(state.selectedId);
@@ -2625,6 +3139,16 @@ function renderSelectedTopic() {
   els.detailRegion.classList.add('isOpen');
   els.detailRegion.setAttribute('aria-hidden', 'false');
   els.detailRegion.inert = false;
+
+  if (selected.kind === 'capability') {
+    renderSelectedCapability(dataset, selected);
+    return;
+  }
+
+  els.masterySummary.textContent = t('masteryEvidence');
+  els.assessmentHeading.textContent = t('assessmentPrompt');
+  els.capabilityRouteComparison.hidden = true;
+  els.topicEvidence.hidden = false;
 
   const profile = profiles[state.profileId];
   const prereqEdges = dataset.dependencies.filter((edge) => edge.topicId === selected.id);
@@ -2665,9 +3189,195 @@ function renderSelectedTopic() {
   renderExportOutput();
 }
 
-function shouldShowNodeLabel({ selected, dimmed, visibleTopicCount, relation, isLandmark = false }) {
+function renderSelectedCapability(dataset, selected) {
+  const prereqEdges = dataset.dependencies.filter((edge) => edge.topicId === selected.id);
+  const unlockEdges = dataset.dependencies.filter((edge) => edge.prerequisiteId === selected.id);
+  const nativeTopics = selected.l1TopicIds.map((id) => dataset.sourceDatasets.native.byId.get(id)).filter(Boolean);
+  const l2Topics = selected.l2TopicIds.map((id) => dataset.sourceDatasets.l2.byId.get(id)).filter(Boolean);
+  const alignedL2Topics = l2TopicsForCoverageLens(l2Topics);
+  const relation = capabilityCoverageRelation(selected);
+  const relationLabel = coverageRelationLabel(relation);
+
+  els.topicBeforeCount.textContent = String(Math.max(0, prerequisitePath(dataset, selected.id).length - 1));
+  els.topicNextCount.textContent = String(Math.max(0, unlockClosure(dataset, selected.id).size - 1));
+  els.topicName.textContent = displayName(selected);
+  els.topicMeta.innerHTML = [
+    localizedDomain(selected.domain),
+    capabilityStageLabel(selected.stage),
+    capabilityRouteStatusLabel(selected.routeStatus),
+    state.coverageLens !== 'none' ? `${coverageLensLabel(state.coverageLens)} · ${relationLabel}` : null
+  ]
+    .filter(Boolean)
+    .map((value) => `<span class="tag">${escapeHtml(value)}</span>`)
+    .join('');
+  els.topicDescription.textContent = state.locale === 'ja' ? selected.summaryJa : selected.summary;
+  els.masterySummary.textContent = state.locale === 'ja' ? '二つの学習経路' : 'Two learning routes';
+  els.assessmentHeading.textContent = state.locale === 'ja' ? '評価カバレッジ' : 'Assessment coverage';
+  els.capabilityRouteComparison.hidden = false;
+  els.capabilityRouteComparison.innerHTML = `
+    ${capabilityRouteCard('native-child', nativeTopics, selected.coverage.nativeGrades)}
+    ${capabilityRouteCard('l2-adult', l2Topics, selected.coverage.jfLevels, alignedL2Topics)}
+  `;
+  els.topicEvidence.hidden = false;
+  els.topicEvidence.innerHTML = [
+    state.locale === 'ja'
+      ? '同じ能力領域でも、経路内の概念数は習得度や等価性を意味しません。重点とモデル化の粒度を示します。'
+      : 'Topic counts show emphasis and modelling granularity, not mastery or equivalence.',
+    state.locale === 'ja'
+      ? '学年、JF、JLPT、BJTの対応は別々の軸です。相互に換算したものではありません。'
+      : 'Grade, JF, JLPT, and BJT alignments are separate axes, not conversions between scales.'
+  ].map((item) => `<li>${escapeHtml(item)}</li>`).join('');
+  els.topicAssessment.textContent = capabilityAssessmentStatement(selected, relation);
+  els.topicPrereqs.innerHTML = edgeList(dataset, prereqEdges, 'prerequisiteId');
+  els.topicUnlocks.innerHTML = edgeList(dataset, unlockEdges, 'topicId');
+  els.topicStandards.innerHTML = capabilityAssessmentTags(selected);
+  els.topicReferences.innerHTML = `
+    <p class="statusText">${escapeHtml(state.locale === 'ja'
+      ? `母語話者経路の${nativeTopics.length}概念と成人L2経路の${l2Topics.length}概念を、この能力領域に対応づけています。`
+      : `${nativeTopics.length} native-route topics and ${l2Topics.length} adult-L2 topics are cross-walked to this capability.`)}</p>
+  `;
+  els.topicSources.innerHTML = `
+    <section class="sourceCard">
+      <div class="sourceTitle">${state.locale === 'ja' ? '共通能力クロスウォーク' : 'Shared capability crosswalk'}</div>
+      <p>${escapeHtml(state.locale === 'ja' ? dataset.crosswalk.note.replace('Capability families are a learner-neutral comparison layer. Membership indicates topical overlap, not grade equivalence or proof that an assessment measures every mapped capability.', '能力領域は学習者に依存しない比較レイヤーです。所属は話題上の重なりを示すもので、学年の等価性や評価がその能力すべてを測定する証拠ではありません。') : dataset.crosswalk.note)}</p>
+      <div class="tagRow"><span class="tag">${escapeHtml(dataset.crosswalk.status)}</span><span class="tag">${escapeHtml(selected.id)}</span></div>
+    </section>
+    ${assessmentScopeCard(dataset)}
+  `;
+  renderCompanion(selected);
+  renderExportOutput();
+}
+
+function assessmentScopeCard(dataset) {
+  if (state.coverageLens === 'none') return '';
+  const assessment = state.coverageLens === 'mext' ? 'mext' : state.coverageLens.split(':')[0];
+  const scope = dataset.crosswalk.assessmentScopeNotes?.[assessment];
+  if (!scope) return '';
+  return `
+    <section class="sourceCard">
+      <div class="sourceTitle">${escapeHtml(coverageLensLabel(state.coverageLens))} · ${state.locale === 'ja' ? '範囲の根拠' : 'scope basis'}</div>
+      <p>${escapeHtml(state.locale === 'ja' ? scope.noteJa : scope.note)}</p>
+      <div class="tagRow">
+        ${scope.sourceUrls.map((url, index) => `<a class="tag sourceTagLink" href="${escapeHtml(url)}" target="_blank" rel="noreferrer">${state.locale === 'ja' ? '公式資料' : 'Official source'} ${index + 1}</a>`).join('')}
+      </div>
+    </section>
+  `;
+}
+
+function capabilityRouteCard(profileId, topics, coverageValues, focusTopics = topics) {
+  const native = profileId === 'native-child';
+  const profileLabel = native ? t('nativeRoute') : t('l2Route');
+  const range = native ? nativeCoverageLabel(coverageValues) : (coverageValues?.join(' · ') || (state.locale === 'ja' ? '対応なし' : 'No alignment'));
+  const samples = focusTopics
+    .filter((topic) => !topic.id.includes('SPIRAL'))
+    .slice(0, 5);
+  const sampleTopics = samples.length ? samples : focusTopics.slice(0, 5);
+  const focusLabel = !native && state.coverageLens !== 'none' && state.coverageLens !== 'mext'
+    ? (state.locale === 'ja'
+        ? `${coverageLensLabel(state.coverageLens)}対応 ${focusTopics.length}件`
+        : `${focusTopics.length} aligned to ${coverageLensLabel(state.coverageLens)}`)
+    : null;
+  return `
+    <section class="capabilityRouteCard ${native ? 'isNative' : 'isL2'}">
+      <div class="capabilityRouteCardTitle"><i></i><strong>${escapeHtml(profileLabel)}</strong><span>${escapeHtml(topics.length)}</span></div>
+      <p>${escapeHtml([range, focusLabel].filter(Boolean).join(' · '))}</p>
+      ${sampleTopics.length
+        ? `<div class="routeTopicSamples">${sampleTopics.map((topic) => `<button type="button" class="routeTopicButton" data-target-profile="${profileId}" data-id="${escapeHtml(topic.id)}">${escapeHtml(displayName(topic))}</button>`).join('')}</div>`
+        : `<p class="routeGap">${escapeHtml(topics.length && focusLabel
+            ? (state.locale === 'ja' ? '選択中のレンズに対応する概念はありません。' : 'No topics align to the selected lens.')
+            : (state.locale === 'ja' ? 'この経路には対応概念がありません。' : 'No mapped topics on this route.'))}</p>`}
+    </section>
+  `;
+}
+
+function l2TopicsForCoverageLens(topics) {
+  if (state.coverageLens.startsWith('jlpt:')) {
+    const level = state.coverageLens.slice('jlpt:'.length);
+    return topics.filter((topic) => (topic.jlptLevels ?? []).includes(level));
+  }
+  if (state.coverageLens.startsWith('bjt:')) {
+    const level = state.coverageLens.slice('bjt:'.length);
+    return topics.filter((topic) => (topic.bjtLevels ?? []).includes(level));
+  }
+  return topics;
+}
+
+function nativeCoverageLabel(grades) {
+  const values = (grades ?? []).filter(Number.isFinite).sort((a, b) => a - b);
+  if (!values.length) return state.locale === 'ja' ? '学年対応なし' : 'No grade alignment';
+  const labels = values.map((grade) => grade === 0
+    ? (state.locale === 'ja' ? '就学前' : 'Pre-school')
+    : state.locale === 'ja'
+      ? japaneseSchoolGrade(grade)
+      : `Grade ${grade}`);
+  return unique(labels).join(' · ');
+}
+
+function capabilityRouteStatusLabel(status) {
+  const labels = state.locale === 'ja'
+    ? { shared: '両方の経路', 'native-only': '母語経路のみ', 'l2-only': 'L2経路のみ' }
+    : { shared: 'Both routes', 'native-only': 'Native route only', 'l2-only': 'Adult L2 route only' };
+  return labels[status] ?? status;
+}
+
+function coverageLensLabel(lens) {
+  if (lens === 'none') return t('noCoverageLens');
+  if (lens === 'mext') return t('mextLens');
+  const [assessment, level] = lens.split(':');
+  return `${assessment.toUpperCase()} ${level}`;
+}
+
+function coverageRelationLabel(relation) {
+  const labels = state.locale === 'ja'
+    ? { direct: '直接対象', supporting: '補助的', unmeasured: '未測定', none: 'レンズなし' }
+    : { direct: 'Direct', supporting: 'Supporting', unmeasured: 'Unmeasured', none: 'No lens' };
+  return labels[relation] ?? relation;
+}
+
+function capabilityAssessmentStatement(topic, relation) {
+  if (state.coverageLens === 'none') {
+    return state.locale === 'ja'
+      ? '評価レンズを選ぶと、この能力が直接対象か、補助的か、未測定かを確認できます。'
+      : 'Choose an assessment lens to see whether this capability is direct, supporting, or unmeasured.';
+  }
+  const lens = coverageLensLabel(state.coverageLens);
+  if (state.coverageLens === 'mext') {
+    return relation === 'direct'
+      ? (state.locale === 'ja' ? `${lens}の母語話者向け経路で明示的に扱われます。` : `Explicitly developed along the native-school route represented by ${lens}.`)
+      : (state.locale === 'ja' ? `${lens}の対応範囲として記録されていません。これは不要という意味ではありません。` : `Not recorded in this ${lens} crosswalk. This does not mean the capability is unnecessary.`);
+  }
+  if (relation === 'direct') {
+    return state.locale === 'ja'
+      ? `${lens}の採点対象となる課題要求に、この能力が直接現れます。`
+      : `This capability appears directly in the scored task demands of ${lens}.`;
+  }
+  if (relation === 'supporting') {
+    return state.locale === 'ja'
+      ? `${lens}の成績を支える能力ですが、独立して直接測定されるわけではありません。`
+      : `This capability supports performance on ${lens}, but is not directly isolated and measured.`;
+  }
+  return state.locale === 'ja'
+    ? `${lens}ではこの能力を直接測定しません。「未測定」は「不要」を意味しません。`
+    : `${lens} does not directly measure this capability. “Unmeasured” does not mean “unnecessary.”`;
+}
+
+function capabilityAssessmentTags(topic) {
+  const rows = [];
+  for (const assessment of ['jlpt', 'bjt']) {
+    for (const level of topic.assessmentCoverage?.[assessment]?.directLevels ?? []) {
+      rows.push(`<li><span class="tag">${assessment.toUpperCase()} ${escapeHtml(level)}</span> ${escapeHtml(coverageRelationLabel('direct'))}</li>`);
+    }
+    for (const level of topic.assessmentCoverage?.[assessment]?.supportingLevels ?? []) {
+      rows.push(`<li><span class="tag">${assessment.toUpperCase()} ${escapeHtml(level)}</span> ${escapeHtml(coverageRelationLabel('supporting'))}</li>`);
+    }
+  }
+  if (topic.assessmentCoverage?.mext?.covered) rows.push(`<li><span class="tag">MEXT</span> ${escapeHtml(state.locale === 'ja' ? '母語話者向け教育課程で扱う' : 'Developed in the native curriculum')}</li>`);
+  return rows.join('') || `<li>${escapeHtml(state.locale === 'ja' ? '記録された直接対応はありません。' : 'No direct alignment recorded.')}</li>`;
+}
+
+function shouldShowNodeLabel({ selected, dimmed, lensDimmed = false, visibleTopicCount, relation, isLandmark = false }) {
   if (selected) return visibleTopicCount <= 36;
-  if (dimmed) return false;
+  if (dimmed || lensDimmed) return false;
   if (relation === 'directPrereqNode' || relation === 'directUnlockNode') return true;
   if (isLandmark && visibleTopicCount > 36) return true;
   return visibleTopicCount <= 36;
@@ -2678,7 +3388,8 @@ function edgeList(dataset, edges, idKey) {
   return edges
     .map((edge) => {
       const topic = dataset.byId.get(edge[idKey]);
-      return `<li><button class="linkButton" data-id="${edge[idKey]}">${escapeHtml(topic ? displayName(topic) : edge[idKey])}</button> <span class="tag">${escapeHtml(localizedDependencyStrength(edge.strength))}</span><br>${escapeHtml(localizedProse(edge.reason))}</li>`;
+      const routeTags = (edge.routes ?? []).map((route) => `<span class="tag routeTag ${route}">${escapeHtml(route === 'native' ? 'L1' : 'L2')}</span>`).join('');
+      return `<li><button class="linkButton" data-id="${edge[idKey]}">${escapeHtml(topic ? displayName(topic) : edge[idKey])}</button> <span class="tag">${escapeHtml(localizedDependencyStrength(edge.strength))}</span>${routeTags}<br>${escapeHtml(state.locale === 'ja' && edge.reasonJa ? edge.reasonJa : localizedProse(edge.reason))}</li>`;
     })
     .join('');
 }
@@ -3035,6 +3746,15 @@ document.addEventListener('click', (event) => {
     return;
   }
 
+  const routeTopicButton = event.target.closest('.routeTopicButton');
+  if (routeTopicButton) {
+    const profileId = routeTopicButton.dataset.targetProfile;
+    const topicId = routeTopicButton.dataset.id;
+    switchProfile(profileId);
+    selectTopicById(topicId);
+    return;
+  }
+
   const button = event.target.closest('.linkButton');
   if (!button) return;
   selectTopicById(button.dataset.id);
@@ -3052,8 +3772,8 @@ function filteredTopics(topics) {
     if (state.axis !== 'all' && !topicCoversAxis(topic, state.axis)) return false;
     if (state.standard !== 'all' && !(topic.standards ?? []).includes(state.standard)) return false;
     if (state.script !== 'all' && !(topic.scriptRequirements ?? []).includes(state.script)) return false;
-    if (state.jlpt !== 'all' && !(topic.jlptLevels ?? []).includes(state.jlpt)) return false;
-    if (state.bjt !== 'all' && !(topic.bjtLevels ?? []).includes(state.bjt)) return false;
+    if (state.profileId !== 'compare' && state.jlpt !== 'all' && !(topic.jlptLevels ?? []).includes(state.jlpt)) return false;
+    if (state.profileId !== 'compare' && state.bjt !== 'all' && !(topic.bjtLevels ?? []).includes(state.bjt)) return false;
     if (!state.search) return true;
     const profile = profiles[state.profileId];
     const haystack = [
@@ -3112,6 +3832,7 @@ function unlockClosure(dataset, selectedId) {
 }
 
 function topicCoversAxis(topic, value) {
+  if (value.startsWith('stage:')) return topic.stage === Number(value.slice('stage:'.length));
   if (value === 'pre-grade') return topic.gradeRangeStart === null;
   if (value.startsWith('grade:')) {
     const grade = Number(value.slice('grade:'.length));
@@ -3234,6 +3955,7 @@ function japaneseSchoolGrade(grade) {
 }
 
 function localizedRange(topic, profile = profiles[state.profileId]) {
+  if (profile.key === 'ja-shared-capability') return capabilityStageLabel(topic.stage ?? 1);
   if (state.locale !== 'ja' || profile.key !== 'ja-L1-child') return profile.formatRange(topic);
   if (topic.gradeRangeStart === null) {
     const start = topic.ageRangeStart;
@@ -3243,6 +3965,13 @@ function localizedRange(topic, profile = profiles[state.profileId]) {
   const start = japaneseSchoolGrade(topic.gradeRangeStart);
   const end = japaneseSchoolGrade(topic.gradeRangeEnd ?? topic.gradeRangeStart);
   return start === end ? start : `${start}〜${end}`;
+}
+
+function capabilityStageLabel(stage) {
+  const labels = state.locale === 'ja'
+    ? ['基礎', '構築', '自立', '高度']
+    : ['Foundation', 'Structure', 'Independent', 'Advanced'];
+  return labels[Number(stage) - 1] ?? String(stage);
 }
 
 function displaySetName(set) {
@@ -3308,7 +4037,14 @@ function restoreFromHash() {
   const topicId = params.get('topic');
   const traceMode = params.get('trace');
   const journey = params.get('journey');
+  const lens = params.get('lens');
+  const comparisonView = params.get('view');
   if (profileId && state.datasets[profileId]) state.profileId = profileId;
+  if (state.profileId === 'compare') {
+    if (isValidCoverageLens(lens)) state.coverageLens = lens;
+    if (['routes', 'differences', 'coverage', 'beyond'].includes(comparisonView)) state.comparisonView = comparisonView;
+    if (['coverage', 'beyond'].includes(state.comparisonView) && state.coverageLens === 'none') state.coverageLens = 'jlpt:N1';
+  }
   if (state.profileId === 'l2-adult' && isValidJlptJourney(journey)) {
     state.jlptJourney = journey;
     state.jlpt = journey.startsWith('level:') ? journey.slice('level:'.length) : 'all';
@@ -3323,9 +4059,17 @@ function updateHash() {
   if (state.profileId === 'l2-adult' && isValidJlptJourney(state.jlptJourney)) {
     params.set('journey', state.jlptJourney);
   }
+  if (state.profileId === 'compare') {
+    if (state.coverageLens !== 'none') params.set('lens', state.coverageLens);
+    if (state.comparisonView !== 'routes') params.set('view', state.comparisonView);
+  }
   if (selected) params.set('topic', selected.id);
   if (selected && state.traceMode !== 'all') params.set('trace', state.traceMode);
   history.replaceState(null, '', `#${params.toString()}`);
+}
+
+function isValidCoverageLens(lens) {
+  return lens === 'none' || lens === 'mext' || /^jlpt:N[1-5]$/.test(lens ?? '') || /^bjt:J(?:[1-5]|1\+)$/.test(lens ?? '');
 }
 
 function graphSize() {
@@ -3396,6 +4140,7 @@ function tickValues(min, max) {
 }
 
 function axisTickValues(min, max, profile) {
+  if (profile.key === 'ja-shared-capability') return [1, 2, 3, 4].filter((value) => value >= min && value <= max);
   if (profile.key !== 'ja-L2-adult') return tickValues(min, max);
   const levelTicks = [
     levelValue('A1.0'),
@@ -3409,6 +4154,7 @@ function axisTickValues(min, max, profile) {
 }
 
 function formatTick(value, profile) {
+  if (profile.key === 'ja-shared-capability') return capabilityStageLabel(Math.round(value));
   if (profile.key === 'ja-L1-child') return String(Math.round(value));
   const labels = [
     ['A1', levelValue('A1.0')],

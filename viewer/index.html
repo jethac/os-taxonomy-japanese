@@ -30,7 +30,8 @@
 
         <div class="primaryControls" aria-label="Primary graph controls">
           <div class="profileSwitch" role="group" aria-label="Learner profile">
-            <button type="button" data-profile-action="native-child" data-i18n="nativePath" aria-pressed="true">Native path</button>
+            <button type="button" data-profile-action="compare" data-i18n="comparePath" aria-pressed="true">Compare</button>
+            <button type="button" data-profile-action="native-child" data-i18n="nativePath" aria-pressed="false">Native path</button>
             <button type="button" data-profile-action="l2-adult" data-i18n="adultPath" aria-pressed="false">Adult L2</button>
           </div>
           <label class="searchControl">
@@ -78,6 +79,29 @@
                 Drag to orbit · Shift-drag to pan · Scroll to zoom · Select a point to trace what comes before and after.
               </p>
               <div id="pathRibbon" aria-live="polite"></div>
+            </section>
+
+            <section id="compareControls" class="compareControls" aria-label="Shared capability comparison controls">
+              <div class="compareControlLead">
+                <span data-i18n="sameMap">One map</span>
+                <strong data-i18n="differentRoutes">different routes</strong>
+              </div>
+              <label class="coverageLensControl">
+                <span data-i18n="coverageLens">Coverage lens</span>
+                <select id="coverageLensSelect"></select>
+              </label>
+              <div class="comparisonViewSwitch" role="group" aria-label="Comparison view">
+                <button type="button" data-comparison-view="routes" data-i18n="routeView" aria-pressed="true">Routes</button>
+                <button type="button" data-comparison-view="differences" data-i18n="differencesView" aria-pressed="false">Differences</button>
+                <button type="button" data-comparison-view="coverage" data-i18n="coverageView" aria-pressed="false">Coverage</button>
+                <button type="button" data-comparison-view="beyond" data-i18n="beyondView" aria-pressed="false">Beyond</button>
+              </div>
+              <div class="routeKey" aria-hidden="true">
+                <span class="routeKeyNative"><i></i><span data-i18n="nativeRoute">Native route</span></span>
+                <span class="routeKeyL2"><i></i><span data-i18n="l2Route">Adult L2 route</span></span>
+                <span class="routeKeyDirect"><i></i><span data-i18n="directCoverage">Direct coverage</span></span>
+                <span class="routeKeyWeight" data-i18n="ringWeight">Ring weight = modelled emphasis</span>
+              </div>
             </section>
 
             <div class="graphToolbar" aria-label="Graph viewport controls">
@@ -132,9 +156,10 @@
             </div>
 
             <details class="detailDisclosure" open>
-              <summary data-i18n="masteryEvidence">Mastery evidence</summary>
+              <summary id="masterySummary" data-i18n="masteryEvidence">Mastery evidence</summary>
+              <div id="capabilityRouteComparison" class="capabilityRouteComparison" hidden></div>
               <ul id="topicEvidence"></ul>
-              <h3 data-i18n="assessmentPrompt">Assessment prompt</h3>
+              <h3 id="assessmentHeading" data-i18n="assessmentPrompt">Assessment prompt</h3>
               <p id="topicAssessment"></p>
             </details>
 
@@ -190,6 +215,7 @@
           <label>
             <span data-i18n="profile">Profile</span>
             <select id="profileSelect">
+              <option value="compare">Compare</option>
               <option value="native-child">Native child</option>
               <option value="l2-adult">Adult L2</option>
             </select>
