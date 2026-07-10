@@ -1,7 +1,7 @@
 {
   "dataset": "Japanese Language Taxonomy",
   "taxonomyVersion": "seed-0.0.1",
-  "generatedAt": "2026-07-09T05:18:20.370Z",
+  "generatedAt": "2026-07-10T13:05:13.719Z",
   "status": "seed",
   "profiles": [
     "ja-L1-child",
@@ -18,18 +18,18 @@
       "ja-L1-child": 2408,
       "ja-L2-adult": 1984
     },
-    "curricula": 14,
-    "curriculumStandards": 94,
+    "curricula": 18,
+    "curriculumStandards": 95,
     "clusters": 171,
     "characterSets": 11,
     "lexemeSets": 143,
-    "sources": 16,
+    "sources": 20,
     "profileCommentaries": 2
   },
   "files": {
     "data/native-child/topics.json": {
-      "bytes": 2132825,
-      "sha256": "d8615612a0da4be5cfc60ed9da8ac4697db4702ea1e7fc570a885882ec9a4044"
+      "bytes": 2134085,
+      "sha256": "a5a102f00218e41bcf7e43a33a58af15e1ab0d2b5ca7d01de56b6e67c8d1aa41"
     },
     "data/native-child/dependencies.json": {
       "bytes": 618659,
@@ -40,40 +40,40 @@
       "sha256": "a3d77639febe128c9370862d5b513c830aa843945a978184a4816e79aa748c94"
     },
     "data/native-child/clusters.json": {
-      "bytes": 39210,
-      "sha256": "e35d9f41671f41649c9cf9dc8e0c5b359ae188767c4c61d91ba272f64254406d"
+      "bytes": 39249,
+      "sha256": "1968364ccace4d931c2936f1ac7a53ff731c6c9355961997b52e20c3d3fb1ba8"
     },
     "data/l2-adult/topics.json": {
-      "bytes": 3302023,
-      "sha256": "0ff724616a2b779bacc959ec4c0e4c8cd3c23d52d7c7522b86a272306cee8d75"
+      "bytes": 3279443,
+      "sha256": "ce2afc7112b379efed51caf99193ea2d4ffb67b44da4ffa868ffcbad5c5d993e"
     },
     "data/l2-adult/dependencies.json": {
       "bytes": 519298,
       "sha256": "bc1ec8c79ee501f2834ca9f308f58aebbe3ffcce8b28e6a846997b1534d15e35"
     },
     "data/l2-adult/curriculum-standards.json": {
-      "bytes": 19217,
-      "sha256": "0358814f00c8398b2e612516939926347754cdc72c055f28c8d551f5258328b3"
+      "bytes": 24604,
+      "sha256": "03a8caf1ca53142b33726dab2cef865a260d674541cf6c7c8b4e968c5904aa9e"
     },
     "data/l2-adult/clusters.json": {
-      "bytes": 42430,
-      "sha256": "18444315524d9d6e1df6ef1c184a56356bcc6313b06ba050643470f3d4132ac3"
+      "bytes": 42475,
+      "sha256": "7491a246c167326676119b3d687e4d59e5d96209d2c4daaa396b6c5dacba9819"
     },
     "data/shared/characters.json": {
       "bytes": 7156,
       "sha256": "b4a235d8926b3b53e58346cf18089dcaac9a736a8f4b7f44509cb11cc40bf788"
     },
     "data/shared/lexemes.json": {
-      "bytes": 147973,
-      "sha256": "18626da70d22284b6dae2c063fb61ab82909501a8da16833d870321e86c79b3e"
+      "bytes": 147921,
+      "sha256": "54d456f7a815ba4b7fa2dc84569e63d4476f8c9eafb91766366316d15493af52"
     },
     "data/shared/sources.json": {
-      "bytes": 10854,
-      "sha256": "c9c9e09c3adf3e4d971eaa5cc57998f6b22e54a0149756f91e45ad7c821b9915"
+      "bytes": 14842,
+      "sha256": "d509167ccfb47ef5e9bbd2186eea0b2b29bfbe881bb717f9f872f33cb83f78a2"
     },
     "data/profile-commentary.json": {
-      "bytes": 3083,
-      "sha256": "578fc13e4dd82d821759bf3c4aa9a3439bbd36b78dc89cc6706366cf9d18ea56"
+      "bytes": 6411,
+      "sha256": "14d18f8e7936638bf24a062390826647218434c3475a358de462f688d4efb7e5"
     }
   },
   "excluded": [

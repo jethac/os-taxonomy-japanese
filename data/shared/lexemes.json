@@ -4544,8 +4544,8 @@
     },
     {
       "id": "lex_l2_adv_discourse_processing",
-      "name": "Adult L2 advanced discourse and processability vocabulary",
-      "japaneseName": "上級談話・処理可能性語彙",
+      "name": "Adult L2 advanced discourse and self-observation vocabulary",
+      "japaneseName": "上級談話・自己観察語彙",
       "items": [
         {
           "lemma": "出現",
@@ -4573,11 +4573,10 @@
           "gloss": "context-dependent"
         }
       ],
-      "notes": "Original seed vocabulary for advanced self-monitoring, native feedback, processability-informed logs, and corpus phrase mining.",
+      "notes": "Original project-authored seed vocabulary for advanced self-observation, native feedback, and corpus phrase mining.",
       "sourceTags": [
         "jlpt",
-        "jf-standard",
-        "jsl-processability-research"
+        "jf-standard"
       ]
     },
     {

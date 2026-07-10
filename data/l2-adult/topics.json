@@ -854,13 +854,17 @@
         "jf-standard:A2",
         "jlpt:N5",
         "jlpt:N4",
-        "tae-kim:basic-grammar-sequence"
+        "tae-kim:basic-grammar-sequence",
+        "iwasaki-2006-child-processability:verbal-morphosyntax-emergence",
+        "iwasaki-2013-adult-processability:adult-morphosyntax-emergence"
       ],
       "sourceTags": [
         "yookoso-book1",
         "tae-kim",
         "jf-standard",
-        "jlpt"
+        "jlpt",
+        "iwasaki-2006-child-processability",
+        "iwasaki-2013-adult-processability"
       ],
       "scriptRequirements": [
         "kana"
@@ -897,6 +901,16 @@
           "source": "jlpt",
           "unit": "N5",
           "note": "Level metadata alignment derived from existing standard key; no exam content included."
+        },
+        {
+          "source": "iwasaki-2006-child-processability",
+          "unit": "verbal-morphosyntax-emergence",
+          "note": "Phenomenon-level link: the child case examined verbal inflection and V-te V emergence; it does not support this topic's A2/JLPT placement, sequence, or mastery threshold."
+        },
+        {
+          "source": "iwasaki-2013-adult-processability",
+          "unit": "adult-morphosyntax-emergence",
+          "note": "Phenomenon-level link: the intensive adult case examined verbal affixes and V-te V emergence; it does not validate this topic's A2/JLPT placement, sequence, or mastery threshold."
         }
       ],
       "mextAreas": []
@@ -2726,12 +2740,14 @@
       "standards": [
         "jlpt:N5",
         "jf-standard:A1",
-        "yookoso-book1:early-introductions"
+        "yookoso-book1:early-introductions",
+        "kawaguchi-iwasaki-2021-content-questions:child-content-question-development"
       ],
       "sourceTags": [
         "yookoso-book1",
         "jf-standard",
-        "jlpt"
+        "jlpt",
+        "kawaguchi-iwasaki-2021-content-questions"
       ],
       "scriptRequirements": [
         "kana"
@@ -2756,6 +2772,11 @@
           "source": "jlpt",
           "unit": "N5",
           "note": "Level metadata alignment derived from existing standard key; no exam content included."
+        },
+        {
+          "source": "kawaguchi-iwasaki-2021-content-questions",
+          "unit": "child-content-question-development",
+          "note": "Phenomenon-level link: the study examined Japanese content-question development in one sequential bilingual child; it does not validate this adult topic's A1/N5 placement, instructional sequence, or assessment design."
         }
       ],
       "mextAreas": []
@@ -5977,11 +5998,15 @@
       "assessmentPrompt": "Ask the learner to interpret short passive sentences and explain who did what to whom and why passive voice is used.",
       "standards": [
         "jlpt:N3",
-        "jgram:jlpt-grammar-index"
+        "jgram:jlpt-grammar-index",
+        "iwasaki-2013-adult-processability:adult-morphosyntax-emergence",
+        "iwasaki-oliver-2018-passive-acquisition:child-passive-development"
       ],
       "sourceTags": [
         "jgram",
-        "jlpt"
+        "jlpt",
+        "iwasaki-2013-adult-processability",
+        "iwasaki-oliver-2018-passive-acquisition"
       ],
       "scriptRequirements": [
         "kana",
@@ -6003,6 +6028,16 @@
           "source": "jlpt",
           "unit": "N3",
           "note": "Level metadata alignment derived from existing standard key; no exam content included."
+        },
+        {
+          "source": "iwasaki-2013-adult-processability",
+          "unit": "adult-morphosyntax-emergence",
+          "note": "Phenomenon-level link: passive structures were examined in the intensive adult case; the study does not validate this topic's N3 placement, instructional sequence, or assessment design."
+        },
+        {
+          "source": "iwasaki-oliver-2018-passive-acquisition",
+          "unit": "child-passive-development",
+          "note": "Phenomenon-level link: the longitudinal child case studied passive-voice development; it does not validate this adult topic's N3 placement, instructional sequence, or assessment design."
         }
       ],
       "mextAreas": []
@@ -6037,11 +6072,15 @@
       "assessmentPrompt": "Give the learner school, workplace, and family scenarios and ask whether the meaning is letting or making someone act.",
       "standards": [
         "jlpt:N3",
-        "jgram:jlpt-grammar-index"
+        "jgram:jlpt-grammar-index",
+        "iwasaki-2006-child-processability:verbal-morphosyntax-emergence",
+        "iwasaki-2013-adult-processability:adult-morphosyntax-emergence"
       ],
       "sourceTags": [
         "jgram",
-        "jlpt"
+        "jlpt",
+        "iwasaki-2006-child-processability",
+        "iwasaki-2013-adult-processability"
       ],
       "scriptRequirements": [
         "kana",
@@ -6063,6 +6102,16 @@
           "source": "jlpt",
           "unit": "N3",
           "note": "Level metadata alignment derived from existing standard key; no exam content included."
+        },
+        {
+          "source": "iwasaki-2006-child-processability",
+          "unit": "verbal-morphosyntax-emergence",
+          "note": "Phenomenon-level link: the child case examined causative-structure emergence; it does not support this adult topic's N3 placement, instructional sequence, or meaning distinctions."
+        },
+        {
+          "source": "iwasaki-2013-adult-processability",
+          "unit": "adult-morphosyntax-emergence",
+          "note": "Phenomenon-level link: causative structures were examined in the intensive adult case; the study does not validate this topic's N3 placement, instructional sequence, or assessment design."
         }
       ],
       "mextAreas": []
@@ -32799,12 +32848,14 @@
         "jlpt:N3",
         "jf-standard:B1",
         "yookoso-book2:giving-receiving-viewpoint",
-        "yookoso-book2:opinion-discussion"
+        "yookoso-book2:opinion-discussion",
+        "iwasaki-2013-adult-processability:adult-morphosyntax-emergence"
       ],
       "sourceTags": [
         "yookoso-book2",
         "jf-standard",
-        "jlpt"
+        "jlpt",
+        "iwasaki-2013-adult-processability"
       ],
       "scriptRequirements": [
         "kana",
@@ -32837,6 +32888,11 @@
           "source": "jlpt",
           "unit": "N3",
           "note": "Level metadata alignment derived from existing standard key; no exam content included."
+        },
+        {
+          "source": "iwasaki-2013-adult-processability",
+          "unit": "adult-morphosyntax-emergence",
+          "note": "Phenomenon-level link: benefactive structures were examined in the intensive adult case; the study does not validate this topic's N3/B1 placement, instructional sequence, or pragmatic framing."
         }
       ],
       "mextAreas": []
@@ -36630,9 +36686,9 @@
       "type": "META",
       "subject": "Japanese",
       "domain": "Learning Strategies & Meta-Language",
-      "name": "B2 emergence and accuracy learning log",
-      "japaneseName": "B2出現と正確さの学習ログ",
-      "description": "Track whether advanced structures merely emerge under support or remain accurate in spontaneous production.",
+      "name": "B2 processability-informed emergence and accuracy observation log",
+      "japaneseName": "B2処理可能性を参考にした出現・正確さ観察ログ",
+      "description": "Use a project-authored observation routine, informed by research distinguishing first emergence from target-like accuracy, to track whether advanced forms appear under support or remain accurate in spontaneous production; the routine itself is not research-validated.",
       "ageRangeStart": null,
       "ageRangeEnd": null,
       "gradeRangeStart": null,
@@ -36650,22 +36706,20 @@
       "actflLevels": [],
       "centrality": null,
       "evidence": [
-        "Separate first successful use from repeated accurate use in a learning log.",
-        "Plan practice that reduces processing load for one unstable structure."
+        "Record first observed use separately from repeated target-like use in speaking or writing samples.",
+        "Label context and support level without treating the record as a validated Processability Theory assessment."
       ],
-      "assessmentPrompt": "Ask the learner to review speaking or writing samples and classify emergence versus accuracy.",
+      "assessmentPrompt": "Ask the learner to review several speaking or writing samples, distinguish first emergence from repeated accuracy, and state that the log is an observational aid rather than a validated diagnostic.",
       "standards": [
         "jlpt:N2",
         "jf-standard:B2",
-        "jsl-processability-research:emergence-vs-accuracy",
-        "jsl-processability-research:verbal-morphology-processing",
-        "jsl-processability-research:passive-causative-processing"
+        "iwasaki-oliver-2014-emergence-accuracy:verbal-morphology-emergence-accuracy"
       ],
       "sourceTags": [
         "jgram",
         "jf-standard",
         "jlpt",
-        "jsl-processability-research"
+        "iwasaki-oliver-2014-emergence-accuracy"
       ],
       "scriptRequirements": [
         "kana",
@@ -36689,19 +36743,9 @@
           "note": "Level metadata alignment derived from existing standard key; no exam content included."
         },
         {
-          "source": "jsl-processability-research",
-          "unit": "emergence-vs-accuracy",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "passive-causative-processing",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "verbal-morphology-processing",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
+          "source": "iwasaki-oliver-2014-emergence-accuracy",
+          "unit": "verbal-morphology-emergence-accuracy",
+          "note": "Processability-informed pedagogical application: the cited child case distinguishes first emergence from target-like accuracy, but this project-authored observation log was not tested or validated by the study."
         }
       ],
       "mextAreas": []
@@ -37328,15 +37372,12 @@
       "standards": [
         "jlpt:N2",
         "jf-standard:B2",
-        "jf-standard:autonomous-learning",
-        "jsl-processability-research:emergence-vs-accuracy",
-        "jsl-processability-research:verbal-morphology-processing"
+        "jf-standard:autonomous-learning"
       ],
       "sourceTags": [
         "jgram",
         "jf-standard",
-        "jlpt",
-        "jsl-processability-research"
+        "jlpt"
       ],
       "scriptRequirements": [
         "kana",
@@ -37363,16 +37404,6 @@
           "source": "jlpt",
           "unit": "N2",
           "note": "Level metadata alignment derived from existing standard key; no exam content included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "emergence-vs-accuracy",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "verbal-morphology-processing",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
         }
       ],
       "mextAreas": []
@@ -37904,15 +37935,12 @@
       "standards": [
         "jlpt:N1",
         "jf-standard:C1",
-        "jf-standard:autonomous-learning",
-        "jsl-processability-research:emergence-vs-accuracy",
-        "jsl-processability-research:verbal-morphology-processing"
+        "jf-standard:autonomous-learning"
       ],
       "sourceTags": [
         "jgram",
         "jf-standard",
-        "jlpt",
-        "jsl-processability-research"
+        "jlpt"
       ],
       "scriptRequirements": [
         "kana",
@@ -37939,16 +37967,6 @@
           "source": "jlpt",
           "unit": "N1",
           "note": "Level metadata alignment derived from existing standard key; no exam content included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "emergence-vs-accuracy",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "verbal-morphology-processing",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
         }
       ],
       "mextAreas": []
@@ -39126,16 +39144,13 @@
         "jf-standard:C1",
         "jf-standard:autonomous-learning",
         "tae-kim:reference-grammar-use",
-        "jgram:grammar-lookup-workflow",
-        "jsl-processability-research:emergence-vs-accuracy",
-        "jsl-processability-research:verbal-morphology-processing"
+        "jgram:grammar-lookup-workflow"
       ],
       "sourceTags": [
         "tae-kim",
         "jgram",
         "jf-standard",
-        "jlpt",
-        "jsl-processability-research"
+        "jlpt"
       ],
       "scriptRequirements": [
         "kana",
@@ -39172,16 +39187,6 @@
           "source": "jlpt",
           "unit": "N1",
           "note": "Level metadata alignment derived from existing standard key; no exam content included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "emergence-vs-accuracy",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "verbal-morphology-processing",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
         }
       ],
       "mextAreas": []
@@ -39223,16 +39228,13 @@
         "jf-standard:C1",
         "bjt:J1+",
         "bjt:performance-reflection",
-        "jf-standard:autonomous-learning",
-        "jsl-processability-research:emergence-vs-accuracy",
-        "jsl-processability-research:verbal-morphology-processing"
+        "jf-standard:autonomous-learning"
       ],
       "sourceTags": [
         "jgram",
         "jf-standard",
         "jlpt",
-        "bjt",
-        "jsl-processability-research"
+        "bjt"
       ],
       "scriptRequirements": [
         "kana",
@@ -39272,16 +39274,6 @@
           "source": "bjt",
           "unit": "performance-reflection",
           "note": "Business-level/reference metadata alignment derived from existing standard key; no test content included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "emergence-vs-accuracy",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "verbal-morphology-processing",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
         }
       ],
       "mextAreas": []
@@ -44404,10 +44396,6 @@
         "yookoso-book1:requests-permission-sequence",
         "tae-kim:basic-grammar-sequence",
         "jgram:jlpt-grammar-index",
-        "jsl-processability-research:emergence-vs-accuracy",
-        "jsl-processability-research:verbal-morphology-processing",
-        "jsl-processability-research:passive-causative-processing",
-        "jsl-processability-research:content-question-development",
         "bjt:J5",
         "bjt:workplace-communication",
         "bjt:negotiation-proposal"
@@ -44419,7 +44407,6 @@
         "jf-standard",
         "jlpt",
         "bjt",
-        "jsl-processability-research",
         "project-authored-l2-spiral"
       ],
       "scriptRequirements": [
@@ -44491,26 +44478,6 @@
           "source": "bjt",
           "unit": "workplace-communication",
           "note": "BJT workplace-task metadata aligned to the generated adult L2 spiral stage; no test content included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "content-question-development",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "emergence-vs-accuracy",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "passive-causative-processing",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "verbal-morphology-processing",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
         }
       ],
       "mextAreas": []
@@ -44558,7 +44525,6 @@
         "yookoso-book1:requests-permission-sequence",
         "tae-kim:basic-grammar-sequence",
         "jgram:jlpt-grammar-index",
-        "jsl-processability-research:passive-causative-processing",
         "bjt:J5",
         "bjt:workplace-communication",
         "bjt:negotiation-proposal"
@@ -44570,7 +44536,6 @@
         "jf-standard",
         "jlpt",
         "bjt",
-        "jsl-processability-research",
         "project-authored-l2-spiral"
       ],
       "scriptRequirements": [
@@ -44642,11 +44607,6 @@
           "source": "bjt",
           "unit": "workplace-communication",
           "note": "BJT workplace-task metadata aligned to the generated adult L2 spiral stage; no test content included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "passive-causative-processing",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
         }
       ],
       "mextAreas": []
@@ -44694,7 +44654,6 @@
         "yookoso-book1:requests-permission-sequence",
         "tae-kim:reference-grammar-use",
         "jgram:grammar-lookup-workflow",
-        "jsl-processability-research:emergence-vs-accuracy",
         "bjt:J5",
         "bjt:workplace-communication",
         "bjt:negotiation-proposal"
@@ -44706,7 +44665,6 @@
         "jf-standard",
         "jlpt",
         "bjt",
-        "jsl-processability-research",
         "project-authored-l2-spiral"
       ],
       "scriptRequirements": [
@@ -44778,11 +44736,6 @@
           "source": "bjt",
           "unit": "workplace-communication",
           "note": "BJT workplace-task metadata aligned to the generated adult L2 spiral stage; no test content included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "emergence-vs-accuracy",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
         }
       ],
       "mextAreas": []
@@ -48793,10 +48746,6 @@
         "yookoso-book1:requests-permission-sequence",
         "tae-kim:basic-grammar-sequence",
         "jgram:jlpt-grammar-index",
-        "jsl-processability-research:emergence-vs-accuracy",
-        "jsl-processability-research:verbal-morphology-processing",
-        "jsl-processability-research:passive-causative-processing",
-        "jsl-processability-research:content-question-development",
         "bjt:J5",
         "bjt:workplace-communication",
         "bjt:negotiation-proposal"
@@ -48808,7 +48757,6 @@
         "jf-standard",
         "jlpt",
         "bjt",
-        "jsl-processability-research",
         "project-authored-l2-spiral"
       ],
       "scriptRequirements": [
@@ -48880,26 +48828,6 @@
           "source": "bjt",
           "unit": "workplace-communication",
           "note": "BJT workplace-task metadata aligned to the generated adult L2 spiral stage; no test content included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "content-question-development",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "emergence-vs-accuracy",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "passive-causative-processing",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "verbal-morphology-processing",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
         }
       ],
       "mextAreas": []
@@ -48947,7 +48875,6 @@
         "yookoso-book1:requests-permission-sequence",
         "tae-kim:basic-grammar-sequence",
         "jgram:jlpt-grammar-index",
-        "jsl-processability-research:passive-causative-processing",
         "bjt:J5",
         "bjt:workplace-communication",
         "bjt:negotiation-proposal"
@@ -48959,7 +48886,6 @@
         "jf-standard",
         "jlpt",
         "bjt",
-        "jsl-processability-research",
         "project-authored-l2-spiral"
       ],
       "scriptRequirements": [
@@ -49031,11 +48957,6 @@
           "source": "bjt",
           "unit": "workplace-communication",
           "note": "BJT workplace-task metadata aligned to the generated adult L2 spiral stage; no test content included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "passive-causative-processing",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
         }
       ],
       "mextAreas": []
@@ -49083,7 +49004,6 @@
         "yookoso-book1:requests-permission-sequence",
         "tae-kim:reference-grammar-use",
         "jgram:grammar-lookup-workflow",
-        "jsl-processability-research:emergence-vs-accuracy",
         "bjt:J5",
         "bjt:workplace-communication",
         "bjt:negotiation-proposal"
@@ -49095,7 +49015,6 @@
         "jf-standard",
         "jlpt",
         "bjt",
-        "jsl-processability-research",
         "project-authored-l2-spiral"
       ],
       "scriptRequirements": [
@@ -49167,11 +49086,6 @@
           "source": "bjt",
           "unit": "workplace-communication",
           "note": "BJT workplace-task metadata aligned to the generated adult L2 spiral stage; no test content included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "emergence-vs-accuracy",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
         }
       ],
       "mextAreas": []
@@ -53172,10 +53086,6 @@
         "yookoso-book1:requests-permission-sequence",
         "tae-kim:basic-grammar-sequence",
         "jgram:jlpt-grammar-index",
-        "jsl-processability-research:emergence-vs-accuracy",
-        "jsl-processability-research:verbal-morphology-processing",
-        "jsl-processability-research:passive-causative-processing",
-        "jsl-processability-research:content-question-development",
         "bjt:J4",
         "bjt:workplace-communication",
         "bjt:negotiation-proposal"
@@ -53187,7 +53097,6 @@
         "jf-standard",
         "jlpt",
         "bjt",
-        "jsl-processability-research",
         "project-authored-l2-spiral"
       ],
       "scriptRequirements": [
@@ -53258,26 +53167,6 @@
           "source": "bjt",
           "unit": "workplace-communication",
           "note": "BJT workplace-task metadata aligned to the generated adult L2 spiral stage; no test content included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "content-question-development",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "emergence-vs-accuracy",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "passive-causative-processing",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "verbal-morphology-processing",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
         }
       ],
       "mextAreas": []
@@ -53325,7 +53214,6 @@
         "yookoso-book1:requests-permission-sequence",
         "tae-kim:basic-grammar-sequence",
         "jgram:jlpt-grammar-index",
-        "jsl-processability-research:passive-causative-processing",
         "bjt:J4",
         "bjt:workplace-communication",
         "bjt:negotiation-proposal"
@@ -53337,7 +53225,6 @@
         "jf-standard",
         "jlpt",
         "bjt",
-        "jsl-processability-research",
         "project-authored-l2-spiral"
       ],
       "scriptRequirements": [
@@ -53408,11 +53295,6 @@
           "source": "bjt",
           "unit": "workplace-communication",
           "note": "BJT workplace-task metadata aligned to the generated adult L2 spiral stage; no test content included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "passive-causative-processing",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
         }
       ],
       "mextAreas": []
@@ -53460,7 +53342,6 @@
         "yookoso-book1:requests-permission-sequence",
         "tae-kim:reference-grammar-use",
         "jgram:grammar-lookup-workflow",
-        "jsl-processability-research:emergence-vs-accuracy",
         "bjt:J4",
         "bjt:workplace-communication",
         "bjt:negotiation-proposal"
@@ -53472,7 +53353,6 @@
         "jf-standard",
         "jlpt",
         "bjt",
-        "jsl-processability-research",
         "project-authored-l2-spiral"
       ],
       "scriptRequirements": [
@@ -53543,11 +53423,6 @@
           "source": "bjt",
           "unit": "workplace-communication",
           "note": "BJT workplace-task metadata aligned to the generated adult L2 spiral stage; no test content included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "emergence-vs-accuracy",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
         }
       ],
       "mextAreas": []
@@ -57526,10 +57401,6 @@
         "yookoso-book1:requests-permission-sequence",
         "tae-kim:basic-grammar-sequence",
         "jgram:jlpt-grammar-index",
-        "jsl-processability-research:emergence-vs-accuracy",
-        "jsl-processability-research:verbal-morphology-processing",
-        "jsl-processability-research:passive-causative-processing",
-        "jsl-processability-research:content-question-development",
         "bjt:J4",
         "bjt:workplace-communication",
         "bjt:negotiation-proposal"
@@ -57541,7 +57412,6 @@
         "jf-standard",
         "jlpt",
         "bjt",
-        "jsl-processability-research",
         "project-authored-l2-spiral"
       ],
       "scriptRequirements": [
@@ -57612,26 +57482,6 @@
           "source": "bjt",
           "unit": "workplace-communication",
           "note": "BJT workplace-task metadata aligned to the generated adult L2 spiral stage; no test content included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "content-question-development",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "emergence-vs-accuracy",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "passive-causative-processing",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "verbal-morphology-processing",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
         }
       ],
       "mextAreas": []
@@ -57679,7 +57529,6 @@
         "yookoso-book1:requests-permission-sequence",
         "tae-kim:basic-grammar-sequence",
         "jgram:jlpt-grammar-index",
-        "jsl-processability-research:passive-causative-processing",
         "bjt:J4",
         "bjt:workplace-communication",
         "bjt:negotiation-proposal"
@@ -57691,7 +57540,6 @@
         "jf-standard",
         "jlpt",
         "bjt",
-        "jsl-processability-research",
         "project-authored-l2-spiral"
       ],
       "scriptRequirements": [
@@ -57762,11 +57610,6 @@
           "source": "bjt",
           "unit": "workplace-communication",
           "note": "BJT workplace-task metadata aligned to the generated adult L2 spiral stage; no test content included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "passive-causative-processing",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
         }
       ],
       "mextAreas": []
@@ -57814,7 +57657,6 @@
         "yookoso-book1:requests-permission-sequence",
         "tae-kim:reference-grammar-use",
         "jgram:grammar-lookup-workflow",
-        "jsl-processability-research:emergence-vs-accuracy",
         "bjt:J4",
         "bjt:workplace-communication",
         "bjt:negotiation-proposal"
@@ -57826,7 +57668,6 @@
         "jf-standard",
         "jlpt",
         "bjt",
-        "jsl-processability-research",
         "project-authored-l2-spiral"
       ],
       "scriptRequirements": [
@@ -57897,11 +57738,6 @@
           "source": "bjt",
           "unit": "workplace-communication",
           "note": "BJT workplace-task metadata aligned to the generated adult L2 spiral stage; no test content included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "emergence-vs-accuracy",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
         }
       ],
       "mextAreas": []
@@ -61880,10 +61716,6 @@
         "yookoso-book2:autonomous-strategy",
         "tae-kim:basic-grammar-sequence",
         "jgram:jlpt-grammar-index",
-        "jsl-processability-research:emergence-vs-accuracy",
-        "jsl-processability-research:verbal-morphology-processing",
-        "jsl-processability-research:passive-causative-processing",
-        "jsl-processability-research:content-question-development",
         "bjt:J3",
         "bjt:workplace-communication",
         "bjt:negotiation-proposal"
@@ -61895,7 +61727,6 @@
         "jf-standard",
         "jlpt",
         "bjt",
-        "jsl-processability-research",
         "project-authored-l2-spiral"
       ],
       "scriptRequirements": [
@@ -61966,26 +61797,6 @@
           "source": "bjt",
           "unit": "workplace-communication",
           "note": "BJT workplace-task metadata aligned to the generated adult L2 spiral stage; no test content included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "content-question-development",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "emergence-vs-accuracy",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "passive-causative-processing",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "verbal-morphology-processing",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
         }
       ],
       "mextAreas": []
@@ -62033,7 +61844,6 @@
         "yookoso-book2:autonomous-strategy",
         "tae-kim:basic-grammar-sequence",
         "jgram:jlpt-grammar-index",
-        "jsl-processability-research:passive-causative-processing",
         "bjt:J3",
         "bjt:workplace-communication",
         "bjt:negotiation-proposal"
@@ -62045,7 +61855,6 @@
         "jf-standard",
         "jlpt",
         "bjt",
-        "jsl-processability-research",
         "project-authored-l2-spiral"
       ],
       "scriptRequirements": [
@@ -62116,11 +61925,6 @@
           "source": "bjt",
           "unit": "workplace-communication",
           "note": "BJT workplace-task metadata aligned to the generated adult L2 spiral stage; no test content included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "passive-causative-processing",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
         }
       ],
       "mextAreas": []
@@ -62168,7 +61972,6 @@
         "yookoso-book2:autonomous-strategy",
         "tae-kim:reference-grammar-use",
         "jgram:grammar-lookup-workflow",
-        "jsl-processability-research:emergence-vs-accuracy",
         "bjt:J3",
         "bjt:workplace-communication",
         "bjt:negotiation-proposal"
@@ -62180,7 +61983,6 @@
         "jf-standard",
         "jlpt",
         "bjt",
-        "jsl-processability-research",
         "project-authored-l2-spiral"
       ],
       "scriptRequirements": [
@@ -62251,11 +62053,6 @@
           "source": "bjt",
           "unit": "workplace-communication",
           "note": "BJT workplace-task metadata aligned to the generated adult L2 spiral stage; no test content included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "emergence-vs-accuracy",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
         }
       ],
       "mextAreas": []
@@ -66227,10 +66024,6 @@
         "yookoso-book2:autonomous-strategy",
         "tae-kim:basic-grammar-sequence",
         "jgram:jlpt-grammar-index",
-        "jsl-processability-research:emergence-vs-accuracy",
-        "jsl-processability-research:verbal-morphology-processing",
-        "jsl-processability-research:passive-causative-processing",
-        "jsl-processability-research:content-question-development",
         "bjt:J3",
         "bjt:workplace-communication",
         "bjt:negotiation-proposal"
@@ -66242,7 +66035,6 @@
         "jf-standard",
         "jlpt",
         "bjt",
-        "jsl-processability-research",
         "project-authored-l2-spiral"
       ],
       "scriptRequirements": [
@@ -66313,26 +66105,6 @@
           "source": "bjt",
           "unit": "workplace-communication",
           "note": "BJT workplace-task metadata aligned to the generated adult L2 spiral stage; no test content included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "content-question-development",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "emergence-vs-accuracy",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "passive-causative-processing",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "verbal-morphology-processing",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
         }
       ],
       "mextAreas": []
@@ -66380,7 +66152,6 @@
         "yookoso-book2:autonomous-strategy",
         "tae-kim:basic-grammar-sequence",
         "jgram:jlpt-grammar-index",
-        "jsl-processability-research:passive-causative-processing",
         "bjt:J3",
         "bjt:workplace-communication",
         "bjt:negotiation-proposal"
@@ -66392,7 +66163,6 @@
         "jf-standard",
         "jlpt",
         "bjt",
-        "jsl-processability-research",
         "project-authored-l2-spiral"
       ],
       "scriptRequirements": [
@@ -66463,11 +66233,6 @@
           "source": "bjt",
           "unit": "workplace-communication",
           "note": "BJT workplace-task metadata aligned to the generated adult L2 spiral stage; no test content included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "passive-causative-processing",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
         }
       ],
       "mextAreas": []
@@ -66515,7 +66280,6 @@
         "yookoso-book2:autonomous-strategy",
         "tae-kim:reference-grammar-use",
         "jgram:grammar-lookup-workflow",
-        "jsl-processability-research:emergence-vs-accuracy",
         "bjt:J3",
         "bjt:workplace-communication",
         "bjt:negotiation-proposal"
@@ -66527,7 +66291,6 @@
         "jf-standard",
         "jlpt",
         "bjt",
-        "jsl-processability-research",
         "project-authored-l2-spiral"
       ],
       "scriptRequirements": [
@@ -66598,11 +66361,6 @@
           "source": "bjt",
           "unit": "workplace-communication",
           "note": "BJT workplace-task metadata aligned to the generated adult L2 spiral stage; no test content included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "emergence-vs-accuracy",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
         }
       ],
       "mextAreas": []
@@ -70259,10 +70017,6 @@
         "jf-standard:B2",
         "tae-kim:basic-grammar-sequence",
         "jgram:jlpt-grammar-index",
-        "jsl-processability-research:emergence-vs-accuracy",
-        "jsl-processability-research:verbal-morphology-processing",
-        "jsl-processability-research:passive-causative-processing",
-        "jsl-processability-research:content-question-development",
         "bjt:J2",
         "bjt:workplace-communication",
         "bjt:negotiation-proposal"
@@ -70273,7 +70027,6 @@
         "jf-standard",
         "jlpt",
         "bjt",
-        "jsl-processability-research",
         "project-authored-l2-spiral"
       ],
       "scriptRequirements": [
@@ -70319,26 +70072,6 @@
           "source": "bjt",
           "unit": "workplace-communication",
           "note": "BJT workplace-task metadata aligned to the generated adult L2 spiral stage; no test content included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "content-question-development",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "emergence-vs-accuracy",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "passive-causative-processing",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "verbal-morphology-processing",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
         }
       ],
       "mextAreas": []
@@ -70381,7 +70114,6 @@
         "jf-standard:B2",
         "tae-kim:basic-grammar-sequence",
         "jgram:jlpt-grammar-index",
-        "jsl-processability-research:passive-causative-processing",
         "bjt:J2",
         "bjt:workplace-communication",
         "bjt:negotiation-proposal"
@@ -70392,7 +70124,6 @@
         "jf-standard",
         "jlpt",
         "bjt",
-        "jsl-processability-research",
         "project-authored-l2-spiral"
       ],
       "scriptRequirements": [
@@ -70438,11 +70169,6 @@
           "source": "bjt",
           "unit": "workplace-communication",
           "note": "BJT workplace-task metadata aligned to the generated adult L2 spiral stage; no test content included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "passive-causative-processing",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
         }
       ],
       "mextAreas": []
@@ -70485,7 +70211,6 @@
         "jf-standard:B2",
         "tae-kim:reference-grammar-use",
         "jgram:grammar-lookup-workflow",
-        "jsl-processability-research:emergence-vs-accuracy",
         "bjt:J2",
         "bjt:workplace-communication",
         "bjt:negotiation-proposal"
@@ -70496,7 +70221,6 @@
         "jf-standard",
         "jlpt",
         "bjt",
-        "jsl-processability-research",
         "project-authored-l2-spiral"
       ],
       "scriptRequirements": [
@@ -70542,11 +70266,6 @@
           "source": "bjt",
           "unit": "workplace-communication",
           "note": "BJT workplace-task metadata aligned to the generated adult L2 spiral stage; no test content included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "emergence-vs-accuracy",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
         }
       ],
       "mextAreas": []
@@ -73528,10 +73247,6 @@
         "jf-standard:B2",
         "tae-kim:basic-grammar-sequence",
         "jgram:jlpt-grammar-index",
-        "jsl-processability-research:emergence-vs-accuracy",
-        "jsl-processability-research:verbal-morphology-processing",
-        "jsl-processability-research:passive-causative-processing",
-        "jsl-processability-research:content-question-development",
         "bjt:J2",
         "bjt:workplace-communication",
         "bjt:negotiation-proposal"
@@ -73542,7 +73257,6 @@
         "jf-standard",
         "jlpt",
         "bjt",
-        "jsl-processability-research",
         "project-authored-l2-spiral"
       ],
       "scriptRequirements": [
@@ -73588,26 +73302,6 @@
           "source": "bjt",
           "unit": "workplace-communication",
           "note": "BJT workplace-task metadata aligned to the generated adult L2 spiral stage; no test content included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "content-question-development",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "emergence-vs-accuracy",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "passive-causative-processing",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "verbal-morphology-processing",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
         }
       ],
       "mextAreas": []
@@ -73650,7 +73344,6 @@
         "jf-standard:B2",
         "tae-kim:basic-grammar-sequence",
         "jgram:jlpt-grammar-index",
-        "jsl-processability-research:passive-causative-processing",
         "bjt:J2",
         "bjt:workplace-communication",
         "bjt:negotiation-proposal"
@@ -73661,7 +73354,6 @@
         "jf-standard",
         "jlpt",
         "bjt",
-        "jsl-processability-research",
         "project-authored-l2-spiral"
       ],
       "scriptRequirements": [
@@ -73707,11 +73399,6 @@
           "source": "bjt",
           "unit": "workplace-communication",
           "note": "BJT workplace-task metadata aligned to the generated adult L2 spiral stage; no test content included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "passive-causative-processing",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
         }
       ],
       "mextAreas": []
@@ -73754,7 +73441,6 @@
         "jf-standard:B2",
         "tae-kim:reference-grammar-use",
         "jgram:grammar-lookup-workflow",
-        "jsl-processability-research:emergence-vs-accuracy",
         "bjt:J2",
         "bjt:workplace-communication",
         "bjt:negotiation-proposal"
@@ -73765,7 +73451,6 @@
         "jf-standard",
         "jlpt",
         "bjt",
-        "jsl-processability-research",
         "project-authored-l2-spiral"
       ],
       "scriptRequirements": [
@@ -73811,11 +73496,6 @@
           "source": "bjt",
           "unit": "workplace-communication",
           "note": "BJT workplace-task metadata aligned to the generated adult L2 spiral stage; no test content included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "emergence-vs-accuracy",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
         }
       ],
       "mextAreas": []
@@ -76797,10 +76477,6 @@
         "jf-standard:C1",
         "tae-kim:basic-grammar-sequence",
         "jgram:jlpt-grammar-index",
-        "jsl-processability-research:emergence-vs-accuracy",
-        "jsl-processability-research:verbal-morphology-processing",
-        "jsl-processability-research:passive-causative-processing",
-        "jsl-processability-research:content-question-development",
         "bjt:J1",
         "bjt:workplace-communication",
         "bjt:negotiation-proposal"
@@ -76811,7 +76487,6 @@
         "jf-standard",
         "jlpt",
         "bjt",
-        "jsl-processability-research",
         "project-authored-l2-spiral"
       ],
       "scriptRequirements": [
@@ -76857,26 +76532,6 @@
           "source": "bjt",
           "unit": "workplace-communication",
           "note": "BJT workplace-task metadata aligned to the generated adult L2 spiral stage; no test content included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "content-question-development",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "emergence-vs-accuracy",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "passive-causative-processing",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "verbal-morphology-processing",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
         }
       ],
       "mextAreas": []
@@ -76919,7 +76574,6 @@
         "jf-standard:C1",
         "tae-kim:basic-grammar-sequence",
         "jgram:jlpt-grammar-index",
-        "jsl-processability-research:passive-causative-processing",
         "bjt:J1",
         "bjt:workplace-communication",
         "bjt:negotiation-proposal"
@@ -76930,7 +76584,6 @@
         "jf-standard",
         "jlpt",
         "bjt",
-        "jsl-processability-research",
         "project-authored-l2-spiral"
       ],
       "scriptRequirements": [
@@ -76976,11 +76629,6 @@
           "source": "bjt",
           "unit": "workplace-communication",
           "note": "BJT workplace-task metadata aligned to the generated adult L2 spiral stage; no test content included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "passive-causative-processing",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
         }
       ],
       "mextAreas": []
@@ -77023,7 +76671,6 @@
         "jf-standard:C1",
         "tae-kim:reference-grammar-use",
         "jgram:grammar-lookup-workflow",
-        "jsl-processability-research:emergence-vs-accuracy",
         "bjt:J1",
         "bjt:workplace-communication",
         "bjt:negotiation-proposal"
@@ -77034,7 +76681,6 @@
         "jf-standard",
         "jlpt",
         "bjt",
-        "jsl-processability-research",
         "project-authored-l2-spiral"
       ],
       "scriptRequirements": [
@@ -77080,11 +76726,6 @@
           "source": "bjt",
           "unit": "workplace-communication",
           "note": "BJT workplace-task metadata aligned to the generated adult L2 spiral stage; no test content included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "emergence-vs-accuracy",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
         }
       ],
       "mextAreas": []
@@ -80066,10 +79707,6 @@
         "jf-standard:C1",
         "tae-kim:basic-grammar-sequence",
         "jgram:jlpt-grammar-index",
-        "jsl-processability-research:emergence-vs-accuracy",
-        "jsl-processability-research:verbal-morphology-processing",
-        "jsl-processability-research:passive-causative-processing",
-        "jsl-processability-research:content-question-development",
         "bjt:J1",
         "bjt:workplace-communication",
         "bjt:negotiation-proposal"
@@ -80080,7 +79717,6 @@
         "jf-standard",
         "jlpt",
         "bjt",
-        "jsl-processability-research",
         "project-authored-l2-spiral"
       ],
       "scriptRequirements": [
@@ -80126,26 +79762,6 @@
           "source": "bjt",
           "unit": "workplace-communication",
           "note": "BJT workplace-task metadata aligned to the generated adult L2 spiral stage; no test content included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "content-question-development",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "emergence-vs-accuracy",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "passive-causative-processing",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "verbal-morphology-processing",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
         }
       ],
       "mextAreas": []
@@ -80188,7 +79804,6 @@
         "jf-standard:C1",
         "tae-kim:basic-grammar-sequence",
         "jgram:jlpt-grammar-index",
-        "jsl-processability-research:passive-causative-processing",
         "bjt:J1",
         "bjt:workplace-communication",
         "bjt:negotiation-proposal"
@@ -80199,7 +79814,6 @@
         "jf-standard",
         "jlpt",
         "bjt",
-        "jsl-processability-research",
         "project-authored-l2-spiral"
       ],
       "scriptRequirements": [
@@ -80245,11 +79859,6 @@
           "source": "bjt",
           "unit": "workplace-communication",
           "note": "BJT workplace-task metadata aligned to the generated adult L2 spiral stage; no test content included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "passive-causative-processing",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
         }
       ],
       "mextAreas": []
@@ -80292,7 +79901,6 @@
         "jf-standard:C1",
         "tae-kim:reference-grammar-use",
         "jgram:grammar-lookup-workflow",
-        "jsl-processability-research:emergence-vs-accuracy",
         "bjt:J1",
         "bjt:workplace-communication",
         "bjt:negotiation-proposal"
@@ -80303,7 +79911,6 @@
         "jf-standard",
         "jlpt",
         "bjt",
-        "jsl-processability-research",
         "project-authored-l2-spiral"
       ],
       "scriptRequirements": [
@@ -80349,11 +79956,6 @@
           "source": "bjt",
           "unit": "workplace-communication",
           "note": "BJT workplace-task metadata aligned to the generated adult L2 spiral stage; no test content included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "emergence-vs-accuracy",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
         }
       ],
       "mextAreas": []
@@ -83335,10 +82937,6 @@
         "jf-standard:C1",
         "tae-kim:basic-grammar-sequence",
         "jgram:jlpt-grammar-index",
-        "jsl-processability-research:emergence-vs-accuracy",
-        "jsl-processability-research:verbal-morphology-processing",
-        "jsl-processability-research:passive-causative-processing",
-        "jsl-processability-research:content-question-development",
         "bjt:J1+",
         "bjt:workplace-communication",
         "bjt:negotiation-proposal"
@@ -83349,7 +82947,6 @@
         "jf-standard",
         "jlpt",
         "bjt",
-        "jsl-processability-research",
         "project-authored-l2-spiral"
       ],
       "scriptRequirements": [
@@ -83395,26 +82992,6 @@
           "source": "bjt",
           "unit": "workplace-communication",
           "note": "BJT workplace-task metadata aligned to the generated adult L2 spiral stage; no test content included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "content-question-development",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "emergence-vs-accuracy",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "passive-causative-processing",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "verbal-morphology-processing",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
         }
       ],
       "mextAreas": []
@@ -83457,7 +83034,6 @@
         "jf-standard:C1",
         "tae-kim:basic-grammar-sequence",
         "jgram:jlpt-grammar-index",
-        "jsl-processability-research:passive-causative-processing",
         "bjt:J1+",
         "bjt:workplace-communication",
         "bjt:negotiation-proposal"
@@ -83468,7 +83044,6 @@
         "jf-standard",
         "jlpt",
         "bjt",
-        "jsl-processability-research",
         "project-authored-l2-spiral"
       ],
       "scriptRequirements": [
@@ -83514,11 +83089,6 @@
           "source": "bjt",
           "unit": "workplace-communication",
           "note": "BJT workplace-task metadata aligned to the generated adult L2 spiral stage; no test content included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "passive-causative-processing",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
         }
       ],
       "mextAreas": []
@@ -83561,7 +83131,6 @@
         "jf-standard:C1",
         "tae-kim:reference-grammar-use",
         "jgram:grammar-lookup-workflow",
-        "jsl-processability-research:emergence-vs-accuracy",
         "bjt:J1+",
         "bjt:workplace-communication",
         "bjt:negotiation-proposal"
@@ -83572,7 +83141,6 @@
         "jf-standard",
         "jlpt",
         "bjt",
-        "jsl-processability-research",
         "project-authored-l2-spiral"
       ],
       "scriptRequirements": [
@@ -83618,11 +83186,6 @@
           "source": "bjt",
           "unit": "workplace-communication",
           "note": "BJT workplace-task metadata aligned to the generated adult L2 spiral stage; no test content included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "emergence-vs-accuracy",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
         }
       ],
       "mextAreas": []
@@ -86604,10 +86167,6 @@
         "jf-standard:C1",
         "tae-kim:basic-grammar-sequence",
         "jgram:jlpt-grammar-index",
-        "jsl-processability-research:emergence-vs-accuracy",
-        "jsl-processability-research:verbal-morphology-processing",
-        "jsl-processability-research:passive-causative-processing",
-        "jsl-processability-research:content-question-development",
         "bjt:J1+",
         "bjt:workplace-communication",
         "bjt:negotiation-proposal"
@@ -86618,7 +86177,6 @@
         "jf-standard",
         "jlpt",
         "bjt",
-        "jsl-processability-research",
         "project-authored-l2-spiral"
       ],
       "scriptRequirements": [
@@ -86664,26 +86222,6 @@
           "source": "bjt",
           "unit": "workplace-communication",
           "note": "BJT workplace-task metadata aligned to the generated adult L2 spiral stage; no test content included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "content-question-development",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "emergence-vs-accuracy",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "passive-causative-processing",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "verbal-morphology-processing",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
         }
       ],
       "mextAreas": []
@@ -86726,7 +86264,6 @@
         "jf-standard:C1",
         "tae-kim:basic-grammar-sequence",
         "jgram:jlpt-grammar-index",
-        "jsl-processability-research:passive-causative-processing",
         "bjt:J1+",
         "bjt:workplace-communication",
         "bjt:negotiation-proposal"
@@ -86737,7 +86274,6 @@
         "jf-standard",
         "jlpt",
         "bjt",
-        "jsl-processability-research",
         "project-authored-l2-spiral"
       ],
       "scriptRequirements": [
@@ -86783,11 +86319,6 @@
           "source": "bjt",
           "unit": "workplace-communication",
           "note": "BJT workplace-task metadata aligned to the generated adult L2 spiral stage; no test content included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "passive-causative-processing",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
         }
       ],
       "mextAreas": []
@@ -86830,7 +86361,6 @@
         "jf-standard:C1",
         "tae-kim:reference-grammar-use",
         "jgram:grammar-lookup-workflow",
-        "jsl-processability-research:emergence-vs-accuracy",
         "bjt:J1+",
         "bjt:workplace-communication",
         "bjt:negotiation-proposal"
@@ -86841,7 +86371,6 @@
         "jf-standard",
         "jlpt",
         "bjt",
-        "jsl-processability-research",
         "project-authored-l2-spiral"
       ],
       "scriptRequirements": [
@@ -86887,11 +86416,6 @@
           "source": "bjt",
           "unit": "workplace-communication",
           "note": "BJT workplace-task metadata aligned to the generated adult L2 spiral stage; no test content included."
-        },
-        {
-          "source": "jsl-processability-research",
-          "unit": "emergence-vs-accuracy",
-          "note": "Citation-level acquisition research alignment derived from existing standard key; no article or thesis text included."
         }
       ],
       "mextAreas": []

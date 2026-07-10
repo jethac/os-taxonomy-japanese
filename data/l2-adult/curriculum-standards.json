@@ -9,9 +9,13 @@
     "jgram",
     "bjt",
     "yookoso-book2",
-    "jsl-processability-research"
+    "iwasaki-2006-child-processability",
+    "iwasaki-2013-adult-processability",
+    "iwasaki-oliver-2014-emergence-accuracy",
+    "iwasaki-oliver-2018-passive-acquisition",
+    "kawaguchi-iwasaki-2021-content-questions"
   ],
-  "curriculumCount": 8,
+  "curriculumCount": 12,
   "curricula": [
     {
       "slug": "yookoso-book1",
@@ -488,45 +492,116 @@
       ]
     },
     {
-      "slug": "jsl-processability-research",
+      "slug": "iwasaki-2006-child-processability",
       "country": "AU",
-      "name": "Japanese second-language acquisition and Processability Theory research",
-      "version": "Iwasaki and colleagues metadata references",
-      "sourceUrl": "https://www.ecu.edu.au/schools/arts-and-humanities/staff/profiles/honorary-appointments/dr-junko-iwasaki",
+      "name": "The Acquisition of Japanese as a Second Language and Processability Theory: A Longitudinal Study of a Naturalistic Child Learner",
+      "version": "2006 doctoral thesis",
+      "sourceUrl": "https://ro.ecu.edu.au/theses/73/",
       "textIncluded": false,
-      "license": "Citation-level metadata only; no article, thesis, or book-chapter text included.",
-      "topicCount": 4,
+      "license": "Citation-level bibliographic metadata only; no thesis text included.",
+      "topicCount": 1,
       "topics": [
         {
-          "key": "jsl-processability-research:emergence-vs-accuracy",
-          "code": "emergence-vs-accuracy",
+          "key": "iwasaki-2006-child-processability:verbal-morphosyntax-emergence",
+          "code": "verbal-morphosyntax-emergence",
           "data": {
-            "label": "Emergence and accuracy in Japanese SLA",
-            "note": "Citation-level alignment to Iwasaki and colleagues on separating first emergence from stable target-like use."
+            "label": "Child JSL verbal morphosyntax emergence",
+            "citation": "Iwasaki, J. (2006). The Acquisition of Japanese as a Second Language and Processability Theory: A Longitudinal Study of a Naturalistic Child Learner [Doctoral thesis, Edith Cowan University].",
+            "note": "The longitudinal case examines emergence in verbal inflection, V-te V, passive, and causative structures.",
+            "evidencePopulation": "One seven-year-old naturalistic child JSL learner.",
+            "alignmentLimit": "Phenomenon-level citation only; not evidence for adult JLPT placement, taxonomy prerequisites, instructional order, or mastery thresholds."
           }
-        },
+        }
+      ]
+    },
+    {
+      "slug": "iwasaki-2013-adult-processability",
+      "country": "AU",
+      "name": "A Processability Theory (PT)-based Analysis of the Acquisition of Japanese Morphology and Syntax: A Case of an Intensive Adult Learner",
+      "version": "2013 journal article",
+      "sourceUrl": "https://doi.org/10.11431/secondlanguage.12.0_21",
+      "textIncluded": false,
+      "license": "Citation-level bibliographic metadata only; no article text included.",
+      "topicCount": 1,
+      "topics": [
         {
-          "key": "jsl-processability-research:verbal-morphology-processing",
-          "code": "verbal-morphology-processing",
+          "key": "iwasaki-2013-adult-processability:adult-morphosyntax-emergence",
+          "code": "adult-morphosyntax-emergence",
           "data": {
-            "label": "Japanese verbal morphology processability",
-            "note": "Citation-level alignment to research on Japanese verbal morphology and development over time."
+            "label": "Intensive adult JSL morphosyntax emergence",
+            "citation": "Iwasaki, J. (2013). A Processability Theory (PT)-based Analysis of the Acquisition of Japanese Morphology and Syntax: A Case of an Intensive Adult Learner. Second Language, 12, 21-42.",
+            "note": "The longitudinal case examines emergence orders for verbal affixes, V-te V, passive, causative, benefactive, and canonical and non-canonical sentence structures.",
+            "evidencePopulation": "One 33-year-old beginner receiving approximately 900 hours of intensive one-to-one instruction.",
+            "alignmentLimit": "Phenomenon-level citation only; a single intensive case does not validate a general adult sequence, JLPT placement, taxonomy prerequisites, or mastery thresholds."
           }
-        },
+        }
+      ]
+    },
+    {
+      "slug": "iwasaki-oliver-2014-emergence-accuracy",
+      "country": "AU",
+      "name": "The Acquisition of Verbal Morphology in Japanese as a Second Language (JSL) by a Child: Emergence and Accuracy",
+      "version": "2014 journal article",
+      "sourceUrl": "https://ro.ecu.edu.au/ecuworkspost2013/633/",
+      "textIncluded": false,
+      "license": "Citation-level bibliographic metadata only; no article text included.",
+      "topicCount": 1,
+      "topics": [
         {
-          "key": "jsl-processability-research:passive-causative-processing",
-          "code": "passive-causative-processing",
+          "key": "iwasaki-oliver-2014-emergence-accuracy:verbal-morphology-emergence-accuracy",
+          "code": "verbal-morphology-emergence-accuracy",
           "data": {
-            "label": "Passive and causative processability",
-            "note": "Citation-level alignment to Processability Theory work on passive and causative development in Japanese L2."
+            "label": "Child JSL verbal morphology: emergence and accuracy",
+            "citation": "Iwasaki, J., & Oliver, R. (2014). The Acquisition of Verbal Morphology in Japanese as a Second Language (JSL) by a Child: Emergence and Accuracy. Studies in Language Sciences, 13, 70-95.",
+            "note": "The longitudinal case treats first emergence and target-like rule application as distinct observations.",
+            "evidencePopulation": "One seven-year-old naturalistic child JSL learner observed longitudinally.",
+            "alignmentLimit": "Supports the observational distinction only. The taxonomy's learning-log procedure is a project-authored, processability-informed pedagogical inference, not a validated intervention or diagnostic."
           }
-        },
+        }
+      ]
+    },
+    {
+      "slug": "iwasaki-oliver-2018-passive-acquisition",
+      "country": "AU",
+      "name": "Describing the Acquisition of the Passive Voice by a Child Learner of Japanese as a Second Language from a Processability Theory Perspective",
+      "version": "2018 journal article",
+      "sourceUrl": "https://doi.org/10.7575/aiac.ijalel.v.7n.5p.247",
+      "textIncluded": false,
+      "license": "Citation-level bibliographic metadata only; no article text included.",
+      "topicCount": 1,
+      "topics": [
         {
-          "key": "jsl-processability-research:content-question-development",
-          "code": "content-question-development",
+          "key": "iwasaki-oliver-2018-passive-acquisition:child-passive-development",
+          "code": "child-passive-development",
           "data": {
-            "label": "Content-question development in Japanese L2",
-            "note": "Citation-level alignment to work on acquiring Japanese content questions in sequential bilingual and JSL development."
+            "label": "Child JSL passive-voice development",
+            "citation": "Iwasaki, J., & Oliver, R. (2018). Describing the Acquisition of the Passive Voice by a Child Learner of Japanese as a Second Language from a Processability Theory Perspective. International Journal of Applied Linguistics and English Literature, 7(5), 247-259.",
+            "note": "The longitudinal case focuses on development of passive voice and non-canonical argument-function mapping.",
+            "evidencePopulation": "One naturalistic child JSL learner with English as the first language.",
+            "alignmentLimit": "Phenomenon-level citation only; not evidence for adult N3 placement, taxonomy prerequisites, instructional order, or mastery thresholds."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "kawaguchi-iwasaki-2021-content-questions",
+      "country": "AU",
+      "name": "Acquiring Content Questions in Japanese: The Case of a Sequential English-Japanese Bilingual Child",
+      "version": "2021 journal article",
+      "sourceUrl": "https://doi.org/10.18848/2327-7939/CGP/v28i01/39-60",
+      "textIncluded": false,
+      "license": "Citation-level bibliographic metadata only; no article text included.",
+      "topicCount": 1,
+      "topics": [
+        {
+          "key": "kawaguchi-iwasaki-2021-content-questions:child-content-question-development",
+          "code": "child-content-question-development",
+          "data": {
+            "label": "Sequential bilingual child Japanese content-question development",
+            "citation": "Kawaguchi, S., & Iwasaki, J. (2021). Acquiring Content Questions in Japanese: The Case of a Sequential English-Japanese Bilingual Child. The International Journal of Early Childhood Learning, 28(1), 39-60.",
+            "note": "The study examines emerging Japanese content interrogatives in a sequential English-Japanese bilingual child.",
+            "evidencePopulation": "One sequential English-Japanese bilingual child observed longitudinally.",
+            "alignmentLimit": "Phenomenon-level citation only; not evidence for adult A1 or JLPT N5 placement, taxonomy prerequisites, instructional order, or mastery thresholds."
           }
         }
       ]

@@ -1,6 +1,6 @@
 {
   "version": "seed-0.0.1",
-  "sourceCount": 16,
+  "sourceCount": 20,
   "sources": [
     {
       "slug": "mext-es-ja-2017",
@@ -159,16 +159,64 @@
       "notes": "BJT tags identify workplace/professional task alignment inside the adult L2 graph."
     },
     {
-      "slug": "jsl-processability-research",
+      "slug": "iwasaki-2006-child-processability",
       "profiles": ["ja-L2-adult"],
-      "name": "Japanese SLA and Processability Theory research metadata",
+      "name": "Iwasaki (2006), The Acquisition of Japanese as a Second Language and Processability Theory",
       "category": "research-alignment",
-      "sourceUrl": "https://www.ecu.edu.au/schools/arts-and-humanities/staff/profiles/honorary-appointments/dr-junko-iwasaki",
-      "use": "L2 acquisition-order and prerequisite hypotheses.",
+      "sourceUrl": "https://ro.ecu.edu.au/theses/73/",
+      "use": "Phenomenon-level citation for a longitudinal child JSL case examining the emergence of verbal inflection, V-te V, passive, and causative structures.",
       "textIncluded": false,
       "redistribution": "citation-level",
-      "licenseStatus": "Citation-level bibliographic metadata only; no thesis, article, abstract, chapter prose, table content, or publisher text is included.",
-      "notes": "Taxonomy alignment records store labels and notes only; quote or full-text reuse requires separate source terms review."
+      "licenseStatus": "Bibliographic metadata and original taxonomy alignment notes only; no thesis prose, tables, examples, or assessment material included.",
+      "notes": "Single-case naturalistic child study. A mapping identifies a studied linguistic phenomenon only; it does not establish this adult taxonomy's JLPT placement, prerequisites, teaching sequence, or mastery threshold."
+    },
+    {
+      "slug": "iwasaki-2013-adult-processability",
+      "profiles": ["ja-L2-adult"],
+      "name": "Iwasaki (2013), A Processability Theory-based Analysis of Japanese Morphology and Syntax",
+      "category": "research-alignment",
+      "sourceUrl": "https://doi.org/10.11431/secondlanguage.12.0_21",
+      "use": "Phenomenon-level citation for an intensive adult JSL case examining emergence across verbal affixes, V-te V, passive, causative, benefactive, and sentence structures.",
+      "textIncluded": false,
+      "redistribution": "citation-level",
+      "licenseStatus": "Bibliographic metadata and original taxonomy alignment notes only; no article prose, tables, examples, or assessment material included.",
+      "notes": "Single-case study of one intensive adult learner. A mapping identifies a studied linguistic phenomenon only; it does not validate a general adult acquisition order, JLPT placement, teaching sequence, or mastery threshold."
+    },
+    {
+      "slug": "iwasaki-oliver-2014-emergence-accuracy",
+      "profiles": ["ja-L2-adult"],
+      "name": "Iwasaki and Oliver (2014), The Acquisition of Verbal Morphology in JSL by a Child: Emergence and Accuracy",
+      "category": "research-alignment",
+      "sourceUrl": "https://ro.ecu.edu.au/ecuworkspost2013/633/",
+      "use": "Citation for the distinction between first emergence and target-like accuracy in one longitudinal child JSL corpus.",
+      "textIncluded": false,
+      "redistribution": "citation-level",
+      "licenseStatus": "Bibliographic metadata and original taxonomy alignment notes only; no article prose, tables, examples, or assessment material included.",
+      "notes": "Single-case naturalistic child study. The taxonomy's learning-log routine is a processability-informed pedagogical application authored by this project, not an intervention or diagnostic validated by the publication."
+    },
+    {
+      "slug": "iwasaki-oliver-2018-passive-acquisition",
+      "profiles": ["ja-L2-adult"],
+      "name": "Iwasaki and Oliver (2018), Describing the Acquisition of the Passive Voice by a Child Learner of JSL",
+      "category": "research-alignment",
+      "sourceUrl": "https://doi.org/10.7575/aiac.ijalel.v.7n.5p.247",
+      "use": "Phenomenon-level citation for passive-voice development in one longitudinal child JSL case from a Processability Theory perspective.",
+      "textIncluded": false,
+      "redistribution": "citation-level",
+      "licenseStatus": "Bibliographic metadata and original taxonomy alignment notes only; no article prose, tables, examples, or assessment material included.",
+      "notes": "Single-case naturalistic child study. A mapping identifies passive voice as the studied phenomenon only; it does not establish this adult taxonomy's N3 placement, prerequisites, teaching sequence, or mastery threshold."
+    },
+    {
+      "slug": "kawaguchi-iwasaki-2021-content-questions",
+      "profiles": ["ja-L2-adult"],
+      "name": "Kawaguchi and Iwasaki (2021), Acquiring Content Questions in Japanese",
+      "category": "research-alignment",
+      "sourceUrl": "https://doi.org/10.18848/2327-7939/CGP/v28i01/39-60",
+      "use": "Phenomenon-level citation for content-question development in one sequential English-Japanese bilingual child.",
+      "textIncluded": false,
+      "redistribution": "citation-level",
+      "licenseStatus": "Bibliographic metadata and original taxonomy alignment notes only; no article prose, tables, examples, or assessment material included.",
+      "notes": "Single-child study. A mapping identifies Japanese content questions as the studied phenomenon only; it does not establish this adult taxonomy's A1 or JLPT N5 placement, prerequisites, teaching sequence, or mastery threshold."
     },
     {
       "slug": "project-authored-native-spiral",
