@@ -35,10 +35,13 @@ jobs:
         run: |
           site="${RUNNER_TEMP}/site"
           mkdir -p "$site"
-          cp viewer/index.html viewer/app.js viewer/styles.css "$site/"
+          cp -R viewer "$site/"
+          cp viewer/index.html "$site/index.html"
           cp -R data "$site/data"
           touch "$site/.nojekyll"
           test -f "$site/index.html"
+          test -f "$site/viewer/app.js"
+          test -f "$site/viewer/styles.css"
           test -f "$site/data/manifest.json"
 
       - name: Configure GitHub Pages
