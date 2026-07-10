@@ -1,0 +1,16 @@
+{
+  "name": "japanese-language-taxonomy",
+  "version": "0.1.0",
+  "description": "An open Japanese language taxonomy and interactive learning atlas.",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "manifest": "node scripts/update-manifest.mjs",
+    "serve": "node scripts/serve.mjs"
+  }
+}
