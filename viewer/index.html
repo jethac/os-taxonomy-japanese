@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta id="themeColor" name="theme-color" content="#080b13">
+    <title>Japanese Learning Atlas</title>
+    <script>
+      (() => {
+        try {
+          const params = new URLSearchParams(location.hash.slice(1));
+          const theme = params.get('theme') || localStorage.getItem('japanese-atlas-theme');
+          const locale = params.get('lang') || localStorage.getItem('japanese-atlas-locale');
+          if (theme === 'light' || theme === 'dark') document.documentElement.dataset.theme = theme;
+          if (locale === 'en' || locale === 'ja') document.documentElement.lang = locale;
+        } catch {
+          // The application applies defaults when storage is unavailable.
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="/viewer/styles.css">
+  </head>
+  <body>
+    <div class="appShell">
+      <header class="topbar">
+        <a class="wordmark" href="#" aria-label="Japanese Learning Atlas home">
+          <span class="wordmarkJa" lang="ja">日本語</span>
+          <span class="wordmarkEn" data-i18n="wordmark">Learning atlas</span>
+        </a>
+
+        <div class="primaryControls" aria-label="Primary graph controls">
+          <div class="profileSwitch" role="group" aria-label="Learner profile">
+            <button type="button" data-profile-action="native-child" data-i18n="nativePath" aria-pressed="true">Native path</button>
+            <button type="button" data-profile-action="l2-adult" data-i18n="adultPath" aria-pressed="false">Adult L2</button>
+          </div>
+          <label class="searchControl">
+            <span class="visuallyHidden">Search concepts</span>
+            <span aria-hidden="true">⌕</span>
+            <input id="searchInput" type="search" placeholder="Search concepts, 日本語, JLPT…" autocomplete="off">
+          </label>
+          <button id="filterToggle" class="utilityButton" type="button" aria-expanded="false" aria-controls="filterPanel">
+            <span data-i18n="filters">Filters</span> <span id="activeFilterCount" class="controlCount" hidden></span>
+          </button>
+          <button id="aboutToggle" class="utilityButton" type="button" aria-expanded="false" aria-controls="filterPanel" data-i18n="about">About</button>
+          <div class="viewerSettings" aria-label="Viewer settings">
+            <div class="languageSwitch" role="group" aria-label="Language">
+              <button type="button" data-language-action="en" aria-pressed="true">EN</button>
+              <button type="button" data-language-action="ja" aria-pressed="false" lang="ja">日本語</button>
+            </div>
+            <button id="themeToggle" class="themeToggle" type="button" aria-label="Use light theme" title="Use light theme">
+              <span id="themeIcon" aria-hidden="true">☀</span>
+              <span id="themeLabel">Light</span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <main class="layout">
+        <section class="graphRegion" aria-label="Japanese concept map">
+          <div class="graphShell">
+            <canvas
+              id="graph"
+              role="img"
+              aria-label="Japanese language concept graph"
+              aria-describedby="graphInstructions"
+              tabindex="0"
+            ></canvas>
+
+            <section class="hero" aria-labelledby="heroTitle">
+              <p class="heroEyebrow" data-i18n="heroEyebrow">Open curriculum map · Grades 1–12 and JLPT N5–N1</p>
+              <h1 id="heroTitle">See how Japanese learning unfolds<span>.</span></h1>
+              <p id="profileSummary"></p>
+              <div class="heroStats">
+                <strong id="graphCounts" aria-live="polite"></strong>
+                <span id="profileTitle"></span>
+              </div>
+              <p id="graphInstructions" class="graphInstructions">
+                Drag to orbit · Shift-drag to pan · Scroll to zoom · Select a point to trace what comes before and after.
+              </p>
+              <div id="pathRibbon" aria-live="polite"></div>
+            </section>
+
+            <div class="graphToolbar" aria-label="Graph viewport controls">
+              <button type="button" class="iconButton" data-graph-action="zoom-out" aria-label="Zoom out" title="Zoom out">−</button>
+              <button type="button" class="iconButton" data-graph-action="zoom-reset" aria-label="Reset graph view" title="Reset graph view">◎</button>
+              <button type="button" class="iconButton" data-graph-action="zoom-in" aria-label="Zoom in" title="Zoom in">+</button>
+            </div>
+
+            <div class="legendPanel">
+              <div class="legendHeading">
+                <span data-i18n="domains">Domains</span>
+                <span data-i18n="selectToFocus">select to focus</span>
+              </div>
+              <div id="domainLegend" class="domainLegend" aria-label="Domain filters"></div>
+            </div>
+
+            <section id="jlptNavigator" class="jlptNavigator" aria-label="JLPT learning journey" hidden>
+              <div class="jlptNavigatorHeader">
+                <div>
+                  <span class="jlptEyebrow" data-i18n="jlptJourney">JLPT journey</span>
+                  <strong data-i18n="jlptChoose">Choose a level or the bridge between levels</strong>
+                </div>
+                <button type="button" class="jlptAllButton" data-jlpt-all data-i18n="allL2" aria-pressed="true">All L2</button>
+              </div>
+              <div id="jlptSteps" class="jlptSteps" role="group" aria-label="JLPT levels and learning bridges"></div>
+              <p id="jlptJourneySummary" class="jlptJourneySummary" aria-live="polite"></p>
+            </section>
+
+            <div id="graphTooltip" class="graphTooltip" role="tooltip" aria-hidden="true">
+              <div class="tooltipMeta"><i></i><span></span></div>
+              <strong></strong>
+              <p></p>
+            </div>
+
+            <div class="graphHint" aria-hidden="true">Orbit <b>drag</b> · Pan <b>shift + drag</b> · Zoom <b>scroll</b></div>
+          </div>
+        </section>
+
+        <aside id="detailRegion" class="detailRegion" aria-label="Selected topic details" aria-hidden="true">
+          <section class="detailPanel">
+            <div class="panelBar">
+              <span data-i18n="selectedConcept">Selected concept</span>
+              <button id="detailClose" class="panelClose" type="button" aria-label="Clear selected topic">×</button>
+            </div>
+            <h2 id="topicName">Select a concept</h2>
+            <div id="topicMeta"></div>
+            <p id="topicDescription"></p>
+
+            <div class="topicMetricRow">
+              <div><strong id="topicBeforeCount">0</strong><span data-i18n="before">before</span></div>
+              <div><strong id="topicNextCount">0</strong><span data-i18n="next">next</span></div>
+            </div>
+
+            <details class="detailDisclosure" open>
+              <summary data-i18n="masteryEvidence">Mastery evidence</summary>
+              <ul id="topicEvidence"></ul>
+              <h3 data-i18n="assessmentPrompt">Assessment prompt</h3>
+              <p id="topicAssessment"></p>
+            </details>
+
+            <details class="detailDisclosure" open>
+              <summary data-i18n="learningConnections">Learning connections</summary>
+              <h3 data-i18n="buildsOn">Builds directly on</h3>
+              <ul id="topicPrereqs"></ul>
+              <h3 data-i18n="unlocksNext">Unlocks next</h3>
+              <ul id="topicUnlocks"></ul>
+            </details>
+
+            <details class="detailDisclosure">
+              <summary data-i18n="curriculumAlignment">Curriculum alignment</summary>
+              <h3 data-i18n="standards">Standards</h3>
+              <ul id="topicStandards"></ul>
+              <h3 data-i18n="referenceAlignments">Reference alignments</h3>
+              <div id="topicReferences"></div>
+              <h3 data-i18n="sourceProvenance">Source provenance</h3>
+              <div id="topicSources"></div>
+            </details>
+
+            <details class="detailDisclosure">
+              <summary data-i18n="charactersVocabulary">Characters and vocabulary</summary>
+              <div id="topicCompanion"></div>
+            </details>
+
+            <details class="detailDisclosure">
+              <summary data-i18n="exportShare">Export and share</summary>
+              <div class="exportActions">
+                <button type="button" class="actionButton" data-export="topic" data-i18n="copyTopic">Copy Topic</button>
+                <button type="button" class="actionButton" data-export="path" data-i18n="copyPath">Copy Path</button>
+                <button type="button" class="actionButton" data-export="list" data-i18n="copyList">Copy List</button>
+                <button type="button" class="actionButton" data-export="link" data-i18n="shareLink">Share Link</button>
+              </div>
+              <textarea id="exportOutput" readonly rows="6" aria-label="Export output"></textarea>
+              <p id="exportStatus" class="statusText"></p>
+            </details>
+          </section>
+        </aside>
+      </main>
+
+      <div id="panelScrim" class="panelScrim" hidden></div>
+      <aside id="filterPanel" class="filterPanel" aria-label="Filters and curriculum notes" aria-hidden="true">
+        <div class="drawerHeader">
+          <div>
+            <span class="drawerEyebrow" data-i18n="exploreDataset">Explore the dataset</span>
+            <h2 id="drawerTitle">Filters</h2>
+          </div>
+          <button id="filterClose" class="panelClose" type="button" aria-label="Close filters">×</button>
+        </div>
+
+        <div class="controls" aria-label="Advanced graph controls">
+          <label>
+            <span data-i18n="profile">Profile</span>
+            <select id="profileSelect">
+              <option value="native-child">Native child</option>
+              <option value="l2-adult">Adult L2</option>
+            </select>
+          </label>
+          <label>
+            <span data-i18n="domain">Domain</span>
+            <select id="domainSelect"></select>
+          </label>
+          <label>
+            <span data-i18n="cluster">Cluster</span>
+            <select id="clusterSelect"></select>
+          </label>
+          <label>
+            <span data-i18n="type">Type</span>
+            <select id="typeSelect"></select>
+          </label>
+          <label>
+            <span data-i18n="gradeLevel">Grade / Level</span>
+            <select id="axisSelect"></select>
+          </label>
+          <label>
+            <span data-i18n="standard">Standard</span>
+            <select id="standardSelect"></select>
+          </label>
+          <label>
+            <span data-i18n="script">Script</span>
+            <select id="scriptSelect"></select>
+          </label>
+          <label>
+            <span>JLPT</span>
+            <select id="jlptSelect"></select>
+          </label>
+          <label>
+            <span>BJT</span>
+            <select id="bjtSelect"></select>
+          </label>
+          <label>
+            <span data-i18n="edgeMode">Edge mode</span>
+            <select id="edgeModeSelect">
+              <option value="unlocks">Unlocks</option>
+              <option value="depends">Depends on</option>
+            </select>
+          </label>
+          <label>
+            <span data-i18n="trace">Trace</span>
+            <select id="traceModeSelect">
+              <option value="all">All topics</option>
+              <option value="prerequisites">Prerequisite path</option>
+              <option value="unlocks">Unlock tree</option>
+            </select>
+          </label>
+          <label>
+            <span data-i18n="companion">Companion</span>
+            <select id="companionLayerSelect">
+              <option value="all">Characters + lexemes</option>
+              <option value="characters">Characters</option>
+              <option value="lexemes">Lexemes</option>
+              <option value="off">Off</option>
+            </select>
+          </label>
+          <button id="resetFilters" class="resetFilters" type="button" data-i18n="resetFilters">Reset filters</button>
+        </div>
+
+        <section class="commentaryPanel">
+          <h2 id="commentaryTitle"></h2>
+          <p id="commentarySummary"></p>
+          <div id="approachList"></div>
+          <h3 data-i18n="coverageSnapshot">Coverage snapshot</h3>
+          <div id="coverageSnapshot"></div>
+          <h3 data-i18n="clusterSummary">Cluster summary</h3>
+          <div id="clusterSummary"></div>
+          <h3 data-i18n="standardSummary">Standard summary</h3>
+          <div id="standardSummary"></div>
+          <h3 data-i18n="comparison">L1 / L2 comparison</h3>
+          <div id="comparisonTable"></div>
+        </section>
+      </aside>
+    </div>
+
+    <script type="module" src="/viewer/app.js"></script>
+  </body>
+</html>
