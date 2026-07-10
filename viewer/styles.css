@@ -1445,6 +1445,42 @@ textarea:hover {
   color: #6a748b;
 }
 
+:root[data-theme="light"] .drawerHeader {
+  border-bottom-color: rgba(52, 64, 98, 0.15);
+  background: rgba(255, 253, 247, 0.96);
+}
+
+:root[data-theme="light"] #topicDescription,
+:root[data-theme="light"] #commentarySummary,
+:root[data-theme="light"] .detailDisclosure p,
+:root[data-theme="light"] .detailDisclosure li,
+:root[data-theme="light"] .commentaryPanel p,
+:root[data-theme="light"] .commentaryPanel li {
+  color: #344158;
+}
+
+:root[data-theme="light"] .panelBar,
+:root[data-theme="light"] .topicMetricRow span,
+:root[data-theme="light"] .detailDisclosure h3,
+:root[data-theme="light"] .commentaryPanel h3,
+:root[data-theme="light"] .controls label,
+:root[data-theme="light"] .coverageMetrics span,
+:root[data-theme="light"] .coverageBar span {
+  color: #46536b;
+}
+
+:root[data-theme="light"] .statusText,
+:root[data-theme="light"] .sourceLicense,
+:root[data-theme="light"] .referenceLicense,
+:root[data-theme="light"] .standardLicense,
+:root[data-theme="light"] .detailDisclosure summary::after {
+  color: #566279;
+}
+
+:root[data-theme="light"] .topicMetricRow strong {
+  color: #172033;
+}
+
 :root[data-theme="light"] .hero {
   text-shadow: none;
 }
@@ -1510,7 +1546,7 @@ textarea:hover {
 }
 
 :root[data-theme="light"] .detailDisclosure {
-  border-top-color: rgba(52, 64, 98, 0.14);
+  border-bottom-color: rgba(52, 64, 98, 0.14);
 }
 
 :root[data-theme="light"] .panelScrim {
